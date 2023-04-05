@@ -8,4 +8,11 @@
 - /sf guide
 
 ### 粘液科技附属拓展
-[下界乌托邦](https://docs.sefiraat.dev/netheopoiesis/purification)
+|粘液科技拓展|
+|---|
+|[下界乌托邦](https://docs.sefiraat.dev/netheopoiesis/purification)|
+|粘液匠魂|
+|异域花园|
+|至尊研究院|
+|网络|
+|无尽科技|
