@@ -4,6 +4,7 @@
 - [服务器](servers/)
   - [服务器状态](servers/motd)
   - [服务器黑名单](servers/banlist)
+  - [服务器记过名单](servers/marklist)
   - [BE娱乐服](servers/19132/)
   - [BE生电服](servers/19133/)
   - [BE空岛服](servers/54056/)
