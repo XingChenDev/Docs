@@ -14,7 +14,7 @@ Deng Feng 0119|8
 Royyuan1108|7.1
 噢耶👻|7
 madokalaka|6
-发电大佬|5|火速给生电7服加入领地系统 没有安全感
+发电大佬|5|火速给生电服加入领地系统 没有安全感
 xiayueaaaa8|3
 smxs132435|2.5
 hwhwiwwiwiww|2.05
