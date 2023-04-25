@@ -207,7 +207,8 @@ PTitle是一个可高度自定义的称号系统插件,他支持玩家定制称�
 ## API
 
 #### 获取玩家当前佩戴称号
-`ll.import("getwearch")(name)`
+`ll.import("getwearch")(name)`  
+`ll.import("PTitle", "getwearch")(name)`
 
 - 参数:
   - name: `String`  
@@ -217,7 +218,8 @@ PTitle是一个可高度自定义的称号系统插件,他支持玩家定制称�
   - 如果返回 `Null` 则表示玩家没有佩戴称号或没有数据
 
 #### 设置玩家当前佩戴称号
-`ll.import("setwearch")(name,title)`
+`ll.import("setwearch")(name,title)`  
+`ll.import("PTitle","setwearch")(name,title)`
 
 - 参数:
   - name: `String`  
@@ -226,3 +228,61 @@ PTitle是一个可高度自定义的称号系统插件,他支持玩家定制称�
     要佩戴的称号
 - 返回值: 是否佩戴成功
 - 返回值类型: `Boolean`
+
+#### 给玩家添加一个个人分类称号
+`ll.import("ptitleaddpersonalch")(name, title, sell, dele, money, buff, rank, time)`
+`ll.import("PTitle", "addpersonalch")(name, title, sell, dele, money, buff, rank, time)`
+
+- 参数:
+  - name: `String`  
+    玩家名称  
+  - title: `String`  
+    要添加的称号  
+  - sell: `Boolean`  
+    出售条件 注: `true`或`false`
+  - dele: `Boolean`  
+    删除条件 注: `true`或`false`
+  - money: `Number`  
+    称号价值 注: `0`为免费
+  - buff: `String`  
+    称号所带的buff 注: 无buff可填`null`
+  - rank: `String`  
+    称号buff的等级 注: 无buff可填`null`
+  - time: `Number`  
+    称号有效时间 注: `0`为永久
+- 返回值: 添加情况  
+- 返回值类型: `Boolean`  
+  - 如果返回 `false` 则表示已添加
+
+#### 给玩家添加一个团队分类称号
+`ll.import("ptitleaddteamchdata")(name, title, sell, dele, money, buff, rank, time)`
+`ll.import("PTitle", "addteamch")(name, title, sell, dele, money, buff, rank, time)`
+
+- 参数:
+  - name: `String`  
+    玩家名称  
+  - title: `String`  
+    要添加的称号  
+  - sell: `Boolean`  
+    出售条件 注: `true`或`false`
+  - dele: `Boolean`  
+    删除条件 注: `true`或`false`
+  - money: `Number`  
+    称号价值 注: `0`为免费
+  - buff: `String`  
+    称号所带的buff 注: 无buff可填`null`
+  - rank: `String`  
+    称号buff的等级 注: 无buff可填`null`
+  - time: `Number`  
+    称号有效时间 注: `0`为永久
+- 返回值: 添加情况  
+- 返回值类型: `Boolean`  
+  - 如果返回 `false` 则表示已添加
+
+- 示例：  
+    ```js
+    const PTitle = ll.import("PTitle", "addpersonalch");
+    
+    // 给玩家一个个人称号分类<测试称号>,无法出售、允许删除、无buff、限时7天
+    PTitle("SUNSServer","测试称号",false,true,0,null,null,7)
+    ```
