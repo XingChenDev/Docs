@@ -1,61 +1,46 @@
-!> 由于2.0.0修改了部分config配置文件，所以使用了旧版本的服主请删除PCsvip的config文件，最好把data文件也删掉，不确定会不会出现什么幺蛾子
+## 插件说明
+PCsvip是我们接手苍山工作室的CSvip的后期维护插件,我们接手后对PCsvip进行了重新规划,将他视为前置插件适用、移除了多余的功能,开放多个外接接口实现多元化操作。
 
-> PCsvip 2.0 beta 23.03.0680L 开发版，已在QQ群内测，快加群一起参与测试吧
+## 前置组件
+#### 必选
+- [LiteLoaderBDS](https://www.minebbs.com/liteloader/)
 
-## 支持的功能
-1.支持在线添加和删除VIP(v1.0.2首发支持)
-2.支持离线添加和删除VIP(v1.0.2首发支持)
-3.支持VIP时限(v1.0.2首发支持)
-4.支持VIP黑名单(v1.0.2首发支持)
-5.支持VIP进服特殊提醒，购买、续费、即将到期特殊提醒
-6.支持VIP等级系统(计划中)
-7.支持VIP积分系统(计划中)
-8.支持VIP积分商城(计划中)
+#### 可选&建议
+- [PBind](https://www.minebbs.com/resources/pbind.4211/) 建议使用
+- [PLib](https://www.minebbs.com/resources/plib-planet.4523/) 建议使用
 
-## 对接插件
-1.与`PTitle`对接(可获得VIP称号，购买称号打折等)(由于PTitle插件将进行第三次重做，以上功能将会在下个版本上线)    
-2.由`PQuery`对接(可显示VIP标识、VIP玩家进服提醒等)(已支持)  
-3.由`PMenu`对接(可支持设置仅VIP才能打开的菜单或指令)(已支持)  
-4.由`PStop`对接(可支持维护奖励翻倍等)(已支持)  
-5.由`PSign`对接(可支持VIP玩家额外签到奖励)(已支持)  
-6.由`PCdk`对接(可支持兑换码兑换VIP)(已支持，暂不支持PCsvip2.0.0)  
-
-## 指令说明
-
-`/myvip`	我的VIP 游戏内执行	
-`/vipshop`	VIP商城	游戏内执行	
-`/vipset`	VIP管理	游戏内执行	
-`/viphelp`	关于插件 游戏内执行	
-`/vip add (玩家ID/QQ号) [天数]`	控制台添加VIP	控制台操作，"[]"内为选填
-通过QQ号添加需要安装PBind
-
-`/vip add SUNSServer`
-
-`/vip add SUNSServer 7`
+## 注册指令说明
+`/myvip` - 我的VIP 游戏内执行  
+`/vipshop` - VIP商城	游戏内执行  
+`/vipset` - VIP管理	游戏内执行  
+`/viphelp` - 关于插件 游戏内执行  
+`/vip add (玩家ID/QQ号) [天数]` - 控制台添加VIP	控制台操作，"[]"内为选填  
+  - 示范:  
+      `/vip add SUNSServer`
+      `/vip add SUNSServer 7`
 
 `/vip del (玩家ID/QQ号)`	控制台删除VIP	控制台操作，当玩家是VIP时输入会关掉VIP，当玩家不是VIP时会删除VIP数据
-
-`/vip del SUNSServer`
+  - 示范:  
+      `/vip del SUNSServer`
 
 `/vip addtime (玩家ID/QQ号) (时长)`	控制台增加玩家时长	控制台操作，所有参数为必填
-通过QQ号添加需要安装PBind
-
-`/vip addtime SUNSServer 7`
+  - 示范:  
+      `/vip addtime SUNSServer 7`
 
 `/vip reducetime (玩家ID/QQ号)  (时长)`	控制台减少玩家时长	控制台操作，所有参数为必填，当减少时长大于剩余时长会自动取消玩家的VIP
-通过QQ号减少需要安装PBind
-
-`/vip reducetime SUNSServer 7`
+  - 示范:  
+      `/vip reducetime SUNSServer 7`
 
 `/vip query (玩家ID/QQ号)` 控制台查询玩家VIP数据	控制台操作，所有参数为必填
-通过QQ号查询需要安装PBind
-
-`/vip query SUNSServer`
+  - 示范:  
+      `/vip query SUNSServer`
 
 ## 配置文件说明
 
-config.json
+#### `config`文件
 
+- 插件基础配置文件
+- 路径: BDS/plugins/Planet/PCsvip/config.json
 ```js
 {
     "version": "2.0.0", //插件版本
@@ -85,11 +70,35 @@ config.json
 }
 ```
 
-storedata.json
+#### `storedata`文件
 
+- VIP商店
+- 路径: BDS/plugins/Planet/PCsvip/data/storedata.json
 ```js
 {
-    "SUNSServer": {
+    "vipgoods": [  //VIP商品
+        {
+            "name": "1天",  //商品名称
+            "money": 195,  //商品价格
+            "viptime": 1  //VIP时长
+        }
+    ],
+    "lizigoods": [  //粒子商品
+        {
+            "mcid": "minecraft:heart_particle",  //粒子ID
+            "money": 195  // 粒子价格
+        }
+    ]
+}
+```
+
+#### `vipdata`文件
+
+- VIP玩家数据
+- 路径: BDS/plugins/Planet/PCsvip/data/vipdata.json
+```js
+{
+    "SUNSServer": {  //玩家名称
         "vip": false, //玩家的VIP身份
         "liziswitch": false, //玩家粒子开关
         "lizimcid": "minecraft:heart_particle", //当前使用的粒子id
@@ -105,180 +114,117 @@ storedata.json
 }
 ```
 
-buyvipdata.json
-
-```js
-{
-    "vipgoods": [ //VIP商品
-        {
-            "name": "1天",
-            "money": 195,
-            "viptime": 1
-        }
-    ],
-    "lizigoods": [ //粒子商品
-        {
-            "mcid": "minecraft:heart_particle",
-            "money": 195
-        }
-    ]
-}
-```
-
 ## API
-#### 获取指定玩家VIP身份(新)
-`ll.import("vipplayer")(realname)`
-- 参数:
-  - realname: String
-    玩家的名字
-- 返回值: 玩家是否是VIP
-- 返回值类型: Boolean
-  - 如果返回 "0" 则表示不是，返回 "1" 则表示是
 
-获取所有玩家VIP数据(新)
+#### 获取指定玩家VIP身份
+`ll.import("vipplayer")(name)`
+
+- 参数:
+  - name: `String`  
+    玩家名称
+- 返回值: 玩家VIP身份
+- 返回值类型: `Boolean`
+  - 如果返回 `false` 则表示不是
+
+#### 获取所有玩家VIP数据
 `ll.import("PCsvip", "getall")()`
-- 返回值: 玩家是否是VIP
-- 返回值类型: Boolean
-  - 如果返回 "{}" 则表示没有数据
 
-获取指定玩家原始VIP数据(新)
-`ll.import("PCsvip", "getvipdata")(realname)`
+- 返回值: 所有VIP玩家数据  
+- 返回值类型: `Object`
+  - 如果返回 `{}` 则表示没有数据
+
+#### 获取指定玩家原始VIP数据
+`ll.import("PCsvip", "getvipdata")(name)`
+
 - 参数:
-  - realname: String
-    玩家的名字
+  - name: `String`  
+    玩家名称
 - 返回值: 玩家是否是VIP
-- 返回值类型: Boolean
-  - 如果返回 "null" 则表示没有数据
-数据属性
-
-|属性|含义|返回值示范|
-|---|---|---|
-|vip|VIP身份|true|
-|liziswitch|随身粒子开关|true|
-|lizinamcid|随身粒子MC代码|minecraft:heart_particle|
-|viplevel|VIP等级|1|
-|levelexp|等级经验|40/100|
-|integral|VIP积分|40|
-|viptitle|VIP称号|§cVIP|
-|viptime|VIP有效时长|1|
-|gattime|VIP有效期内最早获取时间|2022-07-26 20:03:16|
+- 返回值类型: `Object`  
+#### 数据属性
+|属性|含义|类型|返回值示范|
+|---|---|---|---|
+|vip|VIP身份|`Boolean`|true|
+|liziswitch|随身粒子开关|`Buulean`|true|
+|lizinamcid|随身粒子MC代码|`String`|minecraft:heart_particle|
+|viplevel|VIP等级|`Number`|1|
+|levelexp|等级经验|`String`|40/100|
+|integral|VIP积分|`Number`|40|
+|viptitle|VIP称号|`String`|§cVIP|
+|viptime|VIP有效时长|`Number`|1|
+|gattime|VIP有效期内最早获取时间|`String`|2022-07-26 20:03:16|
+  - 如果返回 `Null` 则表示没有数据  
 
 #### 获取指定玩家中文VIP数据(新)
-`ll.import("PCsvip", "getvipdataChinese")(realname)`
+`ll.import("PCsvip", "getvipdataChinese")(name)`
+
 - 参数:
-  - realname: String
+  - realname: String  
     玩家的名字
 - 返回值: 玩家是否是VIP
-- 返回值类型: Boolean
-  - 如果返回 "null" 则表示没有数据
-    数据属性
+- 返回值类型: `Objevt`  
 
-|属性|含义|返回值示范|
-|---|---|---|
-|vip|VIP身份|是|
-|liziswitch|随身粒子开关|开启
-|lizinamcid|随身粒子MC代码|minecraft:heart_particle 或 爱心|
-|viplevel|VIP等级|1级|
-|levelexp|等级经验|40/100|
-|upgrade|升级需要|60|
-|integral|VIP积分|40|
-|viptitle|VIP称号|§cVIP|
-|viptime|VIP有效时长|1天|
-|surplus|剩余时长|1天|
-|gattime|VIP有效期内最早获取时间|2022-07-26 20:03:16|
+#### 数据属性
+|属性|含义|类型|返回值示范|
+|---|---|---|---|
+|vip|VIP身份|`String`|是|
+|liziswitch|随身粒子开关|`String`|开启
+|lizinamcid|随身粒子MC代码|`String`|minecraft:heart_particle 或 爱心|
+|viplevel|VIP等级|`String`|1级|
+|levelexp|等级经验|`String`|40/100|
+|upgrade|升级需要|`Number`|60|
+|integral|VIP积分|`Number`|40|
+|viptitle|VIP称号|`String`|§cVIP|
+|viptime|VIP有效时长|`String`|1天|
+|surplus|剩余时长|`String`|1天|
+|gattime|VIP有效期内最早获取时间|`String`|2022-07-26 20:03:16|
+  - 如果返回 `Null` 则表示没有数据  
 
 #### 增加指定玩家VIP经验(暂时关闭)
-`ll.import("PCsvip", "addviplevelexp")(realname,levelexp)`
+`ll.import("PCsvip", "addviplevelexp")(name,exp)`
+
 - 参数:
-  - realname: String
+  - name: `String`  
     玩家的名字
-  - levelexp: String
+  - exp: `Number`  
     要增加的经验值
 
 #### 减少指定玩家VIP经验(暂时关闭)
-`ll.import("PCsvip", "reduceviplevelexp")(realname,levelexp)`
+`ll.import("PCsvip", "reduceviplevelexp")(name,exp)`
 - 参数:
-  - realname: String
+  - name: `String`  
     玩家的名字
-  - levelexp: String
+  - exp: `Number`  
     要减少的经验值
 
 #### 增加指定玩家VIP积分(新)
-`ll.import("PCsvip", "addvipintegral")(realname,integral)`
+`ll.import("PCsvip", "addvipintegral")(name,int)`
 - 参数:
-  - realname: String
+  - name: `String` 
     玩家的名字
-  - integral: String
+  - int: `Number`  
     要增加的积分
 
 #### 减少指定玩家VIP积分(新)
-`ll.import("PCsvip", "reducevipintegral")(realname,integral)`
+`ll.import("PCsvip", "reducevipintegral")(name,int)`
 - 参数:
-  - realname: String
+  - name: `String` 
     玩家的名字
-  - integral: String
+  - int: `Number`  
     要增加的积分
 
 #### 增加指定玩家VIP时间(新)
-`ll.import("PCsvip", "addviptime")(realname,time)`
+`ll.import("PCsvip", "addviptime")(name,time)`
 - 参数:
-  - realname: String
+  - name: `String` 
     玩家的名字
-  - time: String
+  - time: `Number`  
     要增加的时间(单位:天)
 
 #### 减少指定玩家VIP时间(新)
-`ll.import("PCsvip", "reduceviptime")(realname,time)`
+`ll.import("PCsvip", "reduceviptime")(name,time)`
 - 参数:
-  - realname: String
+  - name: `String` 
     玩家的名字
-  - time: String
+  - time: `Number`  
     要减少的时间(单位:天)
-
-#### 获取玩家VIP身份(旧)
-`ll.import("vipplayer")(realname)`
-- 参数:
-  - realname: String
-    玩家的名字
-- 返回值: 玩家是否是VIP
-- 返回值类型: Boolean
-  - 如果返回 "0" 则表示不是，返回 "1" 则表示是
-
-#### 获取玩家VIP数据(旧)
-`ll.import("vipplayer")(realname)`
-- 参数:
-  - realname: String
-    玩家的名字
-- 返回值: 玩家的VIP数据
-- 返回值类型: Array
-  - 如果返回 Null 则表示没有数据
-
-#### 数据属性
-
-|属性|含义|返回值示范|
-|---|---|---|
-liziswitch|随身粒子开关|true
-liziname|随身粒子中文名|爱心
-lizinamcid|随身粒子MC代码|minecraft:heart_particle
-viptime|VIP有效时长|1
-gattime|VIP有效期内最早获取时间|2022-07-26 20:03:16
-
-#### 给予玩家VIP(旧)
-`ll.import("addvip")(realname, viptime)`
-- 参数:
-  - realname: String
-    玩家的名字
-  - viptime: String
-    给予VIP时长
-- 返回值: 是否给予VIP成功
-- 返回值类型: Boolean
-  - 如果返回 "1" 则表示给予VIP成功
-
-#### 删除玩家VIP
-`ll.import("delvip")(realname)`
-- 参数:
-  - realname: String
-    玩家的名字
-- 返回值: 是否删除VIP成功
-- 返回值类型: Boolean
-  - 如果返回 "0" 则表示不是VIP，返回 "1" 则表示删除成功

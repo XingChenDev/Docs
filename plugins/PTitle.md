@@ -6,10 +6,10 @@ PTitle是一个可高度自定义的称号系统插件,他支持玩家定制称�
 - [LiteLoaderBDS](https://www.minebbs.com/liteloader/)
 
 ## 注册指令说明
-/ch - 我的称号  
-/chshop - 称号商城  
-/dech - 删除称号  
-/chset - 称号设置  
+`/ch` - 我的称号  
+`/chshop` - 称号商城  
+`/dech` - 删除称号  
+`/chset` - 称号设置  
 
 ## 聊天界面变量
 | 变量     | 注释    | 变量     | 注释    |
