@@ -228,9 +228,19 @@ PTitle是一个可高度自定义的称号系统插件,他支持玩家定制称�
     要佩戴的称号
 - 返回值: 是否佩戴成功
 - 返回值类型: `Boolean`
+   注: 设置佩戴称号不会判断玩家是否拥有
+
+- 示例：  
+    ```js
+    const PTitle = ll.import("PTitle", "setwearch");
+    
+    // 给玩家佩戴一个称号<测试称号>
+    PTitle("SUNSServer","测试称号")
+    ```
+
 
 #### 给玩家添加一个个人分类称号
-`ll.import("ptitleaddpersonalch")(name, title, sell, dele, money, buff, rank, time)`
+`ll.import("ptitleaddpersonalch")(name, title, sell, dele, money, buff, rank, time)`  
 `ll.import("PTitle", "addpersonalch")(name, title, sell, dele, money, buff, rank, time)`
 
 - 参数:
@@ -254,8 +264,17 @@ PTitle是一个可高度自定义的称号系统插件,他支持玩家定制称�
 - 返回值类型: `Boolean`  
   - 如果返回 `false` 则表示已添加
 
+
+- 示例：  
+    ```js
+    const PTitle = ll.import("PTitle", "addpersonalch");
+    
+    // 给玩家一个个人分类称号<测试称号>,无法出售、允许删除、无buff、限时7天
+    PTitle("SUNSServer","测试称号",false,true,0,null,null,7)
+    ```
+
 #### 给玩家添加一个团队分类称号
-`ll.import("ptitleaddteamchdata")(name, title, sell, dele, money, buff, rank, time)`
+`ll.import("ptitleaddteamchdata")(name, title, sell, dele, money, buff, rank, time)`  
 `ll.import("PTitle", "addteamch")(name, title, sell, dele, money, buff, rank, time)`
 
 - 参数:
@@ -281,8 +300,53 @@ PTitle是一个可高度自定义的称号系统插件,他支持玩家定制称�
 
 - 示例：  
     ```js
-    const PTitle = ll.import("PTitle", "addpersonalch");
+    const PTitle = ll.import("PTitle", "addteamch");
     
-    // 给玩家一个个人称号分类<测试称号>,无法出售、允许删除、无buff、限时7天
+    // 给玩家一个团队分类称号<测试称号>,无法出售、允许删除、无buff、限时7天
     PTitle("SUNSServer","测试称号",false,true,0,null,null,7)
     ```
+
+#### 删除玩家一个称号
+`ll.import("ptitledelch")(name,title)`  
+`ll.import("PTitle", "delch")(name,title)`
+
+- 参数: 
+  - name: `String`  
+    玩家名称
+  - title: `String`  
+    要删除的称号
+- 返回值: 删除情况  
+- 返回值类型: `Boolean`  
+  - 如果返回 `false` 则表示删除失败或称号不存在
+
+
+- 示例：  
+    ```js
+    const PTitle = ll.import("PTitle", "delch");
+    
+    // 删除玩家称号<测试称号>
+    PTitle("SUNSServer","测试称号")
+    ```
+
+#### 获取玩家所有称号
+`ll.import("playerchdata")(name)`  
+`ll.import("PTitle", "chdata")(name)`
+
+- 参数: 
+  - name: `String`  
+    玩家名称
+- 返回值: 玩家的称号数据
+- 返回值类型: `Array<Object,Object,...>`  
+  - 如果返回 `Null` 则表示玩家没有称号数据
+
+| 属性   | 含义           | 类型   | 返回值示范 |
+| ------ | ------------- | --------- | ----- |
+|.sort   | 称号所属分类   | `String` |	个人称号  |
+|.title  | 称号           | `String` |	萌新求饶  |
+|.sell   | 出售条件        | `Boolean`|	false  |
+|.dele   | 删除条件       | `Boolean`|	false  |
+|.money	 | 称号价值       | `Number` |	0  |
+|.buff   | 称号绑定的buff | `String` |	null  |
+|.rank   | buff等级      | `Number` |	0  |
+|.time   | 有效时长      | `Number` |	0  |
+|.gattime|	获取称号时间 | `String` |	2022-08-03 20:25:43|
