@@ -36,7 +36,7 @@
       maxLevel: 4,
       timeUpdater: {
         text: "<div align='right'>{docsify-updated}</div>",
-        formatUpdated: "{YYYY}/{MM}/{DD}  {HH}:{ss}",
+        formatUpdated: "",
       },
       pagination: {
         previousText: '上一章节',
@@ -100,9 +100,9 @@
   <script src="//cdn.jsdelivr.net/npm/docsify-plugin-flexible-alerts/dist/docsify-plugin-flexible-alerts.min.js"
     defer></script>
   <script>
-  if (typeof navigator.serviceWorker !== 'undefined') {
-    navigator.serviceWorker.register('sw.js')
-  }
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('sw.js')
+    }
   </script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
