@@ -1,7 +1,8 @@
+![logo](/image/logo/planet_studio.png)
 # Planet插件文档
 
 
 
 
 
-[查看文档](README.md)
+[查看](README.md)
