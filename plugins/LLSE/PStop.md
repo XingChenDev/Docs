@@ -1,5 +1,4 @@
-## 插件说明
-PStop是一个可在游戏内、控制台输入指令来进行对非管理员(OP)玩家的进服拦截,使用场景多用于维护服务器
+> [!TIP|style:flat||labelVisibility:hidden|iconVisibility:hidden] PStop是一个可在游戏内、控制台输入指令来进行对非管理员(OP)玩家的进服拦截,使用场景多用于维护服务器
 
 ## 前置组件
 #### 必选

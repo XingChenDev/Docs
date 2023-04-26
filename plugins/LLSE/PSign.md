@@ -1,5 +1,4 @@
-## 插件说明
-PSign是一个支持正则表达式通过控制台实现QQ群离线签到的插件。
+> [!TIP|style:flat||labelVisibility:hidden|iconVisibility:hidden] PSign是一个支持正则表达式通过控制台实现QQ群离线签到的插件。
 
 ## 前置组件
 #### 必选

@@ -1,4 +1,4 @@
-> [!TIP] PMenu是一个多功能的菜单插件，支持玩家菜单、OP菜单、VIP菜单等等，支持在线编辑、添加、删除菜单或菜单内容的操作。
+> [!TIP|style:flat||labelVisibility:hidden|iconVisibility:hidden] PMenu是一个多功能的菜单插件，支持玩家菜单、OP菜单、VIP菜单等等，支持在线编辑、添加、删除菜单或菜单内容的操作。
 
 ## 配置文件说明
 

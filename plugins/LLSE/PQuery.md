@@ -1,5 +1,4 @@
-## 插件说明
-PQuery是一个支持正则表达式通过机器人在指定的QQ群内查询游戏数据的插件
+> [!TIP|style:flat||labelVisibility:hidden|iconVisibility:hidden] PQuery是一个支持正则表达式通过机器人在指定的QQ群内查询游戏数据的插件
 2023年4月27日我们将发布支持Serein面板的PQuery插件,从此告别正则表达式的编写,只需安装Serein面板的js插件（PQuery.Serein.js）,目前该插件已发行开发测试版
 ## 前置组件
 #### 必选

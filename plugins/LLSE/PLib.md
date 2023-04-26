@@ -1,4 +1,4 @@
-> [!TIP] PLib是Planet工作室插件的一个前置插件之一，主要供应“P”系列插件共享数据的对接。
+> [!TIP|style:flat||labelVisibility:hidden|iconVisibility:hidden] PLib是Planet工作室插件的一个前置插件之一，主要供应“P”系列插件共享数据的对接。
 
 ## 前置组件
 #### 必选
