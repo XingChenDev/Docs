@@ -14,6 +14,20 @@
   <div id="app">加载中</div>
   <script>
     window.$docsify = {
+      'flexible-alerts': {
+      note: {
+        label: "重点"
+      },
+      tip: {
+        label: "提示"
+      },
+      warning: {
+        label: "警告"
+      },
+      attention: {
+        label: "注意"
+      }
+      },
       onlyCover: true,
       name: 'Planet插件文档',
       repo: 'true',
@@ -93,6 +107,7 @@
 
   <script src="//cdn.jsdelivr.net/npm/docsify-plugin-flexible-alerts/dist/docsify-plugin-flexible-alerts.min.js"
     defer></script>
+
   <script>
     if (typeof navigator.serviceWorker !== 'undefined') {
       navigator.serviceWorker.register('sw.js')
