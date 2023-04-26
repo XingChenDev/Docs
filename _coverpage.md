@@ -1,4 +1,4 @@
-![logo](/image/logo/planet_studio.png)
+![logo](/imgs/logo/planet_studio.png)
 # Planet插件文档
 
 

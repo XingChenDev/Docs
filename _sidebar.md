@@ -1,5 +1,5 @@
 - [首页](README.md)
-- 插件
+- LLSE插件
   - [PBind - 账号绑定](plugins/PBind)
   - [PCDK - 兑换码](plugins/PCDK)
   - [PCSVIP - 会员](plugins/PCSVIP)
@@ -10,4 +10,6 @@
   - [PSign - 签到](plugins/PSign)
   - [PStop - 维护系统](plugins/PStop)
   - [PTitle - 称号系统](plugins/PTitle)
+- Serein插件
+  - 敬请期待
 - [关于](About)
