@@ -15,24 +15,24 @@
 `/viphelp` - 关于插件 游戏内执行  
 `/vip add (玩家ID/QQ号) [天数]` - 控制台添加VIP	控制台操作，"[]"内为选填  
 #### 示例
-      `/vip add SUNSServer`
-      `/vip add SUNSServer 7`
+`/vip add SUNSServer`
+`/vip add SUNSServer 7`
 
 `/vip del (玩家ID/QQ号)`	控制台删除VIP	控制台操作，当玩家是VIP时输入会关掉VIP，当玩家不是VIP时会删除VIP数据
 #### 示例
-      `/vip del SUNSServer`
+`/vip del SUNSServer`
 
 `/vip addtime (玩家ID/QQ号) (时长)`	控制台增加玩家时长	控制台操作，所有参数为必填
 #### 示例
-      `/vip addtime SUNSServer 7`
+`/vip addtime SUNSServer 7`
 
 `/vip reducetime (玩家ID/QQ号)  (时长)`	控制台减少玩家时长	控制台操作，所有参数为必填，当减少时长大于剩余时长会自动取消玩家的VIP
 #### 示例
-      `/vip reducetime SUNSServer 7`
+`/vip reducetime SUNSServer 7`
 
 `/vip query (玩家ID/QQ号)` 控制台查询玩家VIP数据	控制台操作，所有参数为必填
 #### 示例
-      `/vip query SUNSServer`
+`/vip query SUNSServer`
 
 ## 配置文件说明
 

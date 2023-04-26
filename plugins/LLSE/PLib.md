@@ -122,10 +122,10 @@
 - 示范
    ```js
    {
-       const PLib = ll.import("PLib","iteminfo")
+    const PLib = ll.import("PLib","iteminfo")
        
-       //获取苹果的中文名称(使用对象属性时,请先加判断)
-       PLib("minecraft:apple").chinese
+    //获取苹果的中文名称(使用对象属性时,请先加判断)
+    PLib("minecraft:apple").chinese
    }
    ```
 
