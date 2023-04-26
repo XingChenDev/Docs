@@ -14,13 +14,13 @@
 - 路径: BDS/plugins/Planet/Player/Playerdata.json
 ```js
 [
-    {
-        "qqid": "1031648245",
-        "gameid": "SUNSServer",
-        "xuid": "2535450402001250",
-        "bindtime": "2023-04-23 23:26:21",
-        "firstjoin": "2023-04-23 23:09:00"
-    }
+  {
+    "qqid": "1031648245",
+    "gameid": "SUNSServer",
+    "xuid": "2535450402001250",
+    "bindtime": "2023-04-23 23:26:21",
+    "firstjoin": "2023-04-23 23:09:00"
+  }
 ]
 ```
 

@@ -22,9 +22,9 @@
 - 路径: BDS/plugins/Planet/PQuery/config.json
 ```js
 {
-    "version": "v1.1.9 Beta 23.04.1006T 开发版",  //插件版本
-    "scoreswitch": true,  //记分板开关
-    "score": "money"  //记分板名称
+  "version": "v1.1.9 Beta 23.04.1006T 开发版", //插件版本
+  "scoreswitch": true, //记分板开关
+  "score": "money" //记分板名称
 }
 ```
 
@@ -34,8 +34,8 @@
 - 路径: BDS/plugins/Planet/PQuery/data/equipment.json
 ```js
 {
-    "SUNSServer": "Android",
-    "MC Susu2990": "Win10"
+  "SUNSServer": "Android",
+  "MC Susu2990": "Win10"
 }
 ```
 

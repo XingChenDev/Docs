@@ -17,22 +17,21 @@
 - 路径: BDS/plugins/Planet/PSign/config.json
 ```js
 {
-    "version": "v1.0.9",  //插件版本
-    "money": 0,  //经济模式(0为记分板,1为LLMoney)
-    "score": "money",  //
-    "sign": {
-        "breakoffsign": true,  //离线断签开关（true为开,false为关），用于检测玩家上次入服时间有没有超过指定时长从而禁止离线签到
-        "breakoffsignday": 3,  //离线断签时长
-        "switch": true,//签到开关（true为开,false为关），可在线使用签到设置进行变更
-        "addition": true,//连续签到翻倍开关（true为开,false为关），可在线使用签到设置进行变更
-        "fixed": 0,//签到固定奖励值(0为随机奖励，大于0为固定奖励)
-        "minreward": 1000,//签到的经济最小奖励值，可在线使用签到设置进行变更(该参数不能大于最大值)
-        "maxreward": 10000,//签到的经济最大奖励值，可在线使用签到设置进行变更(该参数不能小于最小值)
-        "vipfixed": 0,//会员签到固定奖励值(0为随机奖励，大于0为固定奖励)
-        "vipminreward": 10000,//会员签到的经济最小奖励值，可在线使用签到设置进行变更(该参数不能大于最大值)
-        "vipmaxreward": 100000//会员签到的经济最大奖励值，可在线使用签到设置进行变更(该参数不能小于最小值)
-    
-    }
+  "version": "v1.0.9", //插件版本
+  "money": 0, //经济模式(0为记分板,1为LLMoney)
+  "score": "money", //
+  "sign": {
+    "breakoffsign": true, //离线断签开关（true为开,false为关），用于检测玩家上次入服时间有没有超过指定时长从而禁止离线签到
+    "breakoffsignday": 3, //离线断签时长
+    "switch": true, //签到开关（true为开,false为关），可在线使用签到设置进行变更
+    "addition": true, //连续签到翻倍开关（true为开,false为关），可在线使用签到设置进行变更
+    "fixed": 0, //签到固定奖励值(0为随机奖励，大于0为固定奖励)
+    "minreward": 1000, //签到的经济最小奖励值，可在线使用签到设置进行变更(该参数不能大于最大值)
+    "maxreward": 10000, //签到的经济最大奖励值，可在线使用签到设置进行变更(该参数不能小于最小值)
+    "vipfixed": 0, //会员签到固定奖励值(0为随机奖励，大于0为固定奖励)
+    "vipminreward": 10000, //会员签到的经济最小奖励值，可在线使用签到设置进行变更(该参数不能大于最大值)
+    "vipmaxreward": 100000 //会员签到的经济最大奖励值，可在线使用签到设置进行变更(该参数不能小于最小值)
+  }
 }
 ```
 
@@ -42,13 +41,13 @@
 - 路径: BDS/plugins/Planet/PSign/data/signdata.json
 ```js
 {
-     "SUNSServer": {  //玩家ID
-        "state": false,  //离线签到奖励领取情况
-        "count": 12,  //总签到次数
-        "contsign": 1,  //连续签到次数
-        "reward": 0,  //离线签到奖励
-        "signdate": "2023-4-23"  //上次签到时间
-    }
+  "SUNSServer": { //玩家ID
+    "state": false, //离线签到奖励领取情况
+    "count": 12, //总签到次数
+    "contsign": 1, //连续签到次数
+    "reward": 0, //离线签到奖励
+    "signdate": "2023-4-23" //上次签到时间
+  }
 }
 ```
 

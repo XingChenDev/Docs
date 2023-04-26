@@ -10,11 +10,11 @@
 - 路径：BDS/plugins/Planet/PMENU/config.json
 ```js
 {
-    "version": "v1.0.6",//配置文件版本
-    "money": 0,//经济模式（0为计分板，1为LLMoney）
-    "score": "money",//计分板项名称
-    "item": "minecraft:clock",//打开菜单的物品type信息
-    "main": "main"//主菜单文件名称
+    "version": "v1.0.6", //配置文件版本
+    "money": 0, //经济模式（0为计分板，1为LLMoney）
+    "score": "money", //计分板项名称
+    "item": "minecraft:clock", //打开菜单的物品type信息
+    "main": "main" //主菜单文件名称
 }
 ```
 
@@ -24,16 +24,16 @@
 - 路径：BDS/plugins/Planet/PMENU/packs/main.json
 ```js
 {
-    "title": "服务器菜单",//菜单标题
-    "content": "选择:",//菜单提示
-    "buttons": [//菜单中的按钮（oplist配置项仅需要填写在type项为“opcm”和"opfm"的菜单中）
+    "title": "服务器菜单", //菜单标题
+    "content": "选择:", //菜单提示
+    "buttons": [ //菜单中的按钮（oplist配置项仅需要填写在type项为“opcm”和"opfm"的菜单中）
         {
-            "images": true,//是否打开按钮贴图
-            "image": "textures/items/apple",//按钮贴图路径（可使用Minecraft本地路径，或网络链接）
-            "money": 0,//是否需要付费（0为不需要，大于0为需要）
-            "text": "获取一个苹果",//按钮的文字描述
-            "command": "give @s apple",//执行的指令（type为comm时输入需要执行的指令，为form是输入二级菜单名）
-            "type": "comm"//执行类型（有四个类型（comm为命令，form为二级菜单，opcm为管理员命令，opfm为管理员二级菜单））
+            "images": true, //是否打开按钮贴图
+            "image": "textures/items/apple", //按钮贴图路径（可使用Minecraft本地路径，或网络链接）
+            "money": 0, //是否需要付费（0为不需要，大于0为需要）
+            "text": "获取一个苹果", //按钮的文字描述
+            "command": "give @s apple", //执行的指令（type为comm时输入需要执行的指令，为form是输入二级菜单名）
+            "type": "comm" //执行类型（有四个类型（comm为命令，form为二级菜单，opcm为管理员命令，opfm为管理员二级菜单））
         },
         {
             "images": false,
@@ -66,7 +66,7 @@
             "text": "管理员二级菜单",
             "command": "opmenutow",
             "type": "opfm",
-            "oplist": []//op列表（指定op才能使用的按钮，可多填，(例如：“SUNSServer”,"MC Susu2990","aaaa")注意JSON的格式即可）
+            "oplist": [] //op列表（指定op才能使用的按钮，可多填，(例如：“SUNSServer”,"MC Susu2990","aaaa")注意JSON的格式即可）
         },
         {
             "images": false,

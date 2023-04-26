@@ -15,24 +15,24 @@
 `/viphelp` - 关于插件 游戏内执行  
 `/vip add (玩家ID/QQ号) [天数]` - 控制台添加VIP	控制台操作，"[]"内为选填  
 #### 示例
-      `/vip add SUNSServer`
-      `/vip add SUNSServer 7`
+`/vip add SUNSServer`
+`/vip add SUNSServer 7`
 
 `/vip del (玩家ID/QQ号)`	控制台删除VIP	控制台操作，当玩家是VIP时输入会关掉VIP，当玩家不是VIP时会删除VIP数据
 #### 示例
-      `/vip del SUNSServer`
+`/vip del SUNSServer`
 
 `/vip addtime (玩家ID/QQ号) (时长)`	控制台增加玩家时长	控制台操作，所有参数为必填
 #### 示例
-      `/vip addtime SUNSServer 7`
+`/vip addtime SUNSServer 7`
 
 `/vip reducetime (玩家ID/QQ号)  (时长)`	控制台减少玩家时长	控制台操作，所有参数为必填，当减少时长大于剩余时长会自动取消玩家的VIP
 #### 示例
-      `/vip reducetime SUNSServer 7`
+`/vip reducetime SUNSServer 7`
 
 `/vip query (玩家ID/QQ号)` 控制台查询玩家VIP数据	控制台操作，所有参数为必填
 #### 示例
-      `/vip query SUNSServer`
+`/vip query SUNSServer`
 
 ## 配置文件说明
 
@@ -42,30 +42,30 @@
 - 路径: BDS/plugins/Planet/PCsvip/config.json
 ```js
 {
-    "version": "2.0.0", //插件版本
-    "moneyswitch": 1, //经济开关(用于获取药水buff是否扣钱)已停止使用
-    "money": 1, //经济模式(0为计分板，1为LLMoney)
-    "score": "money", //计分板项目名称(默认为money)
-    "buyswitch": 1, //购买/续费VIP开关(0为关闭，1为开启)
-    "viptime": 7, //VIP默认时长(管理员手动添加的时长(单位:天))
-    "viptitle": { //VIP称号(当没有安装PTitle插件时只有称号配置项没有其他配置项)
-        "title": "至尊VIP"
-    },
-    "lizi": "minecraft:heart_particle", //vip默认粒子(根据MC原版的id来填写，可在PLib的lizi配置文件中复制lizimcid的配置项粘贴到这里)
-    "vipblacklist": [], //VIP黑名单(禁止一些玩家购买VIP)
-    "viplevel": { //VIP等级
-        "exp": [
-            0,
-            100,
-            300,
-            600,
-            1000
-        ], //VIP等级的升级条件(经验)，每个参数代表了升级到该等级时所需要的经验值
-        "expratio": { //VIP等级增加和减少的值(Beta 23.03.0725Q仅带有进入每日进入服务器增加经验)
-            "up": 10,
-            "down": 20
-        }
+  "version": "2.0.0", //插件版本
+  "moneyswitch": 1, //经济开关(用于获取药水buff是否扣钱)已停止使用
+  "money": 1, //经济模式(0为计分板，1为LLMoney)
+  "score": "money", //计分板项目名称(默认为money)
+  "buyswitch": 1, //购买/续费VIP开关(0为关闭，1为开启)
+  "viptime": 7, //VIP默认时长(管理员手动添加的时长(单位:天))
+  "viptitle": { //VIP称号(当没有安装PTitle插件时只有称号配置项没有其他配置项)
+    "title": "至尊VIP"
+  },
+  "lizi": "minecraft:heart_particle", //vip默认粒子(根据MC原版的id来填写，可在PLib的lizi配置文件中复制lizimcid的配置项粘贴到这里)
+  "vipblacklist": [], //VIP黑名单(禁止一些玩家购买VIP)
+  "viplevel": { //VIP等级
+    "exp": [
+      0,
+      100,
+      300,
+      600,
+      1000
+    ], //VIP等级的升级条件(经验)，每个参数代表了升级到该等级时所需要的经验值
+    "expratio": { //VIP等级增加和减少的值(Beta 23.03.0725Q仅带有进入每日进入服务器增加经验)
+      "up": 10,
+      "down": 20
     }
+  }
 }
 ```
 
@@ -75,19 +75,19 @@
 - 路径: BDS/plugins/Planet/PCsvip/data/storedata.json
 ```js
 {
-    "vipgoods": [  //VIP商品
-        {
-            "name": "1天",  //商品名称
-            "money": 195,  //商品价格
-            "viptime": 1  //VIP时长
-        }
-    ],
-    "lizigoods": [  //粒子商品
-        {
-            "mcid": "minecraft:heart_particle",  //粒子ID
-            "money": 195  // 粒子价格
-        }
-    ]
+  "vipgoods": [ //VIP商品
+    {
+      "name": "1天", //商品名称
+      "money": 195, //商品价格
+      "viptime": 1 //VIP时长
+    }
+  ],
+  "lizigoods": [ //粒子商品
+    {
+      "mcid": "minecraft:heart_particle", //粒子ID
+      "money": 195 // 粒子价格
+    }
+  ]
 }
 ```
 
@@ -97,19 +97,19 @@
 - 路径: BDS/plugins/Planet/PCsvip/data/vipdata.json
 ```js
 {
-    "SUNSServer": {  //玩家名称
-        "vip": false, //玩家的VIP身份
-        "liziswitch": false, //玩家粒子开关
-        "lizimcid": "minecraft:heart_particle", //当前使用的粒子id
-        "viplevel": 2, //玩家VIP等级
-        "levelexp": "29/300", //玩家VIP等级经验(当前/下次升级所需)
-        "integral": 1800, //VIP积分(目前是购买VIP获取)
-        "viptitle": "至尊VIP", //VIP称号
-        "viptime": null, //VIP总时长(null为玩家不是VIP，0为永久，大于0为实际天数)
-        "gettime": "---", //玩家获取VIP的最初时间("---"为玩家不是VIP或永久)
-        "jointime": "2023-3-21" //玩家上次加入的日期(以每日0点为重置点，用于增加VIP等级经验)
-    }
-    //注:玩家VIP倒计时计算方式是("当前时间与玩家上次获取VIP时间的时间差"-"玩家VIP拥有的总时长")
+  "SUNSServer": { //玩家名称
+    "vip": false, //玩家的VIP身份
+    "liziswitch": false, //玩家粒子开关
+    "lizimcid": "minecraft:heart_particle", //当前使用的粒子id
+    "viplevel": 2, //玩家VIP等级
+    "levelexp": "29/300", //玩家VIP等级经验(当前/下次升级所需)
+    "integral": 1800, //VIP积分(目前是购买VIP获取)
+    "viptitle": "至尊VIP", //VIP称号
+    "viptime": null, //VIP总时长(null为玩家不是VIP，0为永久，大于0为实际天数)
+    "gettime": "---", //玩家获取VIP的最初时间("---"为玩家不是VIP或永久)
+    "jointime": "2023-3-21" //玩家上次加入的日期(以每日0点为重置点，用于增加VIP等级经验)
+  }
+  //注:玩家VIP倒计时计算方式是("当前时间与玩家上次获取VIP时间的时间差"-"玩家VIP拥有的总时长")
 }
 ```
 

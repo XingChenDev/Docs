@@ -23,23 +23,23 @@
 - 路径: BDS/plugins/Planet/Pmail/config.json
 ```js
 {
-    "version": "1.0.0 Beta 23.04.1801G",  //插件&配置文件版本
-    "score": "money",  //记分板项
-    "firstemail": {  //首次收到的邮件
-        "module": true,  //模块（true或false）
-        "servername": "***服务器",  //服务器名称
-        "title": "欢迎进入服务器",  //邮件标题
-        "content": "欢迎来到***服务器(以下称为:本服),请自觉遵守本服游戏规则,切勿开挂等使用辅助工具,祝你游戏愉快\n\n\n---------***服务器",  //邮件内容
-        "annex": {  //附件
-            "module": false,  //附件模块（true或false）
-            "money": 0,  //LLMoney
-            "score": 100,  //记分板
-            "item": null,  //物品（需要填写MC物品的NBT JSON)
-            "vip": null  //VIP（需要PCsvip插件）
-        },
-        "received": []  //已收到默认邮件的玩家ID
+  "version": "1.0.0 Beta 23.04.1801G", //插件&配置文件版本
+  "score": "money", //记分板项
+  "firstemail": { //首次收到的邮件
+    "module": true, //模块（true或false）
+    "servername": "***服务器", //服务器名称
+    "title": "欢迎进入服务器", //邮件标题
+    "content": "欢迎来到***服务器(以下称为:本服),请自觉遵守本服游戏规则,切勿开挂等使用辅助工具,祝你游戏愉快\n\n\n---------***服务器", //邮件内容
+    "annex": { //附件
+      "module": false, //附件模块（true或false）
+      "money": 0, //LLMoney
+      "score": 100, //记分板
+      "item": null, //物品
+      "vip": null //VIP（需要PCsvip插件）
     },
-    "deadline": 7  //邮件有效期（0为永久有效）
+    "received": [] //已收到默认邮件的玩家ID
+  },
+  "deadline": 7 //邮件有效期（0为永久有效）
 }
 ```
 
@@ -49,19 +49,19 @@
 - 路径: BDS/plugins/Planet/Pmail/inmailbox.json
 ```js
 {
-    "MC Susu2990": [
-        {
-            "mailid": "7270887ac65b4f428b1fa2d335a269da",  //邮件唯一ID
-            "id": "***服务器",  //发件人ID
-            "title": "测试邮件",  //标题
-            "content": "测试全部邮件",  //内容
-            "collect": null,  //附件领取情况（若邮件为纯文字时，该项目为null）
-            "annex": null,  //附件
-            "read": true,  //已读情况（true或false）
-            "sendtime": "2023-04-18 23:32:55",  //邮件发送的时间
-            "retmail": null  //是否为回复邮件（null或"return"）
-        }
-    ]
+  "MC Susu2990": [
+    {
+      "mailid": "7270887ac65b4f428b1fa2d335a269da", //邮件唯一ID
+      "id": "***服务器", //发件人ID
+      "title": "测试邮件", //标题
+      "content": "测试全部邮件", //内容
+      "collect": null, //附件领取情况（若邮件为纯文字时，该项目为null）
+      "annex": null, //附件
+      "read": true, //已读情况（true或false）
+      "sendtime": "2023-04-18 23:32:55", //邮件发送的时间
+      "retmail": null //是否为回复邮件（null或"return"）
+    }
+  ]
 }
 ```
 
@@ -71,16 +71,16 @@
 - 路径: BDS/plugins/Planet/Pmail/outmailbox.json
 ```js
 {
-    "SUNSServer": [
-        {
-            "mailid": "2dbc4e6b369d40e0b8398d873016a430",  //邮件唯一ID
-            "id": "所有玩家",  //收件人ID
-            "title": "测试邮件",  //标题
-            "content": "测试全部邮件",  //内容
-            "annex": null,  //附件
-            "sendtime": "2023-04-18 23:32:55"  //邮件发送时间
-        }
-    ]
+  "SUNSServer": [
+    {
+      "mailid": "2dbc4e6b369d40e0b8398d873016a430", //邮件唯一ID
+      "id": "所有玩家", //收件人ID
+      "title": "测试邮件", //标题
+      "content": "测试全部邮件", //内容
+      "annex": null, //附件
+      "sendtime": "2023-04-18 23:32:55" //邮件发送时间
+    }
+  ]
 }
 ```
 
@@ -90,15 +90,17 @@
 - 路径: BDS/plugins/Planet/Pmail/automailbox.json
 ```js
 {
-   "7270887ac65b4f428b1fa2d335a269da"：{  //邮件唯一ID
-            "id":"***服务器",   //自动发送邮件的发件人（管理员添加时所选身份决定）
-            "title": "测试自动邮件",  //自动发送邮件的标题
-            "content": "测试系统自动发送邮件",  //自动发送邮件的内容
-            "annex": null,  //自动发送邮件的附件
-            "time": "2023-04-20 22:15:36",  //自动发送邮件的添加时间
-            "deadline": 7,  //自动发送邮件的有效期
-            "received": ["SUNSServer"]  //收到自动发送邮件的玩家ID
- }
+  "7270887ac65b4f428b1fa2d335a269da": { //邮件唯一ID
+    "id": "***服务器", //自动发送邮件的发件人（管理员添加时所选身份决定）
+    "title": "测试自动邮件", //自动发送邮件的标题
+    "content": "测试系统自动发送邮件", //自动发送邮件的内容
+    "annex": null, //自动发送邮件的附件
+    "time": "2023-04-20 22:15:36", //自动发送邮件的添加时间
+    "deadline": 7, //自动发送邮件的有效期
+    "received": [
+      "SUNSServer"
+    ] //收到自动发送邮件的玩家ID
+  }
 }
 ```
 

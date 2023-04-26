@@ -47,11 +47,11 @@
 ```js
 //因数据较多,本文档仅展示一条
 {
-     "minecraft:acacia_boat": {  //物品标准类型名
-        "type": "minecraft:acacia_boat",  //物品标准类型名
-        "chinese": "金合欢木船",  //物品的中文名称
-        "path": "textures/items/boat_oak.png"  //物品的贴图路径
-    }
+  "minecraft:acacia_boat": { //物品标准类型名
+    "type": "minecraft:acacia_boat", //物品标准类型名
+    "chinese": "金合欢木船", //物品的中文名称
+    "path": "textures/items/boat_oak.png" //物品的贴图路径
+  }
 }
 ```
 
@@ -61,13 +61,13 @@
 - 路径: BDS/plugins/Planet/Player/Playerdata.json
 ```js
 [
-    {
-        "qqid": "413831175",  //QQ号
-        "gameid": "SUNSServer",  //游戏ID
-        "xuid": "2535450402001250",  //Xuid
-        "bindtime": "2023-04-23 23:09:27",  //绑定时间
-        "firstjoin": "2023-04-23 23:09:00"  //第一次进服时间
-    }
+  {
+    "qqid": "413831175", //QQ号
+    "gameid": "SUNSServer", //游戏ID
+    "xuid": "2535450402001250", //Xuid
+    "bindtime": "2023-04-23 23:09:27", //绑定时间
+    "firstjoin": "2023-04-23 23:09:00" //第一次进服时间
+  }
 ]
 ```
 
@@ -122,10 +122,10 @@
 - 示范
    ```js
    {
-       const PLib = ll.import("PLib","iteminfo")
+    const PLib = ll.import("PLib","iteminfo")
        
-       //获取苹果的中文名称(使用对象属性时,请先加判断)
-       PLib("minecraft:apple").chinese
+    //获取苹果的中文名称(使用对象属性时,请先加判断)
+    PLib("minecraft:apple").chinese
    }
    ```
 
