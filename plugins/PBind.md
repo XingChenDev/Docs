@@ -1,12 +1,8 @@
-## 插件说明
-PBind是一个账号绑定插件，设计之初是因为Serein面板没有绑定账号功能及查服正则换行的不支持，在1.0.6版本后进行了改名，他可以是一个前置插件，有3个导出函数接口。
+> PBind是一个账号绑定插件，设计之初是因为Serein面板没有绑定账号功能及查服正则换行的不支持，在1.0.6版本后进行了改名，他可以是一个前置插件，有3个导出函数接口。
 
 ## 前置组件
 #### 必选
 - [LiteLoaderBDS](https://www.minebbs.com/liteloader/)
-
-#### 可选
-- [PBind](https://www.minebbs.com/resources/pbind.4211/)
 
 ## 配置文件说明
 
