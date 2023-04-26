@@ -34,7 +34,7 @@
             "module": false,  //附件模块（true或false）
             "money": 0,  //LLMoney
             "score": 100,  //记分板
-            "item": null,  //物品
+            "item": null,  //物品（需要填写MC物品的NBT JSON)
             "vip": null  //VIP（需要PCsvip插件）
         },
         "received": []  //已收到默认邮件的玩家ID
