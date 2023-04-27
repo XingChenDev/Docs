@@ -1,8 +1,16 @@
-> [!TIP|style:flat||labelVisibility:hidden|iconVisibility:hidden] PQuery-Serein版是一个基于Serein面板js扩展插件开发的QQ群查询服务器信息的查询插件,省去了添加正则表达式的烦恼,只需要将PQuery-Serein版放置在Serein/plugins文件夹内,打开Serein即可在QQ群进行查询操作，PQuery-Serein版还支持私信机器人查询(与机器人不是好友则需要打开GoCq的运行临时对话)
+> [!TIP|style:flat||labelVisibility:hidden|iconVisibility:hidden] PQuery-Serein版是一个基于Serein面板js扩展插件开发的QQ群查询服务器信息的查询插件,省去了添加正则表达式的烦恼,只需要将PQuery-Serein版放置在Serein/plugins文件夹内,打开Serein即可在QQ群进行查询操作，PQuery-Serein版还支持私信机器人查询(与机器人不是好友则需要打开GoCq的允许临时对话)
 ## 前置组件
 #### 必选
 - [Serein](https://serein.cc/)
 - [PQuery-LLSE版](https://www.minebbs.com/resources/pquery.4021/)
+
+#### 可选
+- [死亡榜/挖掘榜-LLSE版](https://www.minebbs.com/resources/2857/)
+- [PSign-LLSE版](https://www.minebbs.com/resources/psign.4137/)
+- [PCsvip-LLSE版](https://www.minebbs.com/resources/pcsvip.4385/)
+- [PTitle-LLSE版](https://www.minebbs.com/resources/ptitle.4048/)
+- [OnlineTimer-LLS版](https://www.minebbs.com/resources/onlinetimer.2934/)
+- [Ranking-LLSE版](https://www.minebbs.com/resources/2857/)
 
 ## 查询信息变量
 | 变量     | 注释    | 变量     | 注释    | 变量     | 注释    |
