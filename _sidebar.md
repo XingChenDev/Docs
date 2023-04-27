@@ -11,5 +11,6 @@
   - [PStop - 维护系统](plugins/LLSE/PStop)
   - [PTitle - 称号系统](plugins/LLSE/PTitle)
 - [Serein插件](/plugins/Serein/)
+  - [PQuery - 多功能查询](plugins/Serein/PQuery)
   - 敬请期待
 - [关于](About)
