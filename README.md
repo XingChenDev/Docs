@@ -1,4 +1,4 @@
-![](imgs/星辰.png)
+![](imgs/logo/星辰.png)
 ### 首先声明
 
 > [!ATTENTION|label:警告]使用Planet工作室的所有资源意味着你必须遵守
