@@ -1,5 +1,6 @@
 - [首页](README.md)
 - [LLSE插件](/plugins/LLSE/)
+  - [PBank - 银行系统](plugins/LLSE/PBank.md)
   - [PBind - 账号绑定](plugins/LLSE/PBind)
   - [PCDK - 兑换码](plugins/LLSE/PCDK)
   - [PCSVIP - 会员](plugins/LLSE/PCSVIP)
@@ -11,6 +12,7 @@
   - [PStop - 维护系统](plugins/LLSE/PStop)
   - [PTitle - 称号系统](plugins/LLSE/PTitle)
 - [Serein插件](/plugins/Serein/)
+  - [PBank - 银行系统](plugins/Serein/PBank.md)
   - [PQuery - 多功能查询](plugins/Serein/PQuery)
   - 敬请期待
 - [关于](About)
