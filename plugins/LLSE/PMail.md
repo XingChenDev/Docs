@@ -163,11 +163,13 @@
 
 #### 给指定玩家发送一条邮件
 
-`ll.import("PMail", "addnewmail")(name,title,content,[annex])`
+`ll.import("PMail", "addnewmail")(name,id,title,content,[annex])`
 
 - 参数:  
   - name: `String`  
     玩家ID  
+  - id: `String`  
+    发件人ID或名称
   - title: `String`  
     邮件的标题  
   - content: `String`  
@@ -196,6 +198,8 @@
     | ---------------------------------- |
     | "要发送的邮件没有收件人"           |
     | "要发送的邮件没有收件人或不正确"   |
+    | "必须填写发件人"     |
+    | "发件人名字不能为空"     |
     | "要发送的邮件收件人不能是中文"     |
     | "邮件标题不能为空"                 |
     | "邮件内容不能为空"                 |
@@ -208,10 +212,10 @@
     const PMail = ll.import("PMail", "addnewmail");
     
     // 只发送文字邮件
-    PMail("SUNSServer","标题","内容")
+    PMail("SUNSServer","发件人","标题","内容")
     
     // 发送带附件的邮件
-    PMail("SUNSServer","标题","内容",{money:100})
-    PMail("SUNSServer","标题","内容",{money:100,score:100})
-    PMail("SUNSServer","标题","内容",{vip:7})
+    PMail("SUNSServer","发件人","标题","内容",{money:100})
+    PMail("SUNSServer","发件人","内容",{money:100,score:100})
+    PMail("SUNSServer","发件人","内容",{vip:7})
     ```
