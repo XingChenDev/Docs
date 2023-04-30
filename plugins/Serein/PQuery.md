@@ -5,7 +5,7 @@
 - [PQuery-LLSE版](https://www.minebbs.com/resources/pquery.4021/)
 
 #### 可选
-- [死亡榜/挖掘榜-LLSE版](https://www.minebbs.com/resources/2857/)
+- [死亡榜/挖掘榜-LLSE版](https://www.minebbs.com/resources/ranking.3568/)
 - [PSign-LLSE版](https://www.minebbs.com/resources/psign.4137/)
 - [PCsvip-LLSE版](https://www.minebbs.com/resources/pcsvip.4385/)
 - [PTitle-LLSE版](https://www.minebbs.com/resources/ptitle.4048/)
