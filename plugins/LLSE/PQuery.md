@@ -5,12 +5,12 @@
 - [LiteLoaderBDS](https://www.minebbs.com/liteloader/)
 
 #### 可选
-- [死亡榜/挖掘榜](https://www.minebbs.com/resources/ranking.3568/)
+- [死亡榜/挖掘榜](https://www.minebbs.com/resources/2857/)
 - [PSign](https://www.minebbs.com/resources/psign.4137/)
 - [PCsvip](https://www.minebbs.com/resources/pcsvip.4385/)
 - [PTitle](https://www.minebbs.com/resources/ptitle.4048/)
 - [OnlineTimer](https://www.minebbs.com/resources/onlinetimer.2934/)
-- [Ranking](https://www.minebbs.com/resources/2857/)
+- [Ranking](https://www.minebbs.com/resources/ranking.3568/)
 
 ## 查询信息变量
 | 变量     | 注释    | 变量     | 注释    | 变量     | 注释    |
