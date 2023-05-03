@@ -25,6 +25,7 @@
 ```
 
 ## API
+?> PBind提供了3个接口
 
 #### 通过QQ号获取账号对象
 `ll.import("PBind","qqdata")(qq)`

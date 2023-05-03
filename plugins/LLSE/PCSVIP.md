@@ -114,6 +114,7 @@
 ```
 
 ## API
+?> PCsvip提供了10个接口
 
 #### 获取指定玩家VIP身份
 `ll.import("vipplayer")(name)`
@@ -162,7 +163,6 @@
     玩家的名字
 - 返回值: 玩家是否是VIP
 - 返回值类型: `Objevt`  
-
 #### 数据属性
 |属性|含义|类型|返回值示范|
 |---|---|---|---|
@@ -196,7 +196,7 @@
   - exp: `Number`  
     要减少的经验值
 
-#### 增加指定玩家VIP积分(新)
+#### 增加指定玩家VIP积分
 `ll.import("PCsvip", "addvipintegral")(name,int)`
 - 参数:
   - name: `String` 
@@ -204,7 +204,7 @@
   - int: `Number`  
     要增加的积分
 
-#### 减少指定玩家VIP积分(新)
+#### 减少指定玩家VIP积分
 `ll.import("PCsvip", "reducevipintegral")(name,int)`
 - 参数:
   - name: `String` 
@@ -212,7 +212,7 @@
   - int: `Number`  
     要增加的积分
 
-#### 增加指定玩家VIP时间(新)
+#### 增加指定玩家VIP时间
 `ll.import("PCsvip", "addviptime")(name,time)`
 - 参数:
   - name: `String` 
@@ -220,7 +220,7 @@
   - time: `Number`  
     要增加的时间(单位:天)
 
-#### 减少指定玩家VIP时间(新)
+#### 减少指定玩家VIP时间
 `ll.import("PCsvip", "reduceviptime")(name,time)`
 - 参数:
   - name: `String` 

@@ -205,6 +205,7 @@
 ```
 
 ## API
+?> PTitle提供了6个接口
 
 #### 获取玩家当前佩戴称号
 `ll.import("getwearch")(name)`  

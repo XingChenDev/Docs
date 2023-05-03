@@ -52,8 +52,7 @@
 ```
 
 ## API
-
-> [!ATTENTION] PSign提供了8个接口
+?> PSign提供了8个接口
 
 #### 获取所有玩家签到数据
 `ll.import("PSign", "all")()`
