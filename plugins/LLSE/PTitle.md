@@ -4,20 +4,44 @@
 #### 必选
 - [LiteLoaderBDS](https://www.minebbs.com/liteloader/)
 
+#### 可选
+- [BEPlaceholderAPI](https://www.minebbs.com/resources/beplaceholderapi.4181/)
+
 ## 注册指令说明
 `/ch` - 我的称号  
 `/chshop` - 称号商城  
 `/dech` - 删除称号  
 `/chset` - 称号设置  
 
-## 聊天界面变量
+## 聊天界面变量 (支持`BEPlaceholderAPI`所有注册变量) 
+- `v2.0.0 Beta 23.05.0617M`开始支持
+
+> [!ATTENTION] 使用`BEPlaceholderAPI`公共变量需要安装`BEPlaceholderAPI`插件
+
+#### 自带变量
 | 变量     | 注释    | 变量     | 注释    |
 | --------| -------- | -------- | -------- |
 | `{score}` | 计分板   | `{money}`  | LLMoney |
 | `{world}` | 玩家所在的世界维度 | `{vip}` | 玩家是否拥有VIP身份(需要安装PCsvip插件) |
 | `{ping}` | 玩家实时延迟 | `{os}` | 玩家设备系统 |
-| `{time}`| 当前时间 | `{name}` | 玩家ID |
-| `{msg}` | 玩家发送的消息|
+|`{ch}`|玩家当前佩戴的称号| `{time}`| 当前时间 |
+| `{name}` | 玩家ID | `{msg}` | 玩家发送的消息|
+|`{PAPI.PT_Wearch:pl}`|PTitle注册的PAPI变量（玩家当前佩戴的称号）|
+  - `PT_Wearch`变量是PTitle在PAPI上注册的公共变量,他可以被用在其他支持PAPI的插件中,详细使用方式已目标插件为准
+  - yoyo的[`BetterSidebar`](https://www.minebbs.com/resources/bettersidebar.3071/)中使用方式: `{js:PAPI.getValueByPlayer('PT_Wearch',pl.xuid)}`
+
+#### 使用`BEPlaceholderAPI`变量方法
+
+> [!ATTENTION] 使用非`BEPlaceholderAPI`自带的公共变量时需要安装对应的插件
+
+|PAPI变量|注释|提示|示范|
+|-------|-------|-------|-------|
+|`player_realname`|PAPI自带变量(玩家的真实名称)|这个变量需要玩家对象|`{PAPI.player_realname:pl}`|
+|`server_version`|PAPI自带变量(服务器版本)|这个变量不需要玩家对象|`{PAPI.server_version}`|
+|`pexp_lvl`|[`PlayerExp`](https://www.minebbs.com/resources/playerexp.5852/)插件注册变量(玩家的等级)|这变量需要玩家对象|`{PAPI.pexp_lvl:pl}`|
+|`PlayerTeamName`|[`DTeam`](https://www.minebbs.com/resources/dteam.4999/)插件注册变量(玩家所在的队伍名称)|这个变量需要玩家对象|`{PAPI.PlayerTeamName:pl}`|
+
+  - 使用PAPI变量时,若需要玩家对象,需在变量后面加上`:pl`,若不需要则不加
 
 ## 配置文件说明
 
