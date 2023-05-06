@@ -29,6 +29,7 @@
 |`{PAPI.PT_Wearch:pl}`|PTitle注册的PAPI变量（玩家当前佩戴的称号）|
   - `PT_Wearch`变量是PTitle在PAPI上注册的公共变量,他可以被用在其他支持PAPI的插件中,详细使用方式已目标插件为准
   - yoyo的[`BetterSidebar`](https://www.minebbs.com/resources/bettersidebar.3071/)中使用方式: `{js:PAPI.getValueByPlayer('PT_Wearch',pl.xuid)}`
+  - Huohua的[`HeadShow`](https://www.minebbs.com/resources/headshow.3405/)中使用方式: `%PT_Wearch%`
 
 #### 使用`BEPlaceholderAPI`变量方法
 
