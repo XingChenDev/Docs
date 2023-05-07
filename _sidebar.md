@@ -2,7 +2,7 @@
 - [LLSE插件](/plugins/LLSE/)
   - [PBank - 银行系统](plugins/LLSE/PBank)
   - [PBind - 账号绑定](plugins/LLSE/PBind)
-  - [PCdk - 兑换码](plugins/LLSE/Pcdk)
+  - [PCdk - 兑换码](plugins/LLSE/PCdk)
   - [PCsvip - 会员](plugins/LLSE/PCsvip)
   - [PLib - 数据库](plugins/LLSE/PLib)
   - [PMail - 邮箱&邮件系统](plugins/LLSE/PMail)
