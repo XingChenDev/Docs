@@ -86,4 +86,4 @@
 
 ## API
 
-> [!ATTENTION] PQuery没有提供外接接口
+> [!ATTENTION] PCdk没有提供外接接口
