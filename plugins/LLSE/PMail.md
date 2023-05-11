@@ -1,13 +1,18 @@
-> [!TIP|style:flat||labelVisibility:hidden|iconVisibility:hidden] PMail是一个服内的邮箱&邮件系统，支持玩家互发邮件，可附带附件(物品&经济&记分板)，也可由管理员使用自己或服务器的身份向进入过服务器（需要`PLib插件`）的所有玩家发送邮件，或添加自动邮件，玩家下次进服即可收到来自系统自动的邮件，我们还为PMail开通了导出接口供其他开发者使用，可通过第三方插件调用接口发送邮件等。
+> [!TIP|style:flat||labelVisibility:hidden|iconVisibility:hidden
+] PMail是一个服内的邮箱&邮件系统，支持玩家互发邮件，可附带附件(物品&经济&记分板)，也可由管理员使用自己或服务器的身份向进入过服务器（需要`PLib插件`）的所有玩家发送邮件，或添加自动邮件，玩家下次进服即可收到来自系统自动的邮件，我们还为PMail开通了导出接口供其他开发者使用，可通过第三方插件调用接口发送邮件等。
 
 ## 前置组件
 #### 必选
-- [LiteLoaderBDS](https://www.minebbs.com/liteloader/)
+- [LiteLoaderBDS
+](https: //www.minebbs.com/liteloader/)
 
 #### 可选
-- [PCsvip](https://www.minebbs.com/resources/pcsvip.4385/)
-- [PBind](https://www.minebbs.com/resources/pbind.4211/) 建议使用
-- [PLib](https://www.minebbs.com/resources/plib-planet.4523/) 建议使用
+- [PCsvip
+](https: //www.minebbs.com/resources/pcsvip.4385/)
+- [PBind
+](https: //www.minebbs.com/resources/pbind.4211/) 建议使用
+- [PLib
+](https: //www.minebbs.com/resources/plib-planet.4523/) 建议使用
 
 ## 注册指令说明
 /mail - 邮箱  
@@ -15,7 +20,8 @@
 
 ## 配置文件说明
 
-> [!ATTENTION] 更改配置文件请注意 JSON 文件格式，不推荐使用记事本修改或添加菜单文件解析
+> [!ATTENTION
+] 更改配置文件请注意 JSON 文件格式，不推荐使用记事本修改或添加菜单文件解析
 
 #### `config`文件
 
@@ -109,7 +115,8 @@
 
 #### 获取指定玩家收件箱  
 
-`ll.import("PMail", "getinmailbox")(name)`
+`ll.import("PMail",
+"getinmailbox")(name)`
 
 - 参数：
   - name : `String`  
@@ -120,14 +127,16 @@
 
 - 示例：  
     ```js
-    const PMail = ll.import("PMail", "getinmailbox");
+    const PMail = ll.import("PMail",
+"getinmailbox");
     
     PMail("SUNSServer")
     ```
 
 #### 获取指定玩家已发送邮件  
 
-`ll.import("PMail", "getoutmailbox")(name)`  
+`ll.import("PMail",
+"getoutmailbox")(name)`  
 
 - 参数：
   - name : `String`  
@@ -138,14 +147,16 @@
 
 - 示例：  
     ```js
-    const PMail = ll.import("PMail", "getoutmailbox");
+    const PMail = ll.import("PMail",
+"getoutmailbox");
     
     PMail("SUNSServer")
     ```
 
 #### 获取指定玩家邮件数量 
 
-`ll.import("PMail", "getmailcount")(name)`
+`ll.import("PMail",
+"getmailcount")(name)`
 
 - 参数：
   - name : `String`  
@@ -155,14 +166,18 @@
 
 - 示例：  
     ```js
-    const PMail = ll.import("PMail", "getmailcount");
+    const PMail = ll.import("PMail",
+"getmailcount");
     
     PMail("SUNSServer")
     ```
 
 #### 给指定玩家发送一条邮件
 
-`ll.import("PMail", "addnewmail")(name,id,title,content,[annex])`
+`ll.import("PMail",
+"addnewmail")(name,id,title,content,
+[annex
+])`
 
 - 参数:  
   - name: `String`  
@@ -179,10 +194,10 @@
 
     | annex参数 | 参数含义           | 参数类型 |
     | --------- | ------------------ | -------- |
-    | money:100 | 附件LLMoney数量    | `Number` |
-    | score:100 | 附件记分板数量     | `Number` |
+    | money: 100 | 附件LLMoney数量    | `Number` |
+    | score: 100 | 附件记分板数量     | `Number` |
     | item:Null | 附件MC物品NBT JSON | `Object` |
-    | vip:7     | 附件VIP天数        | `Number` |
+    | vip: 7     | 附件VIP天数        | `Number` |
 
 - 返回值: 邮件发送结果的对象  
 - 返回值类型: `Object`
@@ -208,20 +223,38 @@
 
 - 示例：  
     ```js
-    const PMail = ll.import("PMail", "addnewmail");
+    const PMail = ll.import("PMail",
+"addnewmail");
     
     // 只发送文字邮件
-    PMail("SUNSServer","发件人","标题","内容")
+    PMail("SUNSServer",
+"发件人",
+"标题",
+"内容")
     
     // 发送带附件的邮件
-    PMail("SUNSServer","发件人","标题","内容",{money:100})
-    PMail("SUNSServer","发件人","内容",{money:100,score:100})
-    PMail("SUNSServer","发件人","内容",{vip:7})
+    PMail("SUNSServer",
+"发件人",
+"标题",
+"内容",
+{money: 100
+})
+    PMail("SUNSServer",
+"发件人",
+"内容",
+{money: 100,score: 100
+})
+    PMail("SUNSServer",
+"发件人",
+"内容",
+{vip: 7
+})
     ```
 
 #### 注册系统发件人 `1.0.5`版支持
 
-`ll.import("PMail", "regsystem")(name)`
+`ll.import("PMail",
+"regsystem")(name)`
 > 这个接口主要是为了PMail筛选收件箱的系统发件人、避免玩家回复系统邮件
 
 - 参数:  
@@ -244,7 +277,9 @@
 
 - 示例：  
     ```js
-    const PMail = ll.import("PMail", "regsystem");
+    const PMail = ll.import("PMail",
+"regsystem");
     
-    PMail("SUNSServer","系统")
+    PMail("SUNSServer",
+"系统")
     ```

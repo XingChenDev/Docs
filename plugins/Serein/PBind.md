@@ -15,19 +15,19 @@
 - 路径: Serein/plugins/PBind/config.json
 ```js
 {
-    "version": "1.0", //插件版本
-    "BDcmd": "绑定", //绑定指令
-    "JBcmd": "解绑",  //解绑指令
-    "BDwjcmd": "绑定玩家",  //绑定玩家指令
-    "TJwhite": "添加白名单",  //添加白名单指令
-    "YCwhite": "移除白名单",  //移除白名单指令
-    "CXBind": "查询绑定",  //查询绑定指令
-    "PrivateChat": {  //私信机器功能
-        "module": false,  //模块开关(true或false)
-        "admin": [  //私信机器人的管理员身份
-            1031648245
-        ]
-    }
+  "version": "1.0", //插件版本
+  "BDcmd": "绑定", //绑定指令
+  "JBcmd": "解绑", //解绑指令
+  "BDwjcmd": "绑定玩家", //绑定玩家指令
+  "TJwhite": "添加白名单", //添加白名单指令
+  "YCwhite": "移除白名单", //移除白名单指令
+  "CXBind": "查询绑定", //查询绑定指令
+  "PrivateChat": { //私信机器功能
+    "module": false, //模块开关(true或false)
+    "admin": [ //私信机器人的管理员身份
+      1031648245
+    ]
+  }
 }
 ```
 

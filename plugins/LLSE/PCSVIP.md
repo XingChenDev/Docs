@@ -1,19 +1,24 @@
-> [!TIP|style:flat||labelVisibility:hidden|iconVisibility:hidden] PCsvip是我们接手苍山工作室的CSvip的后期维护插件,我们接手后对PCsvip进行了重新规划,将他视为前置插件使用，移除了多余的功能,开放多个外接接口实现多元化操作。
+> [!TIP|style:flat||labelVisibility:hidden|iconVisibility:hidden
+] PCsvip是我们接手苍山工作室的CSvip的后期维护插件,我们接手后对PCsvip进行了重新规划,将他视为前置插件使用，移除了多余的功能,开放多个外接接口实现多元化操作。
 
 ## 前置组件
 #### 必选
-- [LiteLoaderBDS](https://www.minebbs.com/liteloader/)
+- [LiteLoaderBDS
+](https: //www.minebbs.com/liteloader/)
 
 #### 可选&建议
-- [PBind](https://www.minebbs.com/resources/pbind.4211/) 建议使用
-- [PLib](https://www.minebbs.com/resources/plib-planet.4523/) 建议使用
+- [PBind
+](https: //www.minebbs.com/resources/pbind.4211/) 建议使用
+- [PLib
+](https: //www.minebbs.com/resources/plib-planet.4523/) 建议使用
 
 ## 注册指令说明
 `/myvip` - 我的VIP 游戏内执行  
 `/vipshop` - VIP商城	游戏内执行  
 `/vipset` - VIP管理	游戏内执行  
 `/viphelp` - 关于插件 游戏内执行  
-`/vip add (玩家ID/QQ号) [天数]` - 控制台添加VIP	控制台操作，"[]"内为选填  
+`/vip add (玩家ID/QQ号) [天数
+]` - 控制台添加VIP	控制台操作，"[]"内为选填  
 #### 示例
 `/vip add SUNSServer`
 `/vip add SUNSServer 7`
@@ -44,28 +49,34 @@
 - `2.0.0  Beta 23.05.0915O`
 ```js
 {
-    "version": "v2.0.0 Beta 23.05.0915O", //插件版本
-    "money": 0, //经济模式(0为计分板，1为LLMoney)
-    "score": "money",
-    "buyswitch": 1, //购买/续费VIP开关(0为关闭，1为开启)
-    "viptime": 7, //VIP默认时长(管理员手动添加的时长(单位:天))
-    "viptitle": [  //注册PAPI的变量返回值
-        "至尊VIP",  //玩家是VIP时的返回文本
-        "非VIP"  //玩家不是VIP时的返回完本
+  "version": "v2.0.0 Beta 23.05.0915O", //插件版本
+  "money": 0, //经济模式(0为计分板，1为LLMoney)
+  "score": "money",
+  "buyswitch": 1, //购买/续费VIP开关(0为关闭，1为开启)
+  "viptime": 7, //VIP默认时长(管理员手动添加的时长(单位:天))
+  "viptitle": [ //注册PAPI的变量返回值
+    "至尊VIP", //玩家是VIP时的返回文本
+    "非VIP" //玩家不是VIP时的返回完本
+  ],
+  "lizi": "minecraft:arrow_spell_emitter", //vip默认粒子(根据MC原版的id来填写，可在PLib的lizi配置文件中复制lizimcid的配置项粘贴到这里)
+  "blacklist": [], //VIP黑名单(禁止一些玩家购买VIP)
+  "viplevel": { //VIP等级
+    //每级经验与等级数量 数组内的数量表示了VIP最高等级,例如下面有5给数值表示了VIP等级最高为5级
+    //每个数值表示升级所需的经验,例如从1级升到2级需要300经验、2级升3级需要600经验以此类推
+    //1级必须为0,否则会报错
+    "exp": [
+      0,
+      100,
+      300,
+      600,
+      1000
     ],
-    "lizi": "minecraft:arrow_spell_emitter",//vip默认粒子(根据MC原版的id来填写，可在PLib的lizi配置文件中复制lizimcid的配置项粘贴到这里)
-    "blacklist": [], //VIP黑名单(禁止一些玩家购买VIP)
-    "viplevel": { //VIP等级
-         //每级经验与等级数量 数组内的数量表示了VIP最高等级,例如下面有5给数值表示了VIP等级最高为5级
-         //每个数值表示升级所需的经验,例如从1级升到2级需要300经验、2级升3级需要600经验以此类推
-         //1级必须为0,否则会报错
-        "exp": [0, 100, 300, 600, 1000],
-        "expratio": {  //升级、降级的经验
-            "up": 10,  //每日首次登陆服务器所获得的当日经验（VIP为满级时不会获取)
-            "down": 20  //当玩家失去VIP后起,每日首次登陆服务器将会扣除所积累的经验
-        }
-    },
-    "upintegral": 10  //好像时历史遗留没有清除,下个版本删
+    "expratio": { //升级、降级的经验
+      "up": 10, //每日首次登陆服务器所获得的当日经验（VIP为满级时不会获取)
+      "down": 20 //当玩家失去VIP后起,每日首次登陆服务器将会扣除所积累的经验
+    }
+  },
+  "upintegral": 10 //好像时历史遗留没有清除,下个版本删
 }
 ```
 - `2.0.0  Beta 23.03.0725Q`
@@ -156,14 +167,16 @@
   - 如果返回 `false` 则表示不是
 
 #### 获取所有玩家VIP数据
-`ll.import("PCsvip", "getall")()`
+`ll.import("PCsvip",
+"getall")()`
 
 - 返回值: 所有VIP玩家数据  
 - 返回值类型: `Object`
   - 如果返回 `{}` 则表示没有数据
 
 #### 获取指定玩家原始VIP数据
-`ll.import("PCsvip", "getvipdata")(name)`
+`ll.import("PCsvip",
+"getvipdata")(name)`
 
 - 参数:
   - name: `String`  
@@ -181,11 +194,12 @@
 |integral|VIP积分|`Number`|40|
 |viptitle|VIP称号|`String`|§cVIP|
 |viptime|VIP有效时长|`Number`|1|
-|gattime|VIP有效期内最早获取时间|`String`|2022-07-26 20:03:16|
+|gattime|VIP有效期内最早获取时间|`String`|2022-07-26 20: 03: 16|
   - 如果返回 `Null` 则表示没有数据  
 
 #### 获取指定玩家中文VIP数据(新)
-`ll.import("PCsvip", "getvipdataChinese")(name)`
+`ll.import("PCsvip",
+"getvipdataChinese")(name)`
 
 - 参数:
   - realname: String  
@@ -205,11 +219,12 @@
 |viptitle|VIP称号|`String`|§cVIP|
 |viptime|VIP有效时长|`String`|1天|
 |surplus|剩余时长|`String`|1天|
-|gattime|VIP有效期内最早获取时间|`String`|2022-07-26 20:03:16|
+|gattime|VIP有效期内最早获取时间|`String`|2022-07-26 20: 03: 16|
   - 如果返回 `Null` 则表示没有数据  
 
 #### 增加指定玩家VIP经验(暂时关闭)
-`ll.import("PCsvip", "addviplevelexp")(name,exp)`
+`ll.import("PCsvip",
+"addviplevelexp")(name,exp)`
 
 - 参数:
   - name: `String`  
@@ -218,7 +233,8 @@
     要增加的经验值
 
 #### 减少指定玩家VIP经验(暂时关闭)
-`ll.import("PCsvip", "reduceviplevelexp")(name,exp)`
+`ll.import("PCsvip",
+"reduceviplevelexp")(name,exp)`
 - 参数:
   - name: `String`  
     玩家的名字
@@ -226,7 +242,8 @@
     要减少的经验值
 
 #### 增加指定玩家VIP积分
-`ll.import("PCsvip", "addvipintegral")(name,int)`
+`ll.import("PCsvip",
+"addvipintegral")(name,int)`
 - 参数:
   - name: `String` 
     玩家的名字
@@ -234,7 +251,8 @@
     要增加的积分
 
 #### 减少指定玩家VIP积分
-`ll.import("PCsvip", "reducevipintegral")(name,int)`
+`ll.import("PCsvip",
+"reducevipintegral")(name,int)`
 - 参数:
   - name: `String` 
     玩家的名字
@@ -242,7 +260,8 @@
     要增加的积分
 
 #### 增加指定玩家VIP时间
-`ll.import("PCsvip", "addviptime")(name,time)`
+`ll.import("PCsvip",
+"addviptime")(name,time)`
 - 参数:
   - name: `String` 
     玩家的名字
@@ -250,7 +269,8 @@
     要增加的时间(单位:天)
 
 #### 减少指定玩家VIP时间
-`ll.import("PCsvip", "reduceviptime")(name,time)`
+`ll.import("PCsvip",
+"reduceviptime")(name,time)`
 - 参数:
   - name: `String` 
     玩家的名字

@@ -1,15 +1,19 @@
-> [!TIP|style:flat||labelVisibility:hidden|iconVisibility:hidden] PLib是Planet工作室插件的一个前置插件之一，主要供应“P”系列插件共享数据的对接。
+> [!TIP|style:flat||labelVisibility:hidden|iconVisibility:hidden
+] PLib是Planet工作室插件的一个前置插件之一，主要供应“P”系列插件共享数据的对接。
 
 ## 前置组件
 #### 必选
-- [LiteLoaderBDS](https://www.minebbs.com/liteloader/)
+- [LiteLoaderBDS
+](https: //www.minebbs.com/liteloader/)
 
 #### 可选
-- [PBind](https://www.minebbs.com/resources/pbind.4211/) 
+- [PBind
+](https: //www.minebbs.com/resources/pbind.4211/) 
 
 ## 配置文件说明
 
-> [!ATTENTION] 更改配置文件请注意 JSON 文件格式，不推荐使用记事本修改或添加菜单文件解析
+> [!ATTENTION
+] 更改配置文件请注意 JSON 文件格式，不推荐使用记事本修改或添加菜单文件解析
 
 #### `buffdata`文件
 
@@ -17,12 +21,12 @@
 - 路径: BDS/plugins/Planet/PLibrary/buffdata.json
 ```js
 // 因数据较多,本文档仅展示一条
-[ 
-    {
-        "buffname": "伤害吸收",  //buff的中文名称
-        "buffmcid": "absorption",  //buff的MCID
-        "path": "textures/ui/absorption_effect"  //buff的贴图路径
-    }
+[
+  {
+    "buffname": "伤害吸收", //buff的中文名称
+    "buffmcid": "absorption", //buff的MCID
+    "path": "textures/ui/absorption_effect" //buff的贴图路径
+  }
 ]
 ```
 
@@ -33,10 +37,10 @@
 ```js
 // 因数据较多,本文档仅展示一条
 [
-    {
-        "liziname": "黑药水气泡",  //粒子的中文名称
-        "lizimcid": "minecraft:arrow_spell_emitter"  //粒子的标准类型名
-    }
+  {
+    "liziname": "黑药水气泡", //粒子的中文名称
+    "lizimcid": "minecraft:arrow_spell_emitter" //粒子的标准类型名
+  }
 ]
 ```
 
@@ -75,7 +79,8 @@
 ?> PLib提供了4个接口 
 
 #### 获取buff库数据
-`ll.import("PLib","buffdata")()`
+`ll.import("PLib",
+"buffdata")()`
 
 - 返回值: buff库数据列表
 - 返回值类型: Array<Object,Object,...>
@@ -90,7 +95,8 @@
 
 #### 获取粒子库数据
 
-`ll.import("PLib","lizidata")()`
+`ll.import("PLib",
+"lizidata")()`
 
 - 返回值: 粒子库数据列表
 - 返回值类型: Array<Object,Object,...>
@@ -122,16 +128,18 @@
 - 示范
    ```js
    {
-    const PLib = ll.import("PLib","iteminfo")
+    const PLib = ll.import("PLib",
+  "iteminfo")
        
     //获取苹果的中文名称(使用对象属性时,请先加判断)
     PLib("minecraft:apple").chinese
-   }
+}
    ```
 
 #### 获取玩家信息数据
 
-`ll.import("PLib", "getplayer")()`
+`ll.import("PLib",
+"getplayer")()`
 
 - 返回值 本服务器所有玩家数据
 - 返回值类型 Array<Object,Object,...>

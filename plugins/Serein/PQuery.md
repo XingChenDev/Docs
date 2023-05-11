@@ -35,13 +35,13 @@
 - 路径: Serein/plugins/PQuery/config.json
 ```js
 {
-    "version": "1.1",//插件版本
-    "GroupChat": {//QQ群指令
-        "Cxcmd": "查询",//查询指令
-        "Cwjcmd": "查玩家",//查询玩家指令
-        "PHB": {//查询排行榜
-            "module": true,//模块开关
-            "PHBmenu": "排行榜菜单\n☆进服排行☆等级排行☆\n☆计分板排行☆money排行☆\n☆死亡排行☆挖掘排行☆\n☆时长排行☆签到排行☆",//排行榜菜单
+    "version": "1.1", //插件版本
+    "GroupChat": { //QQ群指令
+        "Cxcmd": "查询", //查询指令
+        "Cwjcmd": "查玩家", //查询玩家指令
+        "PHB": { //查询排行榜
+            "module": true, //模块开关
+            "PHBmenu": "排行榜菜单\n☆进服排行☆等级排行☆\n☆计分板排行☆money排行☆\n☆死亡排行☆挖掘排行☆\n☆时长排行☆签到排行☆", //排行榜菜单
             "Moneyranking": "Money排行",
             "JFBranking": "计分板排行",
             "JFranking": "进服排行",
@@ -52,7 +52,7 @@
             "QDranking": "签到排行"
         }
     },
-    "PrivateChat": {//私信指令
+    "PrivateChat": { //私信指令
         "Cxcmd": "查询",
         "admin": [ //私信的管理员QQ号
             114514
