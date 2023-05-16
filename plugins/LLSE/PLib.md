@@ -3,17 +3,14 @@
 
 ## 前置组件
 #### 必选
-- [LiteLoaderBDS
-](https: //www.minebbs.com/liteloader/)
+- [LiteLoaderBDS](https: //www.minebbs.com/liteloader/)
 
 #### 可选
-- [PBind
-](https: //www.minebbs.com/resources/pbind.4211/) 
+- [PBind](https: //www.minebbs.com/resources/pbind.4211/) 
 
 ## 配置文件说明
 
-> [!ATTENTION
-] 更改配置文件请注意 JSON 文件格式，不推荐使用记事本修改或添加菜单文件解析
+> [!ATTENTION] 更改配置文件请注意 JSON 文件格式，不推荐使用记事本修改或添加菜单文件解析
 
 #### `buffdata`文件
 

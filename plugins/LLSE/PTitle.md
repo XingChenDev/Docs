@@ -39,7 +39,7 @@
 |-------|-------|-------|-------|
 |`player_realname`|PAPI自带变量(玩家的真实名称)|这个变量需要玩家对象|`{PAPI.player_realname:pl}`|
 |`server_version`|PAPI自带变量(服务器版本)|这个变量不需要玩家对象|`{PAPI.server_version}`|
-|`pexp_lvl`|[`PlayerExp`](https://www.minebbs.com/resources/playerexp.5852/)插件注册变量(玩家的等级)|这变量需要玩家对象|`{PAPI.pexp_lvl:pl}`|
+|`pexp_lvl`|[`PlayerExp`](https://www.minebbs.com/resources/playerexp.5852/)插件注册变量(玩家的等级)|这个变量需要玩家对象|`{PAPI.pexp_lvl:pl}`|
 |`PlayerTeamName`|[`DTeam`](https://www.minebbs.com/resources/dteam.4999/)插件注册变量(玩家所在的队伍名称)|这个变量需要玩家对象|`{PAPI.PlayerTeamName:pl}`|
 
   - 使用PAPI变量时,若需要玩家对象,需在变量后面加上`:pl`,若不需要则不加

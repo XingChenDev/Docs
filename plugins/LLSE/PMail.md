@@ -1,18 +1,13 @@
-> [!TIP|style:flat||labelVisibility:hidden|iconVisibility:hidden
-] PMail是一个服内的邮箱&邮件系统，支持玩家互发邮件，可附带附件(物品&经济&记分板)，也可由管理员使用自己或服务器的身份向进入过服务器（需要`PLib插件`）的所有玩家发送邮件，或添加自动邮件，玩家下次进服即可收到来自系统自动的邮件，我们还为PMail开通了导出接口供其他开发者使用，可通过第三方插件调用接口发送邮件等。
+> [!TIP|style:flat||labelVisibility:hidden|iconVisibility:hidden] PMail是一个服内的邮箱&邮件系统，支持玩家互发邮件，可附带附件(物品&经济&记分板)，也可由管理员使用自己或服务器的身份向进入过服务器（需要`PLib插件`）的所有玩家发送邮件，或添加自动邮件，玩家下次进服即可收到来自系统自动的邮件，我们还为PMail开通了导出接口供其他开发者使用，可通过第三方插件调用接口发送邮件等。
 
 ## 前置组件
 #### 必选
-- [LiteLoaderBDS
-](https: //www.minebbs.com/liteloader/)
+- [LiteLoaderBDS](https: //www.minebbs.com/liteloader/)
 
 #### 可选
-- [PCsvip
-](https: //www.minebbs.com/resources/pcsvip.4385/)
-- [PBind
-](https: //www.minebbs.com/resources/pbind.4211/) 建议使用
-- [PLib
-](https: //www.minebbs.com/resources/plib-planet.4523/) 建议使用
+- [PCsvip](https: //www.minebbs.com/resources/pcsvip.4385/)
+- [PBind](https: //www.minebbs.com/resources/pbind.4211/) 建议使用
+- [PLib](https: //www.minebbs.com/resources/plib-planet.4523/) 建议使用
 
 ## 注册指令说明
 /mail - 邮箱  
@@ -20,8 +15,7 @@
 
 ## 配置文件说明
 
-> [!ATTENTION
-] 更改配置文件请注意 JSON 文件格式，不推荐使用记事本修改或添加菜单文件解析
+> [!ATTENTION] 更改配置文件请注意 JSON 文件格式，不推荐使用记事本修改或添加菜单文件解析
 
 #### `config`文件
 

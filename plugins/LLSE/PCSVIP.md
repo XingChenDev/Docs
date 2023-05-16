@@ -1,16 +1,12 @@
-> [!TIP|style:flat||labelVisibility:hidden|iconVisibility:hidden
-] PCsvip是我们接手苍山工作室的CSvip的后期维护插件,我们接手后对PCsvip进行了重新规划,将他视为前置插件使用，移除了多余的功能,开放多个外接接口实现多元化操作。
+> [!TIP|style:flat||labelVisibility:hidden|iconVisibility:hidden] PCsvip是我们接手苍山工作室的CSvip的后期维护插件,我们接手后对PCsvip进行了重新规划,将他视为前置插件使用，移除了多余的功能,开放多个外接接口实现多元化操作。
 
 ## 前置组件
 #### 必选
-- [LiteLoaderBDS
-](https: //www.minebbs.com/liteloader/)
+- [LiteLoaderBDS](https: //www.minebbs.com/liteloader/)
 
 #### 可选&建议
-- [PBind
-](https: //www.minebbs.com/resources/pbind.4211/) 建议使用
-- [PLib
-](https: //www.minebbs.com/resources/plib-planet.4523/) 建议使用
+- [PBind](https: //www.minebbs.com/resources/pbind.4211/) 建议使用
+- [PLib](https: //www.minebbs.com/resources/plib-planet.4523/) 建议使用
 
 ## 注册指令说明
 `/myvip` - 我的VIP 游戏内执行  
