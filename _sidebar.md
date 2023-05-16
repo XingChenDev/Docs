@@ -8,6 +8,7 @@
   - [PMail - 邮箱&邮件系统](plugins/LLSE/PMail)
   - [PMenu - 菜单](plugins/LLSE/PMenu)
   - [PQuery - 多功能查询](plugins/LLSE/PQuery)
+  - [PShop - 商店插件](plugins/LLSE/PShop)
   - [PSign - 签到](plugins/LLSE/PSign)
   - [PStop - 维护系统](plugins/LLSE/PStop)
   - [PTitle - 称号系统](plugins/LLSE/PTitle)
