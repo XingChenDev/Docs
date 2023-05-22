@@ -15,6 +15,18 @@
 
 > [!ATTENTION] 更改配置文件请注意 JSON 文件格式，不推荐使用记事本修改或添加菜单文件解析
 
+#### `config`文件
+
+- 插件基础配置文件
+- 路径: BDS/plugins/Planet/PLibrary/config.json
+```js
+{
+    "version": "v1.0.6",  //插件版本
+    "historydata": 102,  //历史玩家数量
+    "dailyadddata": 102  //当日玩家数量
+}
+```
+
 #### `buffdata`文件
 
 - BUFF数据
