@@ -44,7 +44,21 @@
 ]
 ```
 
-#### `iteminfodata`文件
+#### `itemdata`文件 v1.0.6版本后
+
+- 物品数据
+- 路径: BDS/plugins/Planet/PLibrary/itemdata.json
+```js
+[
+    {
+        "type": "minecraft:test",
+        "chinese": "示范",
+        "path": "textures/items/apple.png"
+    }
+]
+```
+
+#### ~~`iteminfodata`文件已弃用~~
 
 - 物品数据
 - 路径: BDS/plugins/Planet/PLibrary/iteminfodata.json
@@ -58,7 +72,6 @@
   }
 }
 ```
-
 #### `Playerdata`文件 v1.0.5版本后
 
 - 进入过服务器的玩家数据&PBind绑定数据
