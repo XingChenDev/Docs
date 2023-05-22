@@ -8,6 +8,9 @@
 #### 可选
 - [PBind](https: //www.minebbs.com/resources/pbind.4211/) 
 
+## 注册指令说明
+`/plib` - 数据库 当前仅支持查看日新玩家及历史新玩家
+
 ## 配置文件说明
 
 > [!ATTENTION] 更改配置文件请注意 JSON 文件格式，不推荐使用记事本修改或添加菜单文件解析
@@ -72,12 +75,28 @@
 ]
 ```
 
+#### `db文件(NewPlayer)` v1.0.6版本后
+
+- 记录日新增玩家的库，可通过游戏内指令`/plib`打开进行查看每日的新增用户及加入时间
+- 路径: BDS/plugins/Planet/PLibrary/NewPlayer
+## 注册PAPI变量
+
+> [!ATTENTION] 使用`BEPlaceholderAPI`公共变量需要安装`BEPlaceholderAPI`插件
+
+|变量|注释|使用示范|
+|----|----|----|
+|`PL_history`|总玩家人数|yoyo的侧边栏 `{bep.PL_history}`|
+|`PL_dailyadd`|总玩家人数|yoyo的侧边栏 `{bep.PL_dailyadd}`|
+
+  - 详细使用方式已目标插件为准
+
+
 ## API
 ?> PLib提供了4个接口 
 
 #### 获取buff库数据
-`ll.import("PLib",
-"buffdata")()`
+
+`ll.import("PLib", "buffdata")()`
 
 - 返回值: buff库数据列表
 - 返回值类型: Array<Object,Object,...>
@@ -92,8 +111,7 @@
 
 #### 获取粒子库数据
 
-`ll.import("PLib",
-"lizidata")()`
+`ll.import("PLib", "lizidata")()`
 
 - 返回值: 粒子库数据列表
 - 返回值类型: Array<Object,Object,...>
@@ -123,8 +141,8 @@
   - 如果返回 `null` 则表示没有数据
 
 - 示范
-   ```js
-   {
+```js
+{
     const PLib = ll.import("PLib",
   "iteminfo")
        
@@ -135,8 +153,7 @@
 
 #### 获取玩家信息数据
 
-`ll.import("PLib",
-"getplayer")()`
+`ll.import("PLib", "getplayer")()`
 
 - 返回值 本服务器所有玩家数据
 - 返回值类型 Array<Object,Object,...>

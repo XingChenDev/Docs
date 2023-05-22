@@ -1,8 +1,13 @@
 > [!TIP|style:flat||labelVisibility:hidden|iconVisibility:hidden] PMenu是一个多功能的菜单插件，支持玩家菜单、OP菜单、VIP菜单等等，支持在线编辑、添加、删除菜单或菜单内容的操作。
 
+## 注册指令说明
+`/cd`或`/menu` - 菜单  
+`/cd set`或`/menu set` - 菜单设置
+
 ## 配置文件说明
 
 > [!ATTENTION] 更改配置文件请注意 JSON 文件格式，不推荐使用记事本修改或添加菜单文件解析
+
 
 #### `config`文件
 

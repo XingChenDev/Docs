@@ -7,6 +7,13 @@
 #### 可选
 - [PCsvip](https://www.minebbs.com/resources/pcsvip.4385/)
 
+## 注册指令说明
+`/pstop` - 维护服务器（游戏内、控制台）  
+- 控制台使用示范  
+`pstop on` - 开启维护并使用上次维护的信息  
+`pstop on 维护了，快出去` - 开启维护，使用输入的维护信息  
+`pstop off` - 关闭维护
+
 ## 配置文件说明
 
 > [!ATTENTION] 更改配置文件请注意 JSON 文件格式，不推荐使用记事本修改或添加菜单文件解析

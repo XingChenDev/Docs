@@ -58,17 +58,17 @@
 `ll.import("PSign", "all")()`
 
 - 返回值: 签到数据对象
-- 返回值类型: Object
+- 返回值类型: `Object`
   - 数据请看上面的`signdata`配置文件数据
 
 #### 获取指定玩家的签到数据
 `ll.import("PSign", "playerdata")(name)`
 
 - 参数: 
-  - name: String
+  - name: `String`
     玩家ID
 - 返回值: 玩家签到对象
-- 返回值类型: Object
+- 返回值类型: `Object`
 
     | 属性     | 含义                 | 类型      | 示范       |
     | -------- | -------------------- | --------- | ---------- |
@@ -78,64 +78,64 @@
     | reward   | 离线签到奖励         | `Number`  | 0          |
     | signdate | 上次签到时间         | `String`  | "2023-4-23"|
 
-  - 如果返回 null 则表示没有签到数据或没有填写玩家名字
+  - 如果返回 `null` 则表示没有签到数据或没有填写玩家名字
 
 #### 获取指定玩家的离线签到奖励领取情况
 `ll.import("PSign", "state")(name)`
 
 - 参数: 
-  - name: String
+  - name: `String`
     玩家ID
 - 返回值: 领取情况
-- 返回值类型: Boolean
-  - 如果返回 null 则表示没有签到数据或没有填写玩家名字
+- 返回值类型: `Boolean`
+  - 如果返回 `null` 则表示没有签到数据或没有填写玩家名字
 
 #### 获取指定玩家签到总次数
 `ll.import("PSign", "count")(name)`
 
 - 参数: 
-  - name: String
+  - name: `String`
     玩家ID
 - 返回值: 签到次数
-- 返回值类型: Number
-  - 如果返回 null 则表示没有签到数据或没有填写玩家名字
+- 返回值类型: `Number`
+  - 如果返回 `null` 则表示没有签到数据或没有填写玩家名字
 
 #### 获取指定玩家的连续签到次数
 `ll.import("PSign", "contsign")(name)`
 
 - 参数: 
-  - name: String
+  - name: `String`
     玩家ID
 - 返回值: 连续签到次数
-- 返回值类型: Number
-  - 如果返回 null 则表示没有签到数据或没有填写玩家名字
+- 返回值类型: `Number`
+  - 如果返回 `null` 则表示没有签到数据或没有填写玩家名字
 
 #### 获取指定玩家未领取的离线签到奖励
 `ll.import("PSign", "reward")(name)`
 
 - 参数: 
-  - name: String
+  - name: `String`
     玩家ID
 - 返回值: 未领取的签到奖励
-- 返回值类型: Number
-  - 如果返回 null 则表示没有签到数据或没有填写玩家名字
+- 返回值类型: `Number`
+  - 如果返回 `null` 则表示没有签到数据或没有填写玩家名字
 
 #### 获取指定玩家最后签到日期（新版）
 `ll.import("PSign", "signdate")(name)`
 
 - 参数: 
-  - name: String
+  - name: `String`
     玩家ID
 - 返回值: 最后签到时间
-- 返回值类型: String
-  - 如果返回 null 则表示没有签到数据或没有填写玩家名字
+- 返回值类型: `String`
+  - 如果返回 `null` 则表示没有签到数据或没有填写玩家名字
 
 #### 获取指定玩家签到时间差（新版）
 `ll.import("PSign", "interval")(name)`
 
 - 参数: 
-  - name: String
+  - name: `String`
     玩家ID
 - 返回值: 时间差
-- 返回值类型: Number
-  - 如果返回 null 则表示没有签到数据或没有填写玩家名字
+- 返回值类型: `Number`
+  - 如果返回 `null` 则表示没有签到数据或没有填写玩家名字

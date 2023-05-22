@@ -10,8 +10,8 @@
 - [PLib](https: //www.minebbs.com/resources/plib-planet.4523/) 建议使用
 
 ## 注册指令说明
-/mail - 邮箱  
-/mailset - 邮箱设置
+`/mail` - 邮箱  
+`/mailset` - 邮箱设置
 
 ## 配置文件说明
 

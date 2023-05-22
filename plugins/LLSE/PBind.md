@@ -28,14 +28,15 @@
 ?> PBind提供了3个接口
 
 #### 通过QQ号获取账号对象
+
 `ll.import("PBind","qqdata")(qq)`
 
 - 参数
-  - qq: `Number`
+  - qq: `Number`  
     5-10位数QQ号
 - 返回值: 账号对象
 - 返回值类型 `Object`
-  - 如果返回 `Null` 则表示QQ号没有账号对象或没有被绑定
+  - 如果返回 `null` 则表示QQ号没有账号对象或没有被绑定
 
 - 示例：  
     ```js
@@ -48,13 +49,14 @@
     ```
 
 #### 通过玩家游戏ID获取账号对象
+
 `ll.import("PBind","gameiddata")(gameid)`
 
-- 参数
+- 参数  
   - gameid: `String`
 - 返回值: 账号对象
 - 返回值类型 `Object`
-  - 如果返回 `Null` 则表示没有账号对象
+  - 如果返回 `null` 则表示没有账号对象
 
 - 示例：  
   ```js
@@ -67,13 +69,14 @@
   ```
 
 #### 通过玩家XUID获取账号对象
+
 `ll.import("PBind","xuiddata")(xuid)`
 
 - 参数
   - xuid: `Number`
 - 返回值: 账号对象
 - 返回值类型 `Object`
-  - 如果返回 `Null` 则表示没有账号对象
+  - 如果返回 `null` 则表示没有账号对象
 
 - 示例：  
   ```js

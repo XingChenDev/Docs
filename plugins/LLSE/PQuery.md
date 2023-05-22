@@ -12,6 +12,13 @@
 - [OnlineTimer](https://www.minebbs.com/resources/onlinetimer.2934/)
 - [Ranking](https://www.minebbs.com/resources/ranking.3568/)
 
+## 注册指令说明
+`cx` - 查询（游戏内）  
+`phb` - 排行榜（游戏内、控制台）  
+`my` - 查询（控制台）  
+- 示范
+`my SUNSServer`、`my 114514`
+
 ## 查询信息变量
 | 变量     | 注释    | 变量     | 注释    | 变量     | 注释    |
 | --------| -------- | -------- | -------- | -------- | -------- |

@@ -13,26 +13,25 @@
 `/vipshop` - VIP商城	游戏内执行  
 `/vipset` - VIP管理	游戏内执行  
 `/viphelp` - 关于插件 游戏内执行  
-`/vip add (玩家ID/QQ号) [天数
-]` - 控制台添加VIP	控制台操作，"[]"内为选填  
-#### 示例
-`/vip add SUNSServer`
-`/vip add SUNSServer 7`
+`/vip add (玩家ID/QQ号) [天数]` - 控制台添加VIP	控制台操作，"[]"内为选填  
+- 使用示范  
+`/vip add SUNSServer`  
+`/vip add SUNSServer 7`  
 
-`/vip del (玩家ID/QQ号)`	控制台删除VIP	控制台操作，当玩家是VIP时输入会关掉VIP，当玩家不是VIP时会删除VIP数据
-#### 示例
-`/vip del SUNSServer`
+`/vip del (玩家ID/QQ号)`	控制台删除VIP	控制台操作，当玩家是VIP时输入会关掉VIP，当玩家不是VIP时会删除VIP数据  
+- 使用示范  
+`/vip del SUNSServer`  
 
-`/vip addtime (玩家ID/QQ号) (时长)`	控制台增加玩家时长	控制台操作，所有参数为必填
-#### 示例
-`/vip addtime SUNSServer 7`
+`/vip addtime (玩家ID/QQ号) (时长)`	控制台增加玩家时长	控制台操作，所有参数为必填  
+- 使用示范  
+`/vip addtime SUNSServer 7`  
 
-`/vip reducetime (玩家ID/QQ号)  (时长)`	控制台减少玩家时长	控制台操作，所有参数为必填，当减少时长大于剩余时长会自动取消玩家的VIP
-#### 示例
-`/vip reducetime SUNSServer 7`
+`/vip reducetime (玩家ID/QQ号)  (时长)`	控制台减少玩家时长	控制台操作，所有参数为必填，当减少时长大于剩余时长会自动取消玩家的VIP  
+- 使用示范  
+`/vip reducetime SUNSServer 7`  
 
-`/vip query (玩家ID/QQ号)` 控制台查询玩家VIP数据	控制台操作，所有参数为必填
-#### 示例
+`/vip query (玩家ID/QQ号)` 控制台查询玩家VIP数据	控制台操作，所有参数为必填  
+- 使用示范  
 `/vip query SUNSServer`
 
 ## 配置文件说明
@@ -163,8 +162,7 @@
   - 如果返回 `false` 则表示不是
 
 #### 获取所有玩家VIP数据
-`ll.import("PCsvip",
-"getall")()`
+`ll.import("PCsvip", "getall")()`
 
 - 返回值: 所有VIP玩家数据  
 - 返回值类型: `Object`
@@ -194,8 +192,7 @@
   - 如果返回 `Null` 则表示没有数据  
 
 #### 获取指定玩家中文VIP数据(新)
-`ll.import("PCsvip",
-"getvipdataChinese")(name)`
+`ll.import("PCsvip", "getvipdataChinese")(name)`
 
 - 参数:
   - realname: String  
@@ -219,8 +216,7 @@
   - 如果返回 `Null` 则表示没有数据  
 
 #### 增加指定玩家VIP经验(暂时关闭)
-`ll.import("PCsvip",
-"addviplevelexp")(name,exp)`
+`ll.import("PCsvip", "addviplevelexp")(name,exp)`
 
 - 参数:
   - name: `String`  
@@ -229,8 +225,7 @@
     要增加的经验值
 
 #### 减少指定玩家VIP经验(暂时关闭)
-`ll.import("PCsvip",
-"reduceviplevelexp")(name,exp)`
+`ll.import("PCsvip", "reduceviplevelexp")(name,exp)`
 - 参数:
   - name: `String`  
     玩家的名字
@@ -238,8 +233,7 @@
     要减少的经验值
 
 #### 增加指定玩家VIP积分
-`ll.import("PCsvip",
-"addvipintegral")(name,int)`
+`ll.import("PCsvip", "addvipintegral")(name,int)`
 - 参数:
   - name: `String` 
     玩家的名字
@@ -247,8 +241,7 @@
     要增加的积分
 
 #### 减少指定玩家VIP积分
-`ll.import("PCsvip",
-"reducevipintegral")(name,int)`
+`ll.import("PCsvip", "reducevipintegral")(name,int)`
 - 参数:
   - name: `String` 
     玩家的名字
@@ -256,8 +249,7 @@
     要增加的积分
 
 #### 增加指定玩家VIP时间
-`ll.import("PCsvip",
-"addviptime")(name,time)`
+`ll.import("PCsvip", "addviptime")(name,time)`
 - 参数:
   - name: `String` 
     玩家的名字
@@ -265,8 +257,7 @@
     要增加的时间(单位:天)
 
 #### 减少指定玩家VIP时间
-`ll.import("PCsvip",
-"reduceviptime")(name,time)`
+`ll.import("PCsvip", "reduceviptime")(name,time)`
 - 参数:
   - name: `String` 
     玩家的名字
