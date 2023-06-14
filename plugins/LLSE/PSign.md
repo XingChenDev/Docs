@@ -1,4 +1,4 @@
-> [!TIP|style:flat||labelVisibility:hidden|iconVisibility:hidden] PSign是一个支持正则表达式通过控制台实现QQ群离线签到的插件。
+> [!TIP|style:flat||labelVisibility:hidden|iconVisibility:hidden] PSign是一个支持正则表达式通过控制台实现QQ群离线签到的插件。`1.1.0`版本改版后对PSign进行重要调整,同时支持`PMail`进行签到邮件的接收等
 
 ## 前置组件
 #### 必选
@@ -42,10 +42,11 @@
 ```js
 {
   "SUNSServer": { //玩家ID
-    "state": false, //离线签到奖励领取情况
+    "state": false, /*离线签到奖励领取情况*/ `1.1.0 版本后删除了此项`
     "count": 12, //总签到次数
     "contsign": 1, //连续签到次数
-    "reward": 0, //离线签到奖励
+    "reward": 0, //离线普通签到奖励
+    "vipreward": 0, //离线签到VIP奖励
     "signdate": "2023-4-23" //上次签到时间
   }
 }
@@ -72,16 +73,17 @@
 
     | 属性     | 含义                 | 类型      | 示范       |
     | -------- | -------------------- | --------- | ---------- |
-    | state    | 离线签到奖励领取情况 | `Boolean` | true       |
     | count    | 总签到次数           | `Number`  | 24         |
     | contsign | 连续签到次数         | `Number`  | 1          |
-    | reward   | 离线签到奖励         | `Number`  | 0          |
+    | reward   | 离线签到普通奖励 | `Number`  | 0          |
+    | vipreward | 离线签到VIP奖励 | `Number`  | 0          |
     | signdate | 上次签到时间         | `String`  | "2023-4-23"|
 
   - 如果返回 `null` 则表示没有签到数据或没有填写玩家名字
 
 #### 获取指定玩家的离线签到奖励领取情况
 `ll.import("PSign", "state")(name)`
+`1.1.0`版本后配置文件删除了这个数据,为了向下兼容第三方插件保留此项
 
 - 参数: 
   - name: `String`
@@ -116,7 +118,17 @@
 - 参数: 
   - name: `String`
     玩家ID
-- 返回值: 未领取的签到奖励
+- 返回值: 未领取的签到普通奖励
+- 返回值类型: `Number`
+  - 如果返回 `null` 则表示没有签到数据或没有填写玩家名字
+
+#### 获取指定玩家未领取的离线签到奖励`1.1.0`版本后支持
+`ll.import("PSign", "vipreward")(name)`
+
+- 参数: 
+  - name: `String`
+    玩家ID
+- 返回值: 未领取的签到VIP奖励
 - 返回值类型: `Number`
   - 如果返回 `null` 则表示没有签到数据或没有填写玩家名字
 
