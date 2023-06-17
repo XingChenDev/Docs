@@ -26,10 +26,6 @@
 | `{ping}` | 玩家实时延迟 | `{os}` | 玩家设备系统 |
 |`{ch}`|玩家当前佩戴的称号| `{time}`| 当前时间 |
 | `{name}` | 玩家ID | `{msg}` | 玩家发送的消息|
-|`{PAPI.PT_Wearch:pl}`|PTitle注册的PAPI变量（玩家当前佩戴的称号）|
-  - `PT_Wearch`变量是PTitle在PAPI上注册的公共变量,他可以被用在其他支持PAPI的插件中,详细使用方式已目标插件为准
-  - yoyo的[`BetterSidebar`](https://www.minebbs.com/resources/bettersidebar.3071/)中使用方式: `{js:PAPI.getValueByPlayer('PT_Wearch',pl.xuid)}`
-  - Huohua的[`HeadShow`](https://www.minebbs.com/resources/headshow.3405/)中使用方式: `%PT_Wearch%`
 
 #### 使用`BEPlaceholderAPI`变量方法
 
@@ -228,6 +224,19 @@
   "SUNSServer": "§1测试称号§r№.1"
 }
 ```
+
+
+
+
+## PAPI变量说明
+-`v2.0.0 Beta 23.05.0617M`正式版开始支持  
+
+> [!ATTENTION] 使用`BEPlaceholderAPI`公共变量需要安装`BEPlaceholderAPI`插件
+
+|变量|注释|示例|
+|---|---|---|
+|`%PT_Wearch%`|玩家当前佩戴称号|`HeadShow`插件`%PT_Wearch%`<br>`PQuery`插件`{PAPI.PT_Wearch:pl}`|
+
 
 ## API
 ?> PTitle提供了6个接口

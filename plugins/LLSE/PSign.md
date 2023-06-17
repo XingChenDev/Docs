@@ -52,6 +52,18 @@
 }
 ```
 
+## PAPI变量说明
+-`v1.1.0`正式版开始支持  
+
+> [!ATTENTION] 使用`BEPlaceholderAPI`公共变量需要安装`BEPlaceholderAPI`插件
+
+|变量|注释|示例|
+|---|---|---|
+|`%PS_Count%`|玩家总签到次数|`HeadShow`插件`%PS_Count%`<br>`PQuery`插件`{PAPI.PS_Count:pl}`|
+|`%PS_Cont%`|玩家连续签到次数|`HeadShow`插件`%PS_Cont%`<br>`PQuery`插件`{PAPI.PS_Cont:pl}`|
+|`%PS_Date%`|玩家最后签到日期|`HeadShow`插件`%PS_Date%`<br>`PQuery`插件`{PAPI.PS_Date:pl}`|
+
+
 ## API
 ?> PSign提供了8个接口
 
