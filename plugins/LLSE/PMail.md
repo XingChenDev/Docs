@@ -2,12 +2,13 @@
 
 ## 前置组件
 #### 必选
-- [LiteLoaderBDS](https: //www.minebbs.com/liteloader/)
+- [LiteLoaderBDS](https://www.minebbs.com/liteloader/)
 
 #### 可选
-- [PCsvip](https: //www.minebbs.com/resources/pcsvip.4385/)
-- [PBind](https: //www.minebbs.com/resources/pbind.4211/) 建议使用
-- [PLib](https: //www.minebbs.com/resources/plib-planet.4523/) 建议使用
+- [PCsvip](https://www.minebbs.com/resources/pcsvip.4385/)
+- [PBind](https://www.minebbs.com/resources/pbind.4211/) 建议使用
+- [PLib](https://www.minebbs.com/resources/plib-planet.4523/) 建议使用
+- [BEPlaceholderAPI](https://www.minebbs.com/resources/beplaceholderapi.4181/)
 
 ## 注册指令说明
 `/mail` - 邮箱  
@@ -104,13 +105,22 @@
 }
 ```
 
+## PAPI变量说明
+-`v1.0.9`正式版开始支持  
+
+> [!ATTENTION] 使用`BEPlaceholderAPI`公共变量需要安装`BEPlaceholderAPI`插件
+
+|变量|注释|示例|
+|---|---|---|
+|`%PM_Incount%`|玩家收件箱邮件总数量|`HeadShow`插件`%PM_Incount%`<br>`PQuery`插件`{PAPI.PM_Incount:pl}`|
+|`%PM_Unread%`|玩家收件箱未读邮件数量|`HeadShow`插件`%PM_Unread%`<br>`PQuery`插件`{PAPI.PM_Unread:pl}`|
+|`%PM_Outcount%`|玩家发件箱邮件总数量|`HeadShow`插件`%PM_Outcount%`<br>`PQuery`插件`{PAPI.PM_Outcount:pl}`|
 ## API
 ?> PMail提供了5个接口 
 
 #### 获取指定玩家收件箱  
 
-`ll.import("PMail",
-"getinmailbox")(name)`
+`ll.import("PMail","getinmailbox")(name)`
 
 - 参数：
   - name : `String`  
@@ -121,16 +131,14 @@
 
 - 示例：  
     ```js
-    const PMail = ll.import("PMail",
-"getinmailbox");
+    const PMail = ll.import("PMail","getinmailbox");
     
     PMail("SUNSServer")
     ```
 
 #### 获取指定玩家已发送邮件  
 
-`ll.import("PMail",
-"getoutmailbox")(name)`  
+`ll.import("PMail","getoutmailbox")(name)`  
 
 - 参数：
   - name : `String`  
@@ -141,16 +149,14 @@
 
 - 示例：  
     ```js
-    const PMail = ll.import("PMail",
-"getoutmailbox");
+    const PMail = ll.import("PMail","getoutmailbox");
     
     PMail("SUNSServer")
     ```
 
 #### 获取指定玩家邮件数量 
 
-`ll.import("PMail",
-"getmailcount")(name)`
+`ll.import("PMail","getmailcount")(name)`
 
 - 参数：
   - name : `String`  
@@ -160,18 +166,14 @@
 
 - 示例：  
     ```js
-    const PMail = ll.import("PMail",
-"getmailcount");
+    const PMail = ll.import("PMail","getmailcount");
     
     PMail("SUNSServer")
     ```
 
 #### 给指定玩家发送一条邮件
 
-`ll.import("PMail",
-"addnewmail")(name,id,title,content,
-[annex
-])`
+`ll.import("PMail","addnewmail")(name,id,title,content,[annex])`
 
 - 参数:  
   - name: `String`  
@@ -217,38 +219,20 @@
 
 - 示例：  
     ```js
-    const PMail = ll.import("PMail",
-"addnewmail");
+    const PMail = ll.import("PMail","addnewmail");
     
     // 只发送文字邮件
-    PMail("SUNSServer",
-"发件人",
-"标题",
-"内容")
+    PMail("SUNSServer","发件人","标题","内容")
     
     // 发送带附件的邮件
-    PMail("SUNSServer",
-"发件人",
-"标题",
-"内容",
-{money: 100
-})
-    PMail("SUNSServer",
-"发件人",
-"内容",
-{money: 100,score: 100
-})
-    PMail("SUNSServer",
-"发件人",
-"内容",
-{vip: 7
-})
+    PMail("SUNSServer","发件人","标题","内容",{money: 100})
+    PMail("SUNSServer","发件人","内容",{money: 100,score: 100})
+    PMail("SUNSServer","发件人","内容",{vip: 7})
     ```
 
 #### 注册系统发件人 `1.0.5`版支持
 
-`ll.import("PMail",
-"regsystem")(name)`
+`ll.import("PMail","regsystem")(name)`
 > 这个接口主要是为了PMail筛选收件箱的系统发件人、避免玩家回复系统邮件
 
 - 参数:  
@@ -271,9 +255,7 @@
 
 - 示例：  
     ```js
-    const PMail = ll.import("PMail",
-"regsystem");
+    const PMail = ll.import("PMail","regsystem");
     
-    PMail("SUNSServer",
-"系统")
+    PMail("SUNSServer","系统")
     ```
