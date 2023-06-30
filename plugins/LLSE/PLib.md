@@ -27,7 +27,8 @@
 }
 ```
 
-#### `buffdata`文件
+#### `buffdata`文件 该文件已内置到插件中，
+`1.0.8`将删除原有的`buffdata`文件
 
 - BUFF数据
 - 路径: BDS/plugins/Planet/PLibrary/buffdata.json
@@ -35,9 +36,10 @@
 // 因数据较多,本文档仅展示一条
 [
   {
-    "buffname": "伤害吸收", //buff的中文名称
-    "buffmcid": "absorption", //buff的MCID
-    "path": "textures/ui/absorption_effect" //buff的贴图路径
+    "buffname": "伤害吸收", //BUFF的中文名称
+    "buffmcid": "absorption", //BUFF的MCID
+    "numberid": 22, //BUFF的数字ID
+    "path": "textures/ui/absorption_effect" //BUFF的贴图路径
   }
 ]
 ```
@@ -91,9 +93,9 @@
 ```js
 [
   {
-    "qqid": "413831175", //QQ号
+    "qqid": 413831175, //QQ号
     "gameid": "SUNSServer", //游戏ID
-    "xuid": "2535450402001250", //Xuid
+    "xuid": 2535450402001250, //Xuid
     "bindtime": "2023-04-23 23:09:27", //绑定时间
     "firstjoin": "2023-04-23 23:09:00" //第一次进服时间
   }
@@ -119,19 +121,33 @@
 ## API
 ?> PLib提供了4个接口 
 
-#### 获取buff库数据
+#### 获取BUFF库数据
 
 `ll.import("PLib", "buffdata")()`
 
-- 返回值: buff库数据列表
-- 返回值类型: Array<Object,Object,...>
+- 返回值: `BUFF库数据列表`
+- 返回值类型: `Array<Object,Object,...>`
   - 如果返回 "[]" 则表示没有数据
-    
-    | 属性      | 含义           | 类型     | 示范                           |
-    | --------- | -------------- | -------- | ------------------------------ |
-    | .buffname | buff的中文名称 | `String` | "伤害吸收"                     |
-    | .buffmcid | buff的MCID     | `String` | "absorption"                   |
-    | .path     | buff的贴图路径 | `String` | "textures/ui/absorption_effect" 本项为空则表示没有路径|
+
+#### 获取指定BUFF的对象数据 `1.0.8`正式版新增
+
+`ll.import("PLib", "buffinfo")(buff)`
+
+- 参数  
+  - buff: `String`  
+    BUFF的英文ID
+- 返回值: BUFF数据对象
+- 返回值类型: `Object`
+  - 如果返回 `null` 则表示没有数据对象
+
+- BUFF数据对象属性
+
+    | 属性 | 含义 | 类型 | 示范 |
+    | --------- | --------- | --------- | --------- |
+    | .buffname | BUFF的中文名称 | `String` | "伤害吸收" |
+    | .buffmcid | BUFF的MCID | `String` | "absorption" |
+    | .numberid | BUFF的数字ID | `Number` | `22` |
+    | .path     | BUFF的贴图路径 | `String` | "textures/ui/absorption_effect" 本项为空则表示没有路径 |
 
 
 #### 获取粒子库数据
@@ -139,12 +155,25 @@
 `ll.import("PLib", "lizidata")()`
 
 - 返回值: 粒子库数据列表
-- 返回值类型: Array<Object,Object,...>
+- 返回值类型: `Array<Object,Object,...>`
   - 如果返回 "[]" 则表示没有数据
     
-    | 属性      | 含义             | 类型     | 示范                            |
-    | --------- | ---------------- | -------- | ------------------------------- |
-    | .liziname | 粒子的中文名称   | `String` | "黑药水气泡"                    |
+#### 获取指定粒子的数据对象 `1.0.8`正式版新增
+
+`ll.import("PLib", "liziinfo")(lizi)`
+
+- 对象
+  - lizi: `String`  
+    粒子的英文ID(标准名)
+- 返回值: 粒子数据对象
+- 返回值类型: `Object`
+  - 如果返回 `null` 则表示没有数据对象
+
+- 粒子数据对象属性
+
+    | 属性 | 含义 | 类型 | 示范 |
+    | --------- | --------- | --------- | --------- |
+    | .liziname | 粒子的中文名称 | `String` | "黑药水气泡" |
     | .lizimcid | 粒子的标准类型名 | `String` | "minecraft:arrow_spell_emitter" |
 
 #### 获取指定物品数据
@@ -152,24 +181,23 @@
 `ll.import("PLib, "iteminfo")(item)`
 
 - 参数
-  - item: String
+  - item: `String`
     物品标准类型名
 - 返回值 物品对象
-- 返回类型 Object
+- 返回类型 `Object`
     
-    | 属性      | 含义           | 类型     | 示范                     |
-    | --------- | -------------- | -------- | ------------------------ |
-    | .type     | 物品标准类型名 | `String` | "minecraft:apple"        |
-    | .chinese  | 物品的中文名称 | `String` | "苹果"                   |
-    | .path     | 物品的贴图路径 | `String` | "textures/items/apple.png" 本项为空则表示没有路径|
+    | 属性 | 含义 | 类型 | 示范 |
+    | --------- | --------- | --------- | --------- |
+    | .type | 物品标准类型名 | `String` | "minecraft:apple" |
+    | .chinese | 物品的中文名称 | `String` | "苹果" |
+    | .path | 物品的贴图路径 | `String` | "textures/items/apple.png" 本项为空则表示没有路径 |
 
   - 如果返回 `null` 则表示没有数据
 
 - 示范
 ```js
 {
-    const PLib = ll.import("PLib",
-  "iteminfo")
+    const PLib = ll.import("PLib","iteminfo")
        
     //获取苹果的中文名称(使用对象属性时,请先加判断)
     PLib("minecraft:apple").chinese
@@ -181,13 +209,13 @@
 `ll.import("PLib", "getplayer")()`
 
 - 返回值 本服务器所有玩家数据
-- 返回值类型 Array<Object,Object,...>
+- 返回值类型 `Array<Object,Object,...>`
   - 如果返回 "[]" 则表示没有数据
 
-    | 属性       | 含义           | 类型     | 示范                  |
-    | ---------- | -------------- | -------- | --------------------- |
-    | .qqid      | 绑定的QQ       | `Number` | "114514"              |
-    | .gameid    | 游戏ID         | `String` | "SUNSServer"          |
-    | .xuid      | XBOXid         | `Number` | 253***************50  |
-    | .bindtime  | 绑定的时间     | `String` | "2022-11-23 14:31:40" |
+    | 属性 | 含义 | 类型 | 示范 |
+    | ---------- | --------- | --------- | --------- |
+    | .qqid | 绑定的QQ | `Number` | `114514` |
+    | .gameid | 游戏ID | `String` | "SUNSServer" |
+    | .xuid | XUID | `Number` | `253***************50` |
+    | .bindtime | 绑定的时间     | `String` | "2022-11-23 14:31:40" |
     | .firstjion | 第一次进服时间 | `String` | "2022-11-23 03:43:34" |
