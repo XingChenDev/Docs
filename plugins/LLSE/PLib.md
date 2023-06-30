@@ -3,10 +3,10 @@
 
 ## 前置组件
 #### 必选
-- [LiteLoaderBDS](https: //www.minebbs.com/liteloader/)
+- [LiteLoaderBDS](https://www.minebbs.com/liteloader/)
 
 #### 可选
-- [PBind](https: //www.minebbs.com/resources/pbind.4211/) 
+- [PBind](https://www.minebbs.com/resources/pbind.4211/) 
 
 ## 注册指令说明
 `/plib` - 数据库 当前仅支持查看日新玩家及历史新玩家
