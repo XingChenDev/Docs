@@ -33,6 +33,22 @@
 |`{PS.signcount}`|PSign签到次数|`{PB.qq}`|PBind绑定的QQ|`{PB.xuid}`|PBind绑定的xuid|
 |`{PB.bindtime}`|PBind绑定的时间|`{PB.firstjoin}`|PBind首次入服时间|
 
+#### `1.2.1`版本后(在线查询支持%%包含变量 支持PAPI公共变量)
+> [!ATTENTION] 使用`BEPlaceholderAPI`公共变量需要安装`BEPlaceholderAPI`插件
+
+| 变量     | 注释    | 变量     | 注释    | 变量     | 注释    |
+| --------| -------- | -------- | -------- | -------- | -------- |
+|`%name%`|玩家名字|`%score%`|计分板|`%money%`|LLMoney|
+|`%equipment%`|使用的设备| `%level%` |经验等级|`%joind%`|进入次数|
+|`%time%`|当前系统时间|`%date%`|当前系统日期|`%dead%`|死亡榜/挖掘榜(死亡次数)|
+|`%destroy%`|死亡榜/挖掘榜(挖掘次数)|`%RK.chat%`|Ranking发言次数|`%RK.ct%`|Ranking使用图腾次数|
+|`%RK.destroy%`|Ranking挖掘次数|`%RK.dropitem%`|Ranking挖掘次数|`%RK.eat%`|Ranking摄食次数|
+|`%RK.jump%`|Ranking跳跃次数|`%RK.mobdie%`|Ranking击杀次数|`%RK.time%`|Ranking在线时间|
+|`%RK.place%`|Ranking放置次数|`%RK.playerdie%`|Ranking死亡次数|`%PT.ch%`|PTitle当前佩戴称号|
+|`%OL.time%`|OnlineTimer在线时间|`%OL.last%`|OnlineTimer最后登陆时间|`%PC.vip%`|PCsvip会员身份|
+|`%PS.signcount%`|PSign签到次数|`%PB.qq%`|PBind绑定的QQ|`%PB.xuid%`|PBind绑定的xuid|
+|`%PB.bindtime%`|PBind绑定的时间|`%PB.firstjoin%`|PBind首次入服时间|
+
 ## 配置文件说明
 
 > [!ATTENTION] 更改配置文件请注意 JSON 文件格式，不推荐使用记事本修改或添加菜单文件解析
