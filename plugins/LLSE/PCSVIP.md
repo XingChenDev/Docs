@@ -2,11 +2,11 @@
 
 ## 前置组件
 #### 必选
-- [LiteLoaderBDS](https: //www.minebbs.com/liteloader/)
+- [LiteLoaderBDS](https://www.minebbs.com/liteloader/)
 
 #### 可选&建议
-- [PBind](https: //www.minebbs.com/resources/pbind.4211/) 建议使用
-- [PLib](https: //www.minebbs.com/resources/plib-planet.4523/) 建议使用
+- [PBind](https://www.minebbs.com/resources/pbind.4211/) 建议使用
+- [PLib](https://www.minebbs.com/resources/plib-planet.4523/) 建议使用
 
 ## 注册指令说明
 `/myvip` - 我的VIP 游戏内执行  
@@ -41,10 +41,10 @@
 - 插件基础配置文件
 - 路径: BDS/plugins/Planet/PCsvip/config.json
 > 最新版本不能使用旧版本的配置文件、PCsvip正确安装会自动更正不正确的配置项，无需手动修改
-- `2.0.0  Beta 23.05.0915O`
+- `2.0.0  Beta 23.07.0402N`
 ```js
 {
-  "version": "v2.0.0 Beta 23.05.0915O", //插件版本
+  "version": "v2.0.0 Beta 23.07.0402N", //插件版本
   "money": 0, //经济模式(0为计分板，1为LLMoney)
   "score": "money",
   "buyswitch": 1, //购买/续费VIP开关(0为关闭，1为开启)
@@ -67,40 +67,16 @@
       1000
     ],
     "expratio": { //升级、降级的经验
-      "up": 10, //每日首次登陆服务器所获得的当日经验（VIP为满级时不会获取)
+      "up": 10, //每日首次登陆服务器所获得的当日经验
       "down": 20 //当玩家失去VIP后起,每日首次登陆服务器将会扣除所积累的经验
     }
   },
-  "upintegral": 10 //好像时历史遗留没有清除,下个版本删
-}
-```
-- `2.0.0  Beta 23.03.0725Q`
-```js
-{
-  "version": "2.0.0", //插件版本
-  "moneyswitch": 1, //经济开关(用于获取药水buff是否扣钱)已停止使用
-  "money": 1, //经济模式(0为计分板，1为LLMoney)
-  "score": "money", //计分板项目名称(默认为money)
-  "buyswitch": 1, //购买/续费VIP开关(0为关闭，1为开启)
-  "viptime": 7, //VIP默认时长(管理员手动添加的时长(单位:天))
-  "viptitle": { //VIP称号(当没有安装PTitle插件时只有称号配置项没有其他配置项)
-    "title": "至尊VIP"
-  },
-  "lizi": "minecraft:heart_particle", //vip默认粒子(根据MC原版的id来填写，可在PLib的lizi配置文件中复制lizimcid的配置项粘贴到这里)
-  "vipblacklist": [], //VIP黑名单(禁止一些玩家购买VIP)
-  "viplevel": { //VIP等级
-    "exp": [
-      0,
-      100,
-      300,
-      600,
-      1000
-    ], //VIP等级的升级条件(经验)，每个参数代表了升级到该等级时所需要的经验值
-    "expratio": { //VIP等级增加和减少的值(Beta 23.03.0725Q仅带有进入每日进入服务器增加经验)
-      "up": 10,
-      "down": 20
-    }
-  }
+  "upintegral": 10, //每日会员玩家进入服务器增长的积分
+  "customtitlebuff": [//会员玩家自定义称号允许使用的BUFF(后续可在会员配置中修改)
+        "absorption",
+        "conduit_power",
+        "haste"
+    ]
 }
 ```
 
