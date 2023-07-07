@@ -5,4 +5,4 @@
 
 
 
-[查看](README.md)
+[查看](plugins/README.md)

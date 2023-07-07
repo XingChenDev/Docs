@@ -1,4 +1,4 @@
-- [首页](README.md)
+- [首页](plugins/README.md)
 - [LLSE插件](/plugins/LLSE/)
   - [PBank - 银行系统](plugins/LLSE/PBank)
   - [PBind - 账号绑定](plugins/LLSE/PBind)
