@@ -10,7 +10,7 @@
 ## 注册指令说明
 `/ch` - 我的称号  
 `/chshop` - 称号商城  
-`/dech` - 删除称号  
+`/delch` - 删除称号  
 `/chset` - 称号设置  
 
 ## 聊天界面变量 (支持`BEPlaceholderAPI`所有注册变量) 
@@ -345,6 +345,64 @@
     
     // 给玩家一个团队分类称号<测试称号>,无法出售、允许删除、无buff、限时7天
     PTitle("SUNSServer","测试称号",false,true,0,null,null,7)
+    ```
+
+#### 给玩家添加一个分类
+`ll.import("ptitleaddsort")(name, sort)`  
+`ll.import("PTitle", "addsort")(name, sort)`
+
+- 参数:
+  - name: `String`  
+    玩家名称  
+  - sort: `String`  
+    要添加的分类名称  
+- 返回值: 添加情况  
+- 返回值类型: `Boolean`  
+  - 如果返回 `false` 则表示已添加
+
+- 示例：  
+    ```js
+    const PTitle = ll.import("PTitle", "addsort");
+    
+    // 给玩家一个称号<测试分类>
+    PTitle("SUNSServer","测试分类")
+    ```
+
+
+#### 给玩家添自定义分类称号
+`ll.import("addsorttitle")(name, title, sort,  sell, dele, money, buff, rank, time)`  
+`ll.import("PTitle", "addsorttitle")(name, title, sort,  sell, dele, money, buff, rank, time)`
+
+- 参数:
+  - name: `String`  
+    玩家名称  
+  - title: `String`  
+    要添加的称号  
+  - sort: `String`  
+    要添加的分类名称  
+  - sell: `Boolean`  
+    出售条件 注: `true`或`false`
+  - dele: `Boolean`  
+    删除条件 注: `true`或`false`
+  - money: `Number`  
+    称号价值 注: `0`为免费
+  - buff: `String`  
+    称号所带的buff 注: 无buff可填`null`
+  - rank: `String`  
+    称号buff的等级 注: 无buff可填`null`
+  - time: `Number`  
+    称号有效时间 注: `0`为永久
+- 返回值: 添加情况  
+- 返回值类型: `Boolean`  
+  - 如果返回 `false` 则表示已添加  
+  - 若玩家没有这个分类,PTitle会自动为玩家创建这个分类
+
+- 示例：  
+    ```js
+    const PTitle = ll.import("PTitle", "addteamch");
+    
+    // 给玩家测试分类中添加一个称号<测试称号>,无法出售、允许删除、无buff、限时7天
+    PTitle("SUNSServer","测试称号","测试分类",false,true,0,null,null,7)
     ```
 
 #### 删除玩家一个称号

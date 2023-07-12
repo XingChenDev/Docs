@@ -150,7 +150,7 @@
 ?> PCsvip提供了10个接口
 
 #### 获取指定玩家VIP身份
-`ll.import("vipplayer")(name)`
+`ll.import("PCsvip","getplayer")(name)`
 
 - 参数:
   - name: `String`  
