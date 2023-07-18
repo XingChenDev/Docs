@@ -1,5 +1,6 @@
-> [!TIP|style:flat||labelVisibility:hidden|iconVisibility:hidden] PMail是一个服内的邮箱&邮件系统，支持玩家互发邮件，可附带附件(物品&经济&记分板)，也可由管理员使用自己或服务器的身份向进入过服务器（需要`PLib插件`）的所有玩家发送邮件，或添加自动邮件，玩家下次进服即可收到来自系统自动的邮件，我们还为PMail开通了导出接口供其他开发者使用，可通过第三方插件调用接口发送邮件等。
+> [!TIP|style:flat||labelVisibility:hidden|iconVisibility:hidden] PMail是一个服内的邮箱&邮件系统，支持玩家互发邮件，可附带附件(物品&经济&记分板)，也可由管理员使用自己或服务器的身份向进入过服务器（需要`PLib插件`）的所有玩家发送邮件，或添加自动邮件，玩家下次进服即可收到来自系统自动的邮件，我们还为PMail开通了导出接口供其他开发者使用，可通过第三方插件调用接口发送邮件等 。  
 
+> [!ATTENTION] `PMail`将会在下个版本与`E-Mail`链接,当游戏内收到邮件时,所绑定的邮箱也会同步收到邮件,目前插件处于开发中,敬请期待
 ## 前置组件
 #### 必选
 - [LiteLoaderBDS](https://www.minebbs.com/liteloader/)
@@ -21,7 +22,7 @@
 #### `config`文件
 
 - 插件基础配置文件
-- 路径: BDS/plugins/Planet/Pmail/config.json
+- 路径: BDS/plugins/Planet/PMail/config.json
 ```js
 {
   "version": "1.0.0 Beta 23.04.1801G", //插件&配置文件版本
@@ -40,14 +41,20 @@
     },
     "received": [] //已收到默认邮件的玩家ID
   },
-  "deadline": 7 //邮件有效期（0为永久有效）
+  "deadline": 7, //邮件有效期（0为永久有效）
+  "email":{  //E-Mail邮件模块
+    "module": true,  //模块开关（true或false）
+    "service": "qq",  //邮件服务器（已知可以使用QQ邮箱或网易163游戏，QQ邮箱填写为:qq,网易163游戏填写为:163
+    "user": "114514@qq.com",  //发送人邮箱号
+    "pass": "************"  //SMTP服务授权码
+  }
 }
 ```
 
 #### `inmailbox`文件
 
 - 玩家收件箱
-- 路径: BDS/plugins/Planet/Pmail/inmailbox.json
+- 路径: BDS/plugins/Planet/PMail/inmailbox.json
 ```js
 {
   "MC Susu2990": [
@@ -69,7 +76,7 @@
 #### `outmailbox`文件
 
 - 玩家已发送邮件
-- 路径: BDS/plugins/Planet/Pmail/outmailbox.json
+- 路径: BDS/plugins/Planet/PMail/outmailbox.json
 ```js
 {
   "SUNSServer": [
@@ -88,7 +95,7 @@
 #### `automailbox`文件
 
 - 自动发送邮件
-- 路径: BDS/plugins/Planet/Pmail/automailbox.json
+- 路径: BDS/plugins/Planet/PMail/automailbox.json
 ```js
 {
   "7270887ac65b4f428b1fa2d335a269da": { //邮件唯一ID
@@ -104,6 +111,19 @@
   }
 }
 ```
+
+#### `emailaddress` 文件
+
+- 玩家绑定的接收邮箱地址
+- 路径: BDS/plugins/Planet/PMail/emailaddress.json
+```js
+{
+    "SUNSServer": "licheng1117@outlook.com",
+    "玩家名称":"邮箱地址"
+}
+```
+
+
 
 ## PAPI变量说明
 -`v1.0.9`正式版开始支持  
