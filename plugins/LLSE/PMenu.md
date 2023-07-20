@@ -19,7 +19,8 @@
     "money": 0, //经济模式（0为计分板，1为LLMoney）
     "score": "money", //计分板项名称
     "item": "minecraft:clock", //打开菜单的物品type信息
-    "main": "main" //主菜单文件名称
+    "main": "main", //主菜单文件名称
+    "shield": ["minecraft:ender_chest"]  //需要屏蔽掉可交互的方块（填写放的type标准名）
 }
 ```
 
