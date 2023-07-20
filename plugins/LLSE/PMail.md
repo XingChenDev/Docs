@@ -44,7 +44,9 @@
   "deadline": 7, //邮件有效期（0为永久有效）
   "email":{  //E-Mail邮件模块
     "module": true,  //模块开关（true或false）
-    "service": "qq",  //邮件服务器（已知可以使用QQ邮箱或网易163游戏，QQ邮箱填写为:qq,网易163游戏填写为:163
+    "host": "smtp.qq.com",  //设置服务
+    "port": 465,  //端口
+    "sercure": true,  //是否使用TLS
     "user": "114514@qq.com",  //发送人邮箱号
     "pass": "************"  //SMTP服务授权码
   }
