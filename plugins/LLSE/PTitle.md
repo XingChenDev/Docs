@@ -21,24 +21,15 @@
 #### 自带变量
 | 变量     | 注释    | 变量     | 注释    |
 | --------| -------- | -------- | -------- |
-| `{score}` | 计分板   | `{money}`  | LLMoney |
-| `{world}` | 玩家所在的世界维度 | `{vip}` | 玩家是否拥有VIP身份(需要安装PCsvip插件) |
-| `{ping}` | 玩家实时延迟 | `{os}` | 玩家设备系统 |
-|`{ch}`|玩家当前佩戴的称号| `{time}`| 当前时间 |
-| `{name}` | 玩家ID | `{msg}` | 玩家发送的消息|
+| `%score%` | 计分板   | `%money%`  | LLMoney |
+| `%world%` | 玩家所在的世界维度 | `%vip%` | 玩家是否拥有VIP身份(需要安装PCsvip插件) |
+| `%ping%` | 玩家实时延迟 | `%os%` | 玩家设备系统 |
+|`%ch%`|玩家当前佩戴的称号| `%time%`| 当前时间 |
+| `%name%` | 玩家ID | `%msg%` | 玩家发送的消息|
 
 #### 使用`BEPlaceholderAPI`变量方法
 
 > [!ATTENTION] 使用非`BEPlaceholderAPI`自带的公共变量时需要安装对应的插件
-
-|PAPI变量|注释|提示|示范|
-|-------|-------|-------|-------|
-|`player_realname`|PAPI自带变量(玩家的真实名称)|这个变量需要玩家对象|`{PAPI.player_realname:pl}`|
-|`server_version`|PAPI自带变量(服务器版本)|这个变量不需要玩家对象|`{PAPI.server_version}`|
-|`pexp_lvl`|[`PlayerExp`](https://www.minebbs.com/resources/playerexp.5852/)插件注册变量(玩家的等级)|这个变量需要玩家对象|`{PAPI.pexp_lvl:pl}`|
-|`PlayerTeamName`|[`DTeam`](https://www.minebbs.com/resources/dteam.4999/)插件注册变量(玩家所在的队伍名称)|这个变量需要玩家对象|`{PAPI.PlayerTeamName:pl}`|
-
-  - 使用PAPI变量时,若需要玩家对象,需在变量后面加上`:pl`,若不需要则不加
 
 ## 配置文件说明
 
@@ -55,12 +46,12 @@
   "language": "zh_CN", //默认的语言
   "chat": { //聊天界面
     "switch": true, //开关(true为开，false为关)
-    "msg1": "§l§3[记分板money:{score}]§1[{os}]§6[{ping}ms]§7{time}§r[§2{world}§r]<§3{name}§r> {msg}", //未佩戴称号时的游戏聊天界面
-    "msg2": "§l§3[记分板money:{score}]§1[{os}]§6[{ping}ms]§7{time}§r[§2{world}§r]<[{ch}§r]§3{name}§r> {msg}", //佩戴称号时的游戏聊天界面
-    "log1": "{name}", //未佩戴称号时的控制台输出
-    "log2": "[{ch}]{name}", //佩戴称号时的控制台输出
-    "team1": "§r[§c队内聊天§r]<{name}> {msgs}", //未佩戴称号时的队内聊天界面
-    "team2": "§r[§c队内聊天§r]<[{ch}§r]{name}> {msgs}" //佩戴称号时的队内聊天界面
+    "msg1": "§l§3[记分板money:%score%]§1[%os%]§6[%ping%ms]§7%time%§r[§2%world%§r]<§3%name%§r> %msg%", //未佩戴称号时的游戏聊天界面
+    "msg2": "§l§3[记分板money:%score%]§1[%os%]§6[%ping%ms]§7%time%§r[§2%world%§r]<[%ch%§r]§3%name%§r> %msg%", //佩戴称号时的游戏聊天界面
+    "log1": "%name%", //未佩戴称号时的控制台输出
+    "log2": "[%ch%]%name%", //佩戴称号时的控制台输出
+    "team1": "§r[§c队内聊天§r]<%name%> %msgs%", //未佩戴称号时的队内聊天界面
+    "team2": "§r[§c队内聊天§r]<[%ch%§r]%name%> %msgs%" //佩戴称号时的队内聊天界面
   },
   "chset": { //称号设置
     "buych": true, //购买称号(true为开，false为关)
@@ -241,7 +232,7 @@
 
 |变量|注释|示例|
 |---|---|---|
-|`%PT_Wearch%`|玩家当前佩戴称号|`HeadShow`插件`%PT_Wearch%`<br>`PQuery`插件`{PAPI.PT_Wearch:pl}`|
+|`%PT_Wearch%`|玩家当前佩戴称号|`HeadShow`插件`%PT_Wearch%`<br>`PQuery`插件`%PT_Wearch%`|
 
 
 ## API

@@ -134,9 +134,9 @@
 
 |变量|注释|示例|
 |---|---|---|
-|`%PM_Incount%`|玩家收件箱邮件总数量|`HeadShow`插件`%PM_Incount%`<br>`PQuery`插件`{PAPI.PM_Incount:pl}`|
-|`%PM_Unread%`|玩家收件箱未读邮件数量|`HeadShow`插件`%PM_Unread%`<br>`PQuery`插件`{PAPI.PM_Unread:pl}`|
-|`%PM_Outcount%`|玩家发件箱邮件总数量|`HeadShow`插件`%PM_Outcount%`<br>`PQuery`插件`{PAPI.PM_Outcount:pl}`|
+|`%PM_Incount%`|玩家收件箱邮件总数量|`HeadShow`插件`%PM_Incount%`<br>`PQuery`插件`%PM_Incount%`|
+|`%PM_Unread%`|玩家收件箱未读邮件数量|`HeadShow`插件`%PM_Unread%`<br>`PQuery`插件`%PM_Unread%`|
+|`%PM_Outcount%`|玩家发件箱邮件总数量|`HeadShow`插件`%PM_Outcount%`<br>`PQuery`插件`%PM_Outcount%`|
 ## API
 ?> PMail提供了5个接口 
 

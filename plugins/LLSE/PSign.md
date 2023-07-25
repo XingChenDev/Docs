@@ -59,10 +59,9 @@
 
 |变量|注释|示例|
 |---|---|---|
-|`%PS_Count%`|玩家总签到次数|`HeadShow`插件`%PS_Count%`<br>`PQuery`插件`{PAPI.PS_Count:pl}`|
-|`%PS_Cont%`|玩家连续签到次数|`HeadShow`插件`%PS_Cont%`<br>`PQuery`插件`{PAPI.PS_Cont:pl}`|
-|`%PS_Date%`|玩家最后签到日期|`HeadShow`插件`%PS_Date%`<br>`PQuery`插件`{PAPI.PS_Date:pl}`|
-
+|`%PS_Count%`|玩家总签到次数|`HeadShow`插件`%PS_Count%`<br>`PQuery`插件`%PS_Count%`|
+|`%PS_Cont%`|玩家连续签到次数|`HeadShow`插件`%PS_Cont%`<br>`PQuery`插件`%PS_Cont%`|
+|`%PS_Date%`|玩家最后签到日期|`HeadShow`插件`%PS_Date%`<br>`PQuery`插件`%PS_Date%`|
 
 ## API
 ?> PSign提供了8个接口
