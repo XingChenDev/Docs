@@ -13,7 +13,6 @@
   - [PStop - 维护系统](plugins/LLSE/PStop)
   - [PTitle - 称号系统](plugins/LLSE/PTitle)
 - [Serein插件](/plugins/Serein/)
-  - [PBank - 银行系统](plugins/Serein/PBank)
   - [PBind - 账号绑定](plugins/Serein/PBind)
   - [PQuery - 多功能查询](plugins/Serein/PQuery)
   - 敬请期待
