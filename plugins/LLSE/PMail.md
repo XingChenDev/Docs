@@ -14,7 +14,7 @@
 ## 注册指令说明
 `/mail` - 邮箱  
 `/mailset` - 邮箱设置
-
+`/sendmail` - 发送测试电子邮件（控制台操作 格式: sendmail stardevel@outlook.com）
 ## 配置文件说明
 
 > [!ATTENTION] 更改配置文件请注意 JSON 文件格式，不推荐使用记事本修改或添加菜单文件解析
