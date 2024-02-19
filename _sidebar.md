@@ -3,6 +3,7 @@
   - [PBank - 银行系统](plugins/LLSE/PBank)
   - [PBind - 账号绑定](plugins/LLSE/PBind)
   - [PCdk - 兑换码](plugins/LLSE/PCDK)
+  - [PChat - 消息处理](plugins/LLSE/PChat)
   - [PCsvip - 会员](plugins/LLSE/PCSVIP)
   - [PLib - 数据库](plugins/LLSE/PLib)
   - [PMail - 邮箱&邮件系统](plugins/LLSE/PMail)
