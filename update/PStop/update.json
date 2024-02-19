@@ -1,0 +1,10 @@
+{
+    "name": "维护&反馈系统",
+    "message": "",
+    "status": 4001,
+    "version": "1.0.7",
+    "fixvers": "",
+    "updatemes": {
+        "1.0.7": "1.新增玩家反馈&举报功能,2.接入PMail - 邮箱&邮件系统插件\n下载链接:https://www.minebbs.com/resources/pstop.4333/"
+    }
+}

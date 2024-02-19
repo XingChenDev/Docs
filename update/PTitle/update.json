@@ -1,0 +1,10 @@
+{
+    "name": "称号系统",
+    "message": "",
+    "status": 4001,
+    "version": "2.0.5",
+    "fixvers": "",
+    "updatemes": {
+        "2.0.5": "1.更改了config配置文件中的chat类（精简）,2.变量%ch%自动添加[]符号，在配置文件中无需自行添加了,3.将控制台%msg%输出自定义格式加入到chat下的log中,--添加PChat的变量%face_msg%或%emoji_msg_log%即可体验@群员功能（需要设置机器人）,4.修复发消息报计分板错误,5.修正了一个玩家下线的报错\n下载链接:https://www.minebbs.com/resources/ptitle.4048/"
+    }
+}

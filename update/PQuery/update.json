@@ -1,0 +1,10 @@
+{
+    "name": "多功能查询插件",
+    "message": "",
+    "status": 4001,
+    "version": "1.2.4",
+    "fixvers": "",
+    "updatemes": {
+        "1.2.4": "1.修复在线查询玩家信息数据错误的bug,2.修复对接最新版PCsvip插件的报错,3.新增游戏内通过指令查询其他玩家功能\n注意事项:由于会员插件制作疏忽，将会员的一个接口命名错误，故导致使用旧版本PCsvip插件会与PQuery 1.2.3存在错误情况，请在QQ群中下载更新最新PCsvip开发版\n下载链接:https://www.minebbs.com/resources/psign.4137/"
+    }
+}

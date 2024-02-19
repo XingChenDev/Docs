@@ -1,0 +1,10 @@
+{
+    "name": "账号绑定插件",
+    "message": "",
+    "status": 4001,
+    "version": "1.0.9",
+    "fixvers": "",
+    "updatemes": {
+        "1.0.9": "1.修复一个已知问题,2.更正通过xuid查询玩家对象接口代码逻辑\n下载链接:https://www.minebbs.com/resources/pbind.4211/"
+    }
+}
