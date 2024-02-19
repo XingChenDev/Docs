@@ -5,7 +5,7 @@
     return $json_string;
   };
   if($name==""){
- echo open_file("./update/plugins/404.json"); 
+ echo open_file("./update/404.json"); 
   }else{ 
      echo open_file("./update/$name/update.json"); }
  ?>
