@@ -1,4 +1,5 @@
 > [!TIP|style:flat||labelVisibility:hidden|iconVisibility:hidden] PTitle是一个可高度自定义的称号系统插件,他支持玩家定制称号、带buff效果的称号、限时称号等,开放了外接接口,可通过接口对PTitle进行操作,例如: 获取指定玩家当前佩戴的称号、删除指定玩家指定称号等等
+> 全新改版的PTitle即将登场,我们将对底层代码进行重写,新PTitle将支持多buff、自定义buff、实物称号（命名牌）,带来不一样的称号体验。对影响服务器TPS的所有逻辑单元进行简化,以达到最优效果
 
 ## 前置组件
 #### 必选
@@ -13,7 +14,7 @@
 `/delch` - 删除称号  
 `/chset` - 称号设置  
 
-## 聊天界面变量 (支持`BEPlaceholderAPI`所有注册变量) 
+## 聊天界面变量(支持`BEPlaceholderAPI`所有注册变量) 
 - `v2.0.0 Beta 23.05.0617M`开始支持
 
 > [!ATTENTION] 使用`BEPlaceholderAPI`公共变量需要安装`BEPlaceholderAPI`插件
@@ -27,16 +28,94 @@
 |`%ch%`|玩家当前佩戴的称号| `%time%`| 当前时间 |
 | `%name%` | 玩家ID | `%msg%` | 玩家发送的消息|
 
-#### 使用`BEPlaceholderAPI`变量方法
-
-> [!ATTENTION] 使用非`BEPlaceholderAPI`自带的公共变量时需要安装对应的插件
-
 ## 配置文件说明
 
 > [!ATTENTION] 更改配置文件请注意 JSON 文件格式，不推荐使用记事本修改或添加菜单文件解析
 
-#### `config`文件
+#### `config`文件(全新改版，将支持中英双语配置文件)
+- 新
+```js
+{
+    "version": "v2.0.5 Beta 24.02.2401A", //配置文件版本
+    "money": 0, //经济模式(0为计分板，1为LLMoney)
+    "score": "money", //计分板项(经济模式为计分板时生效)
+    "defaul_title": "§f萌新求饶", //默认的称号
+    "defaul_language": "zh_CN", //默认的语言
+    "config_language": "en_US", //配置文件语言(新增)
+    "chat": { //聊天界面
+        "switch": false, //开关(true为开，false为关)
+        "msg": "§l§3[记分板money:%score%]§1[%os%]§6[%ping%ms]§7%time%§r[§2%world%§r]<§3%name%§r> %msg%", //游戏聊天界面
+        "log": "<[%ch%]%name%> %msgs%", //控制台输出
+        "team": "§r[§c队内聊天§r]<[%ch%§r]%name%> %msgs%" //队内聊天界面  将会在2.0.7版本弃用对原Team插件的对接
+    },
+    "title_set": { //称号设置
+        "buy_title": false, //购买称号(true为开，false为关)
+        "sell_title": false, //出售称号(true为开，false为关)
+        "del_title": false, //删除称号(true为开，false为关)
+        "customize": false, //定制称号(true为开，false为关)
+        "discount": 95, //出售称号时的折扣
+        "vipdiscount": 90 //VIP玩家购买称号时的折扣
+    },
+    "customize": { //定制称号配置项
+        "sort": "个人称号", //定制称号的分类
+        "suffix": "№.", //定制称号的后缀
+        "sell": false, //定制称号的字数
+        "dele": false, //定制称号的出售条件
+        "max": 3 //定制称号的删除条件
+    },
+    "grade": [ //品阶&等级
+        {
+            "name": "普通", //中文名
+            "id": "§f", //颜色代码
+            "customize": true, //定制是否可选(true为允许定制称号时选择，false则反)
+            "money": 1000, //定制称号时的价格
+            "buff_list": [] //允许定制的属性列表(buff列表)
+        },
+        {
+            "name": "中级",
+            "id": "§2",
+            "customize": true,
+            "money": 2000,
+            "buff_list": [ //允许定制的属性列表(buff列表)
+                {
+                    "id": 1, //buff的数字ID
+                    "type": "speed", //buff的type
+                    "rank": 1, //buff的等级
+                    "money": 300 //buff的价格
+                },
+                {
+                    "id": 3,
+                    "type": "haste",
+                    "rank": 1,
+                    "money": 300
+                }
+            ]
+        },
+        {
+            "name": "高级",
+            "id": "§1",
+            "customize": true,
+            "money": 3000,
+            "buff_list": [
+                {
+                    "id": 1,
+                    "type": "speed",
+                    "rank": 0,
+                    "money": 200
+                },
+                {
+                    "id": 3,
+                    "type": "haste",
+                    "rank": 0,
+                    "money": 200
+                }
+            ]
+        }
+    ]
+}
+```
 
+- 旧
 ```js
 {
   "version": "v2.0.1 Beta 23.06.2209H", //配置文件版本
@@ -46,12 +125,9 @@
   "language": "zh_CN", //默认的语言
   "chat": { //聊天界面
     "switch": true, //开关(true为开，false为关)
-    "msg1": "§l§3[记分板money:%score%]§1[%os%]§6[%ping%ms]§7%time%§r[§2%world%§r]<§3%name%§r> %msg%", //未佩戴称号时的游戏聊天界面
-    "msg2": "§l§3[记分板money:%score%]§1[%os%]§6[%ping%ms]§7%time%§r[§2%world%§r]<[%ch%§r]§3%name%§r> %msg%", //佩戴称号时的游戏聊天界面
-    "log1": "%name%", //未佩戴称号时的控制台输出
-    "log2": "[%ch%]%name%", //佩戴称号时的控制台输出
-    "team1": "§r[§c队内聊天§r]<%name%> %msgs%", //未佩戴称号时的队内聊天界面
-    "team2": "§r[§c队内聊天§r]<[%ch%§r]%name%> %msgs%" //佩戴称号时的队内聊天界面
+    "msg": "§l§3[记分板money:%score%]§1[%os%]§6[%ping%ms]§7%time%§r[§2%world%§r]<%ch%§r§3%name%§r> %msg%", //游戏聊天界面
+    "log": "%ch%%name% >> %msg%", //控制台输出
+    "team": "§r[§c队内聊天§r]<%ch%§r%name%> %msgs%" //佩戴称号时的队内聊天界面  将会在2.0.7版本弃用对原Team插件的对接
   },
   "chset": { //称号设置
     "buych": true, //购买称号(true为开，false为关)
@@ -111,10 +187,19 @@
 }
 ```
 
-#### `titlesort`文件 原(`storesortdata`)
+#### `titlesort`文件(改版)
 
 - 称号商店分类的配置文件
 - 路径: BDS/plugins/Planet/PTitle/data/store/titlesort.json
+- 新
+```js
+[
+    "个人称号",
+    "西游记称号"
+]
+```
+
+- 旧
 ```js
 {
   "sort": [
@@ -124,10 +209,38 @@
 }
 ```
 
-#### `title`文件 原(`storechdata`)
+#### `title`文件(改版)
 
 - 称号商店商品的配置文件
 - 路径: BDS/plugins/Planet/PTitle/data/store/title.json
+- 新
+```js
+[
+    {
+      "sort": "个人称号", //称号所属分类
+      "title": "萌新求饶", //称号
+      "sell": false, //出售条件(false为禁止，true为允许)
+      "dele": false, //删除条件(false为禁止，true为允许)
+      "money": 0, //称号售价(0为免费，大于0为收费)
+      "buff": null, //称号buff加成 (null为无加成，根据Minecraft Wiki上的药水buff的ID进行设置)
+      "time": 0, //称号有效时长 (0为永久，大于0为有效时长)
+      "selltime": 0, //称号售卖时长 (0为长期，大于0为倒计时)
+      "addtime": "2022-07-27 02:34:39" //(添加称号时的时间)
+    },
+    {
+      "sort": "西游记称号",
+      "title": "§6天蓬元帅",
+      "sell": true,
+      "dele": true,
+      "money": 99999,
+      "buff": "absorption",
+      "time": 0,
+      "selltime": 0,
+      "addtime": "2022-07-28 02:34:39"
+    }
+  ]
+```
+- 旧
 ```js
 {
   "goods": [
@@ -156,6 +269,25 @@
   ]
 }
 ```
+#### `buffdata`文件(2.0.6版新增)
+- 预计格式
+```js
+[
+  //原版格式（若装有PLib,PTitle在启动时会自动删除原版buff数据)
+  {
+    "id":1,
+    "type": "speed",
+    "rank": 0,
+    "money": 200 
+  },
+  //自定义格式
+  //设计中
+]
+```
+
+
+
+
 
 #### `customize`文件
 
@@ -177,7 +309,7 @@
 }
 ```
 
-#### `titlesort`文件 原(`playersortdata`)
+#### `titlesort`文件
 
 - 玩家称号分类文件
 - 路径: BDS/plugins/Planet/PTitle/data/player/titlesort.json
@@ -190,10 +322,44 @@
 }
 ```
 
-#### `title`文件 原(`playerchdata`)
+#### `title`文件(称号buff部分改版，新增强化属性)
 
 - 玩家称号数据
 - 路径: BDS/plugins/Planet/PTitle/data/player/title.json
+- 新
+```js
+{
+  "SUNSServer": [
+    {
+      "sort": "个人称号",
+      "title": "§f萌新求饶",
+      "sell": false,
+      "dele": false,
+      "money": 0,
+      "buff": [
+        {
+          "id":10,
+          "type":"",
+          "rank":0
+        },
+        {
+          "id":21,
+          "type":"",
+          "rank":0
+        }, 
+        {
+          "type":"xp",
+          "rank":1.5
+        }
+      ],
+      "time": 0,
+      "gattime": "2023-04-09 13:04:27"
+    }
+  ]
+}
+```
+
+
 ```js
 {
   "SUNSServer": [
