@@ -1,0 +1,10 @@
+{
+    "name": "菜单插件",
+    "message": "",
+    "status": 4001,
+    "version": "1.1.5",
+    "fixvers": "",
+    "updatemes": {
+        "1.1.5": "修复使用LLMoney经济时扣除经济的报错\n注意事项:由于会员插件制作疏忽，将会员的一个接口命名错误，故导致使用旧版本PCsvip插件会与PQuery 1.1.3存在错误情况，请在QQ群中下载更新最新PCsvip开发版\n下载链接:https://www.minebbs.com/resources/pmail.5820/"
+    }
+}

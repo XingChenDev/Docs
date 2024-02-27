@@ -1,0 +1,8 @@
+{
+    "name": "错误",
+    "message": "请至少输入一个参数(例如:update.mamap.top?name=PMenu",
+    "status": 4000,
+    "version": "",
+    "fixvers": "",
+    "updatemes": {}
+}

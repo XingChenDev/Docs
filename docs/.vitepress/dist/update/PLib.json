@@ -1,0 +1,11 @@
+{
+    "name": "邮箱&邮件系统",
+    "message": "",
+    "status": 4001,
+    "version": "1.0.9",
+    "fixvers": "Beta 23.07.2610V",
+    "updatemes": {
+        "1.1.0": "1.新增E-Mail功能,可使用腾讯邮箱、阿里邮箱、自建邮箱等,2.使用LLSE-NodeJs引擎\n注意事项:\n1.在玩家未绑定收件邮箱地址时会调用PBind绑定的QQ邮箱，若未使用PBind则不会发送电子邮件,2.若短时间内发送的电子邮件太多会造成发送电子邮件失败，这属于正常情况,3.\n下载链接:https://www.minebbs.com/resources/pmail.5820/",
+        "Beta 23.07.2610V": "修复了一些已知问题\n下载链接:QQ群文件"
+    }
+}
