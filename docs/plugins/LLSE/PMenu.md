@@ -17,11 +17,12 @@ PMenu是一个多功能的菜单插件，支持玩家菜单、OP菜单、VIP菜�
 - 路径：BDS/plugins/Planet/PMENU/config.json
 ```js
 {
-    "version": "v1.0.6", //配置文件版本
+    "version": "v1.1.6", //配置文件版本
     "money": 0, //经济模式（0为计分板，1为LLMoney）
     "score": "money", //计分板项名称
     "item": "minecraft:clock", //打开菜单的物品type信息
     "main": "main", //主菜单文件名称
+    "intercept": 1, // 玩家使用指令拦截模式（0为不拦截，1为全部拦截，2为仅拦截菜单文件中的指令）
     "shield": ["minecraft:ender_chest"]  //需要屏蔽掉可交互的方块（填写放的type标准名）
 }
 ```
@@ -47,54 +48,29 @@ PMenu是一个多功能的菜单插件，支持玩家菜单、OP菜单、VIP菜�
             "images": false,
             "image": "textures/items/apple",
             "money": 0,
-            "text": "发送一句你好",
-            "command": "msg @a 你好",
-            "type": "comm"
-        },
-        {
-            "images": false,
-            "image": "textures/items/apple",
-            "money": 10,
-            "text": "花10金币发送一句你好",
-            "command": "msg @a 你好",
-            "type": "comm"
-        },
-        {
-            "images": false,
-            "image": "textures/items/apple",
-            "money": 0,
-            "text": "二级菜单",
-            "command": "menutow",
-            "type": "form"
-        },
-        {
-            "images": false,
-            "image": "textures/items/apple",
-            "money": 0,
             "text": "管理员二级菜单",
             "command": "opmenutow",
             "type": "opfm",
             "oplist": [] //op列表（指定op才能使用的按钮，可多填，(例如：“SUNSServer”,"MC Susu2990","aaaa")注意JSON的格式即可）
-        },
-        {
-            "images": false,
-            "image": "textures/items/apple",
-            "money": 0,
-            "text": "管理员发送一个标题",
-            "command": "title @a title 一个标题",
-            "type": "opcm",
-            "oplist": []
         }
     ]
 }
 ```
 
 ## API
->PMenu仅提供一个API接口,用于需要对物品进行扣除的插件以做到不会误扣效果,例如PMail的发送邮件
+>PMenu提供了2个API接口, 
+
+#### 获取PMenu插件版本
+
+`ll.import("PMenu","version")()`
+
+- 返回值: `PMenu插件版本` 
+- 返回值类型: `String` 
+ - 该接口仅在`1.1.6`版本后开放，若使用之前的旧版本请使用`ll.hasExported("PMenu","version")`检查函数是否被导出，否则会报错
 
 #### 获取菜单物品
 
 `ll.import("PMenu","iteminfo")()`
 
-- 返回值: 设置的打开菜单的物品
+- 返回值: 打开菜单的物品
 - 返回值类型: `String`
