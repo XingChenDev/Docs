@@ -191,7 +191,7 @@ PLib是Planet工作室插件的一个前置插件之一，主要供应“P”系
 - 为保证旧接口的兼容性,所有的数据对象旧属性均已保留
 #### 获取BUFF库数据
 
-`ll.import("PLib", "buffdata")()`
+`ll.import("PLib", "buffdata")()` 
 `ll.import("buffdata")()`
 
 - 返回值: `BUFF库数据列表`
@@ -225,7 +225,7 @@ PLib是Planet工作室插件的一个前置插件之一，主要供应“P”系
 
 #### 获取粒子库数据
 
-`ll.import("PLib", "lizidata")()`
+`ll.import("PLib", "lizidata")()` 
 `ll.import("lizidata")()`
 
 - 返回值: 粒子库数据列表
@@ -256,7 +256,7 @@ PLib是Planet工作室插件的一个前置插件之一，主要供应“P”系
 
 #### 获取物品库数据
 
-`ll.import("PLib", "alliteminfo")()`
+`ll.import("PLib", "alliteminfo")()` 
 `ll.import("itemallinfodata")()`
 
 
@@ -266,7 +266,7 @@ PLib是Planet工作室插件的一个前置插件之一，主要供应“P”系
 
 #### 获取指定物品数据
 
-`ll.import("PLib, "iteminfo")(item)`
+`ll.import("PLib, "iteminfo")(item)` 
 `ll.import("iteminfodata")(item)`
 
 - 参数
@@ -300,7 +300,7 @@ PLib是Planet工作室插件的一个前置插件之一，主要供应“P”系
 
 #### 获取玩家信息数据
 
-`ll.import("PLib", "getplayer")()`
+`ll.import("PLib", "getplayer")()` 
 `ll.import("PLibplayer")()`
 
 - 返回值 本服务器所有玩家数据
