@@ -261,6 +261,36 @@ PMail已接入E-Mail模块，可以实现对现实邮箱的交互（详细使用
     | state    | 发送结果     | `Boolean` | true |
     | content  | 发送结果信息 | `String`  | "接收地址不是邮箱地址" | 
 
+#### 获取玩家电子邮箱地址
+
+`ll.import("PMail", "get_address")(player)`
+
+- 参数
+  - player: `Player`或`String` 
+    玩家对象 或 玩家名称
+- 返回值: 电子邮箱地址
+- 返回值类型: `String` 
+ - 若返回`Null`则表示没有数据
+
+#### 设置玩家电子邮箱地址
+
+`ll.import("PMail", "set_address")(player, address)`
+
+- 参数
+  - player: `Player`或`String` 
+    玩家对象 或 玩家名称
+  - address: `String` 
+    电子邮箱地址 格式为`114514@qq.com`
+- 返回值: 设置结果对象
+- 返回值类型:  `Object` 
+
+- 返回值对象属性
+ 
+    | 属性 | 含义 | 类型 | 示范 |
+    | ---- | ----- | ----- |
+    | state    | 发送结果     | `Boolean` | true |
+    | content  | 发送结果信息 | `String`  | "缺少玩家参数（可传递Player或玩家的名字）" | 
+
 ### 以下是旧版本接口
 - 为保证旧接口的兼容性,所有的数据对象旧属性均已保留
 
