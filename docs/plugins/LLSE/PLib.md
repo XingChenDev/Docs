@@ -3,11 +3,28 @@ PLib是Planet工作室插件的一个前置插件之一，主要供应“P”系
 :::
 
 ## 前置组件
-#### 必选
-- [LiteLoaderBDS](https://www.minebbs.com/liteloader/)
+### 必选
+#### LL2 
+- [LiteLoaderBDS](https://www.minebbs.com/liteloader/) 
+#### LL3
+- [LeviLamina](https://www.minebbs.com/resources/levilamina.8049/) 
+- [LegacyScriptEngine](https://www.minebbs.com/resources/legacyscriptengine.8048/) 
+ - 此插件需要LL3的LSE-quickjs加载器下运行,使用前请确保您已安装了该加载器 
 
-#### 可选(1.1.0 后不再需要并强制删除PBind)
-- [PBind](https://www.minebbs.com/resources/pbind.4211/) 
+### 可选
+> LL2上使用PAPI的所需组件 
+ - [BEPlaceholderAPI](https://www.minebbs.com/resources/beplaceholderapi.4181/) 
+> LL3上使用PAPI的所需组件 
+ - [GMLIB](https://www.minebbs.com/resources/gmlib.6636/) 
+ - [GMLIB-LegacyRemoteCallApi](https://www.minebbs.com/resources/gmlib-legacyremotecallapi-gmlib-remotecallapi.7159/) 
+
+## 安装
+#### LL2
+- 首次安装,将文件`PLib.js`或`PLib.llse.js`解压到此路径下:`BDS/plugins/` 
+ - 更新直接替换原来的文件,若旧插件的名称与新插件的名称不一致,请删除旧插件再解压 
+#### LL3
+- LL3 将文件夹`PLib`解压到此路径下:`BDS/plugins/` 
+ - 更新插件请将原来的文件夹删除 
 
 ## 注册指令说明
 `/plib` - 数据库 当前仅支持查看日新玩家及历史新玩家

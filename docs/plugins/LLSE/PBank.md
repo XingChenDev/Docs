@@ -3,23 +3,40 @@ PBank是一个银行系统插件,他支持玩家存钱、取钱、贷款、转�
 :::
 
 ## 前置组件
-#### 必选
-- [LiteLoaderBDS](https://www.minebbs.com/liteloader/)
+### 必选
+#### LL2 
+- [LiteLoaderBDS](https://www.minebbs.com/liteloader/) 
+#### LL3
+- [LeviLamina](https://www.minebbs.com/resources/levilamina.8049/) 
+- [LegacyScriptEngine](https://www.minebbs.com/resources/legacyscriptengine.8048/) 
+ - 此插件需要LL3的LSE-quickjs加载器下运行,使用前请确保您已安装了该加载器 
 
-#### 可选&建议
-- [PMail](https://www.minebbs.com/resources/pmail.5820/)
-- [PBind](https://www.minebbs.com/resources/pbind.4211/) 建议使用
+### 可选
+- [PMail](https://www.minebbs.com/resources/pmail.5820/) 
+- [PLib 建议使用](https://www.minebbs.com/resources/plib-planet.4523/) 
+> LL2上使用PAPI的所需组件 
+ - [BEPlaceholderAPI](https://www.minebbs.com/resources/beplaceholderapi.4181/) 
+> LL3上使用PAPI的所需组件 
+ - [GMLIB](https://www.minebbs.com/resources/gmlib.6636/) 
+ - [GMLIB-LegacyRemoteCallApi](https://www.minebbs.com/resources/gmlib-legacyremotecallapi-gmlib-remotecallapi.7159/) 
+
+## 安装
+#### LL2
+- 首次安装,将文件`PBank.js`或`PBank.llse.js`解压到此路径下:`BDS/plugins/` 
+ - 更新直接替换原来的文件,若旧插件的名称与新插件的名称不一致,请删除旧插件再解压 
+#### LL3
+- 将文件夹`PBank`解压到此路径下:`BDS/plugins/` 
+ - 更新插件请将原来的文件夹删除 
+
 
 ## 注册指令说明
 `/bank` - 银行  
 `/bankset` - 银行管理	
 
-## 配置文件说明
-
-#### `config`文件
-
-- 插件基础配置文件
-- 路径: BDS/plugins/Planet/PBank/config.json
+## 配置文件说明 
+#### `config`文件 
+- 插件基础配置文件 
+- 路径: BDS/plugins/Planet/PBank/config.json 
 ```js
 {
     "version": "0.0.0 Beta 23.05.1505E",  //插件版本
@@ -35,10 +52,9 @@ PBank是一个银行系统插件,他支持玩家存钱、取钱、贷款、转�
 }
 ```
 
-#### `bankdata`文件
-
-- 银行账户数据文件
-- 路径: BDS/plugins/Planet/PBank/data/bankdata.json
+#### `bankdata`文件 
+- 银行账户数据文件 
+- 路径: BDS/plugins/Planet/PBank/data/bankdata.json 
 ```js
 {
     "SUNSServer": [  //玩家ID

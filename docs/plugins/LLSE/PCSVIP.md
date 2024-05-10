@@ -3,12 +3,29 @@ PCsvip是我们接手苍山工作室的CSvip的后期维护插件,我们接手�
 :::
 
 ## 前置组件
-#### 必选
-- [LiteLoaderBDS](https://www.minebbs.com/liteloader/)
+### 必选
+#### LL2 
+- [LiteLoaderBDS](https://www.minebbs.com/liteloader/) 
+#### LL3
+- [LeviLamina](https://www.minebbs.com/resources/levilamina.8049/) 
+- [LegacyScriptEngine](https://www.minebbs.com/resources/legacyscriptengine.8048/) 
+ - 此插件需要LL3的LSE-quickjs加载器下运行,使用前请确保您已安装了该加载器 
 
-#### 可选&建议
-- [PBind](https://www.minebbs.com/resources/pbind.4211/) 建议使用
-- [PLib](https://www.minebbs.com/resources/plib-planet.4523/) 建议使用
+### 可选
+- [PLib 建议使用](https://www.minebbs.com/resources/plib-planet.4523/) 
+> LL2上使用PAPI的所需组件 
+ - [BEPlaceholderAPI](https://www.minebbs.com/resources/beplaceholderapi.4181/) 
+> LL3上使用PAPI的所需组件 
+ - [GMLIB](https://www.minebbs.com/resources/gmlib.6636/) 
+ - [GMLIB-LegacyRemoteCallApi](https://www.minebbs.com/resources/gmlib-legacyremotecallapi-gmlib-remotecallapi.7159/) 
+
+## 安装
+#### LL2
+- 首次安装,将文件`PCsvip.js`或`PCsvip.llse.js`解压到此路径下:`BDS/plugins/` 
+ - 更新直接替换原来的文件,若旧插件的名称与新插件的名称不一致,请删除旧插件再解压 
+#### LL3
+- LL3 将文件夹`PCsvip`解压到此路径下:`BDS/plugins/` 
+ - 更新插件请将原来的文件夹删除 
 
 ## 注册指令说明
 `/myvip` - 我的VIP 游戏内执行  
@@ -38,15 +55,13 @@ PCsvip是我们接手苍山工作室的CSvip的后期维护插件,我们接手�
 |`vip query 114514`|查询114514绑定的玩家的会员信息（默认为英文输出格式）|`vip query Steve cn`|查询Steve玩家的会员信息（输出格式为中文）|
 
 
-## 配置文件说明
+## 配置文件说明 
+> 更改配置文件请注意 JSON 文件格式，不推荐使用记事本修改配置文件
 
-> [!ATTENTION] 更改配置文件请注意 JSON 文件格式，不推荐使用记事本修改配置文件
-
-#### `config`文件
-
-- 插件基础配置文件
-- 路径: BDS/plugins/Planet/PCsvip/config.json
-> 最新版本不能使用旧版本的配置文件、PCsvip正确安装会自动更正不正确的配置项，无需手动修改
+#### `config`文件 
+- 插件基础配置文件 
+- 路径: BDS/plugins/Planet/PCsvip/config.json 
+> 最新版本不能使用旧版本的配置文件、PCsvip正确安装会自动更正不正确的配置项，无需手动修改 
 - `2.0.0  Beta 23.07.0402N`
 ```js
 {
@@ -86,10 +101,9 @@ PCsvip是我们接手苍山工作室的CSvip的后期维护插件,我们接手�
 }
 ```
 
-#### `storedata`文件
-
-- 会员商店
-- 路径: BDS/plugins/Planet/PCsvip/data/storedata.json
+#### `storedata`文件 
+- 会员商店 
+- 路径: BDS/plugins/Planet/PCsvip/data/storedata.json 
 ```js
 {
   "vipgoods": [ //VIP商品
@@ -108,10 +122,9 @@ PCsvip是我们接手苍山工作室的CSvip的后期维护插件,我们接手�
 }
 ```
 
-#### `vipdata`文件
-
-- 会员玩家数据
-- 路径: BDS/plugins/Planet/PCsvip/data/vipdata.json
+#### `vipdata`文件 
+- 会员玩家数据 
+- 路径: BDS/plugins/Planet/PCsvip/data/vipdata.json 
 ```js
 {
   "SUNSServer": { //玩家名称
@@ -131,10 +144,9 @@ PCsvip是我们接手苍山工作室的CSvip的后期维护插件,我们接手�
 ```
 
 
-#### `lizidata`文件
-
-- 会员玩家购买的粒子
-- 路径: BDS/plugins/Planet/PCsvip/data/lizidata.json
+#### `lizidata`文件 
+- 会员玩家购买的粒子 
+- 路径: BDS/plugins/Planet/PCsvip/data/lizidata.json 
 ```js
 "SUNSServer": [
         {

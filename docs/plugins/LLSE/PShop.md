@@ -9,6 +9,7 @@ PShop是一个商店插件,服主可以在商店中添加固定的售卖物品�
 #### 可选&建议
 - [PMail](https://www.minebbs.com/resources/pmail.5820/)
 
+
 ## 注册指令说明
 `/shop` - 商店  
 `/shopset` - 商店管理	

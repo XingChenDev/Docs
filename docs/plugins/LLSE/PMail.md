@@ -2,29 +2,46 @@
 PMail是一个服内的邮箱&邮件系统，支持玩家互发邮件，可附带附件(物品&经济&记分板)，也可由管理员使用自己或服务器的身份向进入过服务器的所有玩家（需要`PLib`插件）发送邮件，或添加自动邮件，玩家下次进服即可收到来自系统自动的邮件，我们还为PMail开通了导出接口供其他开发者使用，可通过第三方插件调用接口发送邮件等 。
 PMail已接入E-Mail模块，可以实现对现实邮箱的交互（详细使用方法后面会出一期视屏），PMail使用的是Nodejs的`nodemailer`模块，使用STMP服务器来发送电子邮件
 ::: 
-
+ 
 ## 前置组件
-#### 必选
-- [LiteLoaderBDS](https://www.minebbs.com/liteloader/)
+> 请根据您的服务端系统进选择
+### 必选
+#### LL2 
+- [LiteLoaderBDS](https://www.minebbs.com/liteloader/) 
+#### LL3
+- [LeviLamina](https://www.minebbs.com/resources/levilamina.8049/) 
+- [LegacyScriptEngine](https://www.minebbs.com/resources/legacyscriptengine.8048/) 
+ - 此插件需要LL3的LSE-nodejs加载器下运行,使用前请确保您已安装了该加载器 
 
-#### 可选
-- [PCsvip](https://www.minebbs.com/resources/pcsvip.4385/)
-- [PBind](https://www.minebbs.com/resources/pbind.4211/) 建议使用
-- [PLib](https://www.minebbs.com/resources/plib-planet.4523/) 建议使用
-- [BEPlaceholderAPI](https://www.minebbs.com/resources/beplaceholderapi.4181/)
+### 可选
+- [PCsvip](https://www.minebbs.com/resources/pcsvip.4385/) 
+- [PLib 建议使用](https://www.minebbs.com/resources/plib-planet.4523/)  
+> LL2上使用PAPI的所需组件 
+ - [BEPlaceholderAPI](https://www.minebbs.com/resources/beplaceholderapi.4181/) 
+> LL3上使用PAPI的所需组件 
+ - [GMLIB](https://www.minebbs.com/resources/gmlib.6636/) 
+ - [GMLIB-LegacyRemoteCallApi](https://www.minebbs.com/resources/gmlib-legacyremotecallapi-gmlib-remotecallapi.7159/) 
+
+
+## 安装
+#### LL2
+- 首次安装,将文件夹`PMail`解压到此路径下:`BDS/plugins/nodejs/` 
+ - 更新直接替换原来的文件,若旧插件的名称与新插件的名称不一致,请删除旧插件再解压 
+#### LL3
+- 将文件夹`PMail`解压到此路径下:`BDS/plugins/` 
+ - 更新插件请将原来的文件夹删除  
 
 ## 注册指令说明
 `/mail` - 邮箱  
 `/mailset` - 邮箱设置
 `/sendmail` - 发送测试电子邮件（控制台操作 格式: sendmail stardevel@outlook.com）
-## 配置文件说明
 
-> [!ATTENTION] 更改配置文件请注意 JSON 文件格式，不推荐使用记事本修改配置文件
+## 配置文件说明 
+> 更改配置文件请注意 JSON 文件格式，不推荐使用记事本修改配置文件
 
-#### `config`文件
-
-- 插件基础配置文件
-- 路径: BDS/plugins/Planet/PMail/config.json
+#### `config`文件 
+- 插件基础配置文件 
+- 路径: BDS/plugins/Planet/PMail/config.json 
 ```js
 {
     "version": "v1.1.0", // 插件版本
@@ -57,10 +74,9 @@ PMail已接入E-Mail模块，可以实现对现实邮箱的交互（详细使用
 }
 ```
 
-#### `mail_in`文件（原`inmailbox`）
-
-- 玩家收件箱
-- 路径: BDS/plugins/Planet/PMail/data/mail_in.json
+#### `mail_in`文件（原`inmailbox`） 
+- 玩家收件箱 
+- 路径: BDS/plugins/Planet/PMail/data/mail_in.json 
 ```js
 {
   "MC Susu2990": [
@@ -84,10 +100,9 @@ PMail已接入E-Mail模块，可以实现对现实邮箱的交互（详细使用
 }
 ```
 
-#### `sent_mail`文件（原 `outmailbox`）
-
-- 玩家已发送邮件
-- 路径: BDS/plugins/Planet/PMail/data/sent_mail.json
+#### `sent_mail`文件（原 `outmailbox`） 
+- 玩家已发送邮件 
+- 路径: BDS/plugins/Planet/PMail/data/sent_mail.json 
 ```js
 {
   "SUNSServer": [
@@ -108,10 +123,9 @@ PMail已接入E-Mail模块，可以实现对现实邮箱的交互（详细使用
 }
 ```
 
-#### `auto_sent_mail`文件（原`automailbox`）
-
-- 自动发送邮件
-- 路径: BDS/plugins/Planet/PMail/data/auto_sent_mail.json
+#### `auto_sent_mail`文件（原`automailbox`） 
+- 自动发送邮件 
+- 路径: BDS/plugins/Planet/PMail/data/auto_sent_mail.json 
 ```js
 {
   "7270887ac65b4f428b1fa2d335a269da": { //邮件唯一ID
@@ -132,10 +146,9 @@ PMail已接入E-Mail模块，可以实现对现实邮箱的交互（详细使用
 }
 ```
 
-#### `email_address` 文件（原`emailaddress`）
-
-- 玩家绑定的接收邮箱地址
-- 路径: BDS/plugins/Planet/PMail/data/email_address.json
+#### `email_address` 文件（原`emailaddress`） 
+- 玩家绑定的接收邮箱地址 
+- 路径: BDS/plugins/Planet/PMail/data/email_address.json 
 ```js
 {
     "SUNSServer": "licheng1117@outlook.com",
@@ -144,9 +157,8 @@ PMail已接入E-Mail模块，可以实现对现实邮箱的交互（详细使用
 ```
 
 ## PAPI变量说明
--`v1.0.9`正式版开始支持  
-
-> [!ATTENTION] 使用`BEPlaceholderAPI`公共变量需要安装`BEPlaceholderAPI`插件
+-`v1.0.9`正式版开始支持   
+>  使用`BEPlaceholderAPI`公共变量需要安装`BEPlaceholderAPI`插件
 
 |变量|注释|示例|
 |---|---|---|

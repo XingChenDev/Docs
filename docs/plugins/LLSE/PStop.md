@@ -3,11 +3,26 @@ PStop是一个可在游戏内、控制台输入指令来进行对非管理员(OP
 :::
 
 ## 前置组件
-#### 必选
-- [LiteLoaderBDS](https://www.minebbs.com/liteloader/)
+> 请根据您的服务端系统进选择 
+### 必选
+#### LL2 
+- [LiteLoaderBDS](https://www.minebbs.com/liteloader/) 
+#### LL3
+- [LeviLamina](https://www.minebbs.com/resources/levilamina.8049/) 
+- [LegacyScriptEngine](https://www.minebbs.com/resources/legacyscriptengine.8048/) 
+ - 此插件需要LL3的LSE-quickjs加载器下运行,使用前请确保您已安装了该加载器 
 
-#### 可选
+### 可选
 - [PCsvip](https://www.minebbs.com/resources/pcsvip.4385/)
+- [PLib 建议使用](https://www.minebbs.com/resources/plib-planet.4523/)  
+
+## 安装
+#### LL2
+- 首次安装,将文件`PStop.js`或`PStop.llse.js`解压到此路径下:`BDS/plugins/` 
+ - 更新直接替换原来的文件,若旧插件的名称与新插件的名称不一致,请删除旧插件再解压
+#### LL3
+- 将文件夹`PStop`解压到此路径下:`BDS/plugins/` 
+ - 更新插件请将原来的文件夹删除  
 
 ## 注册指令说明
 `/pstop` - 普通玩家: 反馈%&举报  OP玩家和控制台: 维护服务器（游戏内、控制台）  
@@ -18,7 +33,7 @@ PStop是一个可在游戏内、控制台输入指令来进行对非管理员(OP
 
 ## 配置文件说明
 
-> [!ATTENTION] 更改配置文件请注意 JSON 文件格式，不推荐使用记事本修改配置文件
+> 更改配置文件请注意 JSON 文件格式，不推荐使用记事本修改配置文件
 
 #### `config`文件
 
@@ -69,4 +84,4 @@ PStop是一个可在游戏内、控制台输入指令来进行对非管理员(OP
 
 ## API
 
-> [!ATTENTION] PStop没有提供外接接口
+> PStop没有提供外接接口

@@ -3,18 +3,29 @@ PQuery是一个支持正则表达式通过机器人在指定的QQ群内查询游
 2023年4月27日我们发布支持Serein面板的PQuery插件,从此告别正则表达式的编写,只需安装Serein面板的js插件（PQuery.Serein.js）,目前该插件已发行开发测试版，
 PQuery停更
 :::
-
+> 由于本插件停更，他将不能在LL3上使用PAPI变量，带来不便，敬请谅解
 ## 前置组件
-#### 必选
-- [LiteLoaderBDS](https://www.minebbs.com/liteloader/)
+### 必选
+#### LL2 
+- [LiteLoaderBDS](https://www.minebbs.com/liteloader/) 
+#### LL3
+- [LeviLamina](https://www.minebbs.com/resources/levilamina.8049/) 
+- [LegacyScriptEngine](https://www.minebbs.com/resources/legacyscriptengine.8048/) 
+ - 此插件需要LL3的LSE-quickjs加载器下运行,使用前请确保您已安装了该加载器 
 
-#### 可选
+### 可选
 - [死亡榜/挖掘榜](https://www.minebbs.com/resources/2857/)
 - [PSign](https://www.minebbs.com/resources/psign.4137/)
 - [PCsvip](https://www.minebbs.com/resources/pcsvip.4385/)
 - [PTitle](https://www.minebbs.com/resources/ptitle.4048/)
 - [OnlineTimer](https://www.minebbs.com/resources/onlinetimer.2934/)
-- [Ranking](https://www.minebbs.com/resources/ranking.3568/)
+- [Ranking](https://www.minebbs.com/resources/ranking.3568/) 
+> LL2上使用PAPI的所需组件 
+ - [BEPlaceholderAPI](https://www.minebbs.com/resources/beplaceholderapi.4181/) 
+
+## 安装 
+- 首次安装,将文件`PQuery.llse.js`解压到此路径下:`BDS/plugins/` 
+ - 更新直接替换原来的文件,若旧插件的名称与新插件的名称不一致,请删除旧插件再解压 
 
 ## 注册指令说明
 `cx` - 查询（游戏内）  
@@ -42,7 +53,7 @@ PQuery停更
 |`{PB.bindtime}`|PBind绑定的时间|`{PB.firstjoin}`|PBind首次入服时间|
 
 #### `1.2.1`版本后(在线查询支持%%包含变量 支持PAPI公共变量)
-> [!ATTENTION] 使用`BEPlaceholderAPI`公共变量需要安装`BEPlaceholderAPI`插件
+> 使用`BEPlaceholderAPI`公共变量需要安装`BEPlaceholderAPI`插件
 
 | 变量     | 注释    | 变量     | 注释    | 变量     | 注释    |
 | --------| -------- | -------- | -------- | -------- | -------- |
@@ -59,7 +70,7 @@ PQuery停更
 
 ## 配置文件说明
 
-> [!ATTENTION] 更改配置文件请注意 JSON 文件格式，不推荐使用记事本修改配置文件
+> 更改配置文件请注意 JSON 文件格式，不推荐使用记事本修改配置文件
 
 #### `config`文件
 
@@ -130,4 +141,4 @@ PQuery停更
 
 ## API
 
-> [!ATTENTION] PQuery没有提供外接接口
+> PQuery没有提供外接接口

@@ -2,15 +2,34 @@
 PCDK是一个MC服内的兑换码插件,支持限时兑换码、物品、VIP、称号等等
 :::
 
-> [!ATTENTION] PCdk是一个MC服内的兑换码插件,支持使用兑换码获取`LLMoney`经济、计分板经济、物品、VIP(需要`PCsvip`插件)、称号(需要`PTitle`插件),同时支持使用兑换码后获得内容邮件、管理员添加兑换码后的邮件(需要`PMail`插件与`PLib`插件),上述所需插件可选装,不影响其他功能
+> PCdk是一个MC服内的兑换码插件,支持使用兑换码获取`LLMoney`经济、计分板经济、物品、VIP(需要`PCsvip`插件)、称号(需要`PTitle`插件),同时支持使用兑换码后获得内容邮件、管理员添加兑换码后的邮件(需要`PMail`插件与`PLib`插件),上述所需插件可选装,不影响其他功能
 
 ## 前置组件
-#### 必选
-- [LiteLoaderBDS](https://www.minebbs.com/liteloader/)
+### 必选
+#### LL2 
+- [LiteLoaderBDS](https://www.minebbs.com/liteloader/) 
+#### LL3
+- [LeviLamina](https://www.minebbs.com/resources/levilamina.8049/) 
+- [LegacyScriptEngine](https://www.minebbs.com/resources/legacyscriptengine.8048/) 
+ - 此插件需要LL3的LSE-quickjs加载器下运行,使用前请确保您已安装了该加载器 
 
-#### 可选
-- [PMail](https://www.minebbs.com/resources/pmail.5820/)
-- [PLib](https://www.minebbs.com/resources/plib-planet.4523/) 建议使用
+### 可选
+- [PMail](https://www.minebbs.com/resources/pmail.5820/) 
+- [PLib 建议使用](https://www.minebbs.com/resources/plib-planet.4523/) 
+> LL2上使用PAPI的所需组件 
+ - [BEPlaceholderAPI](https://www.minebbs.com/resources/beplaceholderapi.4181/) 
+> LL3上使用PAPI的所需组件 
+ - [GMLIB](https://www.minebbs.com/resources/gmlib.6636/) 
+ - [GMLIB-LegacyRemoteCallApi](https://www.minebbs.com/resources/gmlib-legacyremotecallapi-gmlib-remotecallapi.7159/) 
+
+## 安装
+#### LL2
+- 首次安装,将文件`PCdk.js`或`PCdk.llse.js`解压到此路径下:`BDS/plugins/` 
+ - 更新直接替换原来的文件,若旧插件的名称与新插件的名称不一致,请删除旧插件再解压 
+#### LL3
+- 将文件夹`PCdk`解压到此路径下:`BDS/plugins/` 
+ - 更新插件请将原来的文件夹删除 
+
 
 ## 注册指令说明
 `/cdk` - 兑换码  
@@ -88,4 +107,4 @@ PCDK是一个MC服内的兑换码插件,支持限时兑换码、物品、VIP、�
 
 ## API
 
-> [!ATTENTION] PCdk没有提供外接接口
+> PCdk没有提供外接接口

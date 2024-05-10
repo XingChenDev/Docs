@@ -3,22 +3,38 @@ PSign是一个支持正则表达式通过控制台实现QQ群离线签到的插�
 :::
 
 ## 前置组件
-#### 必选
-- [LiteLoaderBDS](https://www.minebbs.com/liteloader/)
+> 请根据您的服务端系统进选择 
+### 必选
+#### LL2 
+- [LiteLoaderBDS](https://www.minebbs.com/liteloader/) 
+#### LL3
+- [LeviLamina](https://www.minebbs.com/resources/levilamina.8049/) 
+- [LegacyScriptEngine](https://www.minebbs.com/resources/legacyscriptengine.8048/) 
+ - 此插件需要LL3的LSE-quickjs加载器下运行,使用前请确保您已安装了该加载器 
 
-#### 可选
-- [PBind](https://www.minebbs.com/resources/pbind.4211/) 建议使用
+### 可选
+- [PCsvip](https://www.minebbs.com/resources/pcsvip.4385/)
+- [PLib 建议使用](https://www.minebbs.com/resources/plib-planet.4523/)  
+> LL2上使用PAPI的所需组件 
+ - [BEPlaceholderAPI](https://www.minebbs.com/resources/beplaceholderapi.4181/) 
+> LL3上使用PAPI的所需组件 
+ - [GMLIB](https://www.minebbs.com/resources/gmlib.6636/) 
+ - [GMLIB-LegacyRemoteCallApi](https://www.minebbs.com/resources/gmlib-legacyremotecallapi-gmlib-remotecallapi.7159/) 
+
+## 安装
+#### LL2
+- 首次安装,将文件`PSign.js`或`PSign.llse.js`解压到此路径下:`BDS/plugins/` 
+ - 更新直接替换原来的文件,若旧插件的名称与新插件的名称不一致,请删除旧插件再解压 
+#### LL3
+- 将文件夹`PSign`解压到此路径下:`BDS/plugins/`  
+ - 更新插件请将原来的文件夹删除  
 
 ## 配置文件说明
+> 更改配置文件请注意 JSON 文件格式，不推荐使用记事本修改配置文件 
 
-:::warning
-更改配置文件请注意 JSON 文件格式，不推荐使用记事本修改配置文件
-:::
-
-#### `config`文件
-
-- 插件基础配置文件
-- 路径: BDS/plugins/Planet/PSign/config.json
+#### `config`文件 
+- 插件基础配置文件 
+- 路径: BDS/plugins/Planet/PSign/config.json 
 ```js
 {
   "version": "v1.1.4", // 插件版本
@@ -51,10 +67,9 @@ PSign是一个支持正则表达式通过控制台实现QQ群离线签到的插�
 }
 ```
 
-#### `sign`文件
-
-- 签到数据
-- 路径: BDS/plugins/Planet/PSign/data/sign.json
+#### `sign`文件  
+- 签到数据 
+- 路径: BDS/plugins/Planet/PSign/data/sign.json 
 ```js
 {
   "SUNSServer": { // 玩家ID
@@ -68,10 +83,9 @@ PSign是一个支持正则表达式通过控制台实现QQ群离线签到的插�
 }
 ```
 
-#### `reward`文件
-
-- 奖励物品数据
-- 路径: BDS/plugins/Planet/PSign/data/reward.json
+#### `reward`文件 
+- 奖励物品数据 
+- 路径: BDS/plugins/Planet/PSign/data/reward.json 
 ```js
 [
     "{\"Count\":64b,\"Damage\":0s,\"Name\":\"minecraft:cooked_chicken\",\"WasPickedUp\":0b}", // 物品NBT数据
@@ -81,20 +95,18 @@ PSign是一个支持正则表达式通过控制台实现QQ群离线签到的插�
 ]
 ```
 
-#### `statistics`文件（尚未启用）
-
-- 连续签到统计及连签报告数据
-- 路径: BDS/Plugins/Planet/PSign/data/statistics.json
+#### `statistics`文件（尚未启用） 
+- 连续签到统计及连签报告数据 
+- 路径: BDS/Plugins/Planet/PSign/data/statistics.json 
 ```js
 {}
 ```
 
 
 
-## PAPI变量说明
--`v1.1.0`正式版开始支持  
-
-> [!ATTENTION] 使用`BEPlaceholderAPI`公共变量需要安装`BEPlaceholderAPI`插件
+## PAPI变量说明 
+-`v1.1.0`正式版开始支持   
+> 使用`BEPlaceholderAPI`公共变量需要安装`BEPlaceholderAPI`插件 
 
 |变量|注释|示例|
 |---|---|---|
@@ -105,8 +117,8 @@ PSign是一个支持正则表达式通过控制台实现QQ群离线签到的插�
 |`%player_sign_date%`|玩家最后签到日期|`%player_sign_date%`|
 |`%player_sign_time_diff%`|玩家签到时间差|`%player_sign_time_diff%`||
 
-## API
-> PSign提供了18个接口 包括9个新接口和9个兼容旧接口
+## API 
+> PSign提供了18个接口 包括9个新接口和9个兼容旧接口 
 
 #### 获取PSign插件版本
 

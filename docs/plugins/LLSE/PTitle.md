@@ -5,11 +5,32 @@ PTitle是一个可高度自定义的称号系统插件,他支持玩家定制称�
 > 全新改版的PTitle即将登场,我们将对底层代码进行重写,新PTitle将支持多buff、自定义buff、实物称号（命名牌）,带来不一样的称号体验。对影响服务器TPS的所有逻辑单元进行简化,以达到最优效果
 
 ## 前置组件
-#### 必选
-- [LiteLoaderBDS](https://www.minebbs.com/liteloader/)
+> 请根据您的服务端系统进选择 
+### 必选
+#### LL2 
+- [LiteLoaderBDS](https://www.minebbs.com/liteloader/) 
+#### LL3
+- [LeviLamina](https://www.minebbs.com/resources/levilamina.8049/) 
+- [LegacyScriptEngine](https://www.minebbs.com/resources/legacyscriptengine.8048/) 
+ - 此插件需要LL3的LSE-nodejs加载器下运行,使用前请确保您已安装了该加载器 
 
-#### 可选
-- [BEPlaceholderAPI](https://www.minebbs.com/resources/beplaceholderapi.4181/)
+### 可选
+- [PCsvip](https://www.minebbs.com/resources/pcsvip.4385/) 
+- [PLib 建议使用](https://www.minebbs.com/resources/plib-planet.4523/)  
+> LL2上使用PAPI的所需组件 
+ - [BEPlaceholderAPI](https://www.minebbs.com/resources/beplaceholderapi.4181/) 
+> LL3上使用PAPI的所需组件 
+ - [GMLIB](https://www.minebbs.com/resources/gmlib.6636/) 
+ - [GMLIB-LegacyRemoteCallApi](https://www.minebbs.com/resources/gmlib-legacyremotecallapi-gmlib-remotecallapi.7159/) 
+
+## 安装
+#### LL2
+- 首次安装,将文件夹`PTitle`解压到此路径下:`BDS/plugins/nodejs/` 
+ - 更新插件请将原来的文件夹删除 
+#### LL3
+- 将文件夹`PTitle`解压到此路径下:`BDS/plugins/`  
+ - 更新插件请将原来的文件夹删除  
+ 
 
 ## 注册指令说明
 `/ch` - 我的称号  
@@ -20,7 +41,7 @@ PTitle是一个可高度自定义的称号系统插件,他支持玩家定制称�
 ## 聊天界面变量(支持`BEPlaceholderAPI`所有注册变量) 
 - `v2.0.0 Beta 23.05.0617M`开始支持
 
-> [!ATTENTION] 使用`BEPlaceholderAPI`公共变量需要安装`BEPlaceholderAPI`插件
+> 使用`BEPlaceholderAPI`公共变量需要安装`BEPlaceholderAPI`插件
 
 #### 自带变量
 | 变量     | 注释    | 变量     | 注释    |
@@ -28,12 +49,12 @@ PTitle是一个可高度自定义的称号系统插件,他支持玩家定制称�
 | `%score%` | 计分板   | `%money%`  | LLMoney |
 | `%world%` | 玩家所在的世界维度 | `%vip%` | 玩家是否拥有VIP身份(需要安装PCsvip插件) |
 | `%ping%` | 玩家实时延迟 | `%os%` | 玩家设备系统 |
-|`%ch%`|玩家当前佩戴的称号| `%time%`| 当前时间 |
+| `%ch%` |玩家当前佩戴的称号| `%time%`| 当前时间 |
 | `%name%` | 玩家ID | `%msg%` | 玩家发送的消息|
 
 ## 配置文件说明
 
-> [!ATTENTION] 更改配置文件请注意 JSON 文件格式，不推荐使用记事本修改配置文件
+> 更改配置文件请注意 JSON 文件格式，不推荐使用记事本修改配置文件
 
 #### `config`文件(全新改版，将支持中英双语配置文件)
 - 新
@@ -397,12 +418,11 @@ PTitle是一个可高度自定义的称号系统插件,他支持玩家定制称�
 ## PAPI变量说明
 -`v2.0.0 Beta 23.05.0617M`正式版开始支持  
 
-> [!ATTENTION] 使用`BEPlaceholderAPI`公共变量需要安装`BEPlaceholderAPI`插件
+> 使用`BEPlaceholderAPI`公共变量需要安装`BEPlaceholderAPI`或`GMLIB-LegacyRemoteCallApi`插件
 
 |变量|注释|示例|
 |---|---|---|
-|`%PT_Wearch%`|玩家当前佩戴称号|`HeadShow`插件`%PT_Wearch%`<br>`PQuery`插件`%PT_Wearch%`|
-
+|`%PT_Wearch%`|玩家当前佩戴称号|`HeadShow`插件`%PT_Wearch%`<br>`PQuery`插件`%PT_Wearch%`| 
 
 ## API
 > PTitle提供了6个接口
