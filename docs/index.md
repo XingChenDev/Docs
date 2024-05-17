@@ -4,7 +4,7 @@ layout: home
 hero:
   name: "Planet工作室插件文档"
   image:
-      src: /planet_studio.png
+      src: /logo/planet_studio.png
       alt: Planet工作室
   actions:
     - theme: brand

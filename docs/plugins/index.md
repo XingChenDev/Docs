@@ -2,7 +2,7 @@
 next: false
 ---
 
-![](/imgs/logo/星辰.png)
+![](/logo/星辰.png)
 
 :::warning 首先声明
 使用Planet工作室的所有资源意味着你必须遵守
@@ -13,4 +13,5 @@ next: false
 ----
 :::tip 提示
  如需帮助请加QQ群:639276103
+:::3
 :::
