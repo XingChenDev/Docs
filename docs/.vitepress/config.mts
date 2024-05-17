@@ -32,14 +32,15 @@ export default defineConfig({
           { text: 'PBank - 银行系统', link: '/plugins/LLSE/PBank' },
           { text: 'PCdk - 兑换码', link: '/plugins/LLSE/PCDK' },
           { text: 'PChat - 消息处理', link: '/plugins/LLSE/PChat' },
-          { text: 'PCsvip - 会员', link: '/plugins/LLSE/PCSVIP' },
+          { text: 'PCsvip - 会员(停更转移至PVip)', link: '/plugins/LLSE/PCSVIP' },
           { text: 'PLib - 数据库', link: '/plugins/LLSE/PLib' },
           { text: 'PMail - 邮箱&邮件系统', link: '/plugins/LLSE/PMail' },
           { text: 'PMenu - 菜单', link: '/plugins/LLSE/PMenu' },
           { text: 'PQuery - 多功能查询', link: '/plugins/LLSE/PQuery' },
           { text: 'PSign - 签到', link: '/plugins/LLSE/PSign' },
           { text: 'PStop - 维护系统', link: '/plugins/LLSE/PStop' },
-          { text: 'PTitle - 称号系统', link: '/plugins/LLSE/PTitle' }
+          { text: 'PTitle - 称号系统', link: '/plugins/LLSE/PTitle' },
+          { text: 'PVip - VIP插件', link: '/plugins/LLSE/PVip' }
         ]
       },
       {
