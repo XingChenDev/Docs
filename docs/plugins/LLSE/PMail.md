@@ -182,7 +182,7 @@ PMail已接入E-Mail模块，可以实现对现实邮箱的交互（详细使用
 `ll.import("PMail","mail_in")(.[player])`
 
 - 参数
-  - player: `Player`或`String`
+  - player: `Player`或`String`或`null`
     (可选参数)玩家对象 或 玩家名称
 - 返回值: 玩家收件箱数据 或 收件箱所有数据
 - 返回值类型: `Array<Mail,Mail,...>` 或 `Object` 
@@ -195,7 +195,7 @@ PMail已接入E-Mail模块，可以实现对现实邮箱的交互（详细使用
     | mail_id | 邮件唯一ID | `String` | "7270887ac65b4f428b1fa2d335a269da" |
     | id | 发件人名称 | `String` | `***服务器` |
     | title | 邮件标题 | `String` | "测试邮件" |
-    | content | 邮件内容 | `String` | "邮件内容 |
+    | content | 邮件内容 | `String` | "邮件内容" |
     | collect | 附件领取状态 | `Boolean` | `false` |
     | annex | 附件 | `Object` | `{"item":null,"money":null,"score":null,"vip":null}` |
     | read | 已读状态 | `Boolean` | `false` |
@@ -218,7 +218,7 @@ PMail已接入E-Mail模块，可以实现对现实邮箱的交互（详细使用
 `ll.import("PMail", "sent_mail")(.[player])` 
 
 - 参数
-  - player: `Player`或`String`
+  - player: `Player`或`String`或`null`
     (可选参数)玩家对象 或 玩家名称
 - 返回值: 玩家发件箱数据 或 发件箱所有数据
 - 返回值类型: `Array<Mail,Mail,...>` 或 `Object` 
