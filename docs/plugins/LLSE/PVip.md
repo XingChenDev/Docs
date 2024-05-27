@@ -13,6 +13,7 @@ PVip是PCsvip的全新续作,作为前置插件的它拥有PCsvip全部功能,�
 
 ### 可选
 - [PLib 建议使用](https://www.minebbs.com/resources/plib-planet.4523/) 
+- [PVip_old 为使用旧接口的插件而制作](https://sunsserver.lanzn.com/iJdYP1zydl5a)
 > LL2上使用PAPI的所需组件 
  - [BEPlaceholderAPI](https://www.minebbs.com/resources/beplaceholderapi.4181/) 
 > LL3上使用PAPI的所需组件 
@@ -74,7 +75,6 @@ PVip是PCsvip的全新续作,作为前置插件的它拥有PCsvip全部功能,�
   ],
   "default_time": 7, //VIP默认时长(管理员手动添加的时长(单位:天))
   "default_lizi": "minecraft:arrow_spell_emitter", //vip默认粒子(根据MC原版的type来填写，可在PLib的lizi配置文件中复制type的配置项粘贴到这里)
-  "blacklist": [], //VIP黑名单(禁止一些玩家购买VIP)
   "level": { // VIP等级
     "up": 10, // 每日首次登陆服务器所获得的当日经验
     "down": 20, //当玩家失去VIP后起,每日首次登陆服务器将会扣除所积累的经验
@@ -100,7 +100,7 @@ PVip是PCsvip的全新续作,作为前置插件的它拥有PCsvip全部功能,�
 
 #### `storedata`文件 
 - 会员商店 
-- 路径: BDS/plugins/Planet/PCsvip/data/storedata.json 
+- 路径: BDS/plugins/Planet/PVip/data/storedata.json 
 ```js
 {
   "vip": [ // VIP商品
@@ -122,7 +122,7 @@ PVip是PCsvip的全新续作,作为前置插件的它拥有PCsvip全部功能,�
 
 #### `vip`文件 
 - 会员玩家数据 
-- 路径: BDS/plugins/Planet/PCsvip/data/vip.json 
+- 路径: BDS/plugins/Planet/PVip/data/vip.json 
 ```js
 {
   "SUNSServer": { // 玩家名称
@@ -135,7 +135,8 @@ PVip是PCsvip的全新续作,作为前置插件的它拥有PCsvip全部功能,�
     "title": "至尊VIP", // VIP称号
     "time": null, // VIP总时长(null为玩家不是VIP，0为永久，大于0为实际天数)
     "get_time": "---", // 玩家获取VIP的最初时间("---"为玩家不是VIP或永久)
-    "join_time": "2023-3-21" // 玩家上次加入的日期(以每日0点为重置点，用于增加VIP等级经验)
+    "join_time": "2023-3-21", // 玩家上次加入的日期(以每日0点为重置点，用于增加VIP等级经验)
+    "black_list": false // 是否存在VIP黑名单中
   }
   //注:玩家VIP倒计时计算方式是("当前时间与玩家上次获取VIP时间的时间差"-"玩家VIP拥有的总时长")
 }
@@ -143,8 +144,9 @@ PVip是PCsvip的全新续作,作为前置插件的它拥有PCsvip全部功能,�
 
 #### `lizi`文件 
 - 会员玩家购买的粒子 
-- 路径: BDS/plugins/Planet/PCsvip/data/lizi.json 
+- 路径: BDS/plugins/Planet/PVip/data/lizi.json 
 ```js
+{
 "SUNSServer": [
         {
             "type": "minecraft:heart_particle", // 粒子的标准名
@@ -157,17 +159,55 @@ PVip是PCsvip的全新续作,作为前置插件的它拥有PCsvip全部功能,�
             "get_time": "2023-07-05 20:59:23"
         }
     ]
+}
 ```
+
+## 模块化
+> PVip全新版本开启了VIP模块化,直接将PVip的模块插件放置在指定文件夹中，通过PVip的`vipmod`指令打开VIP模块中心进行调用<br>PVip模块可使用`LiteLoaderBDS`或`LegacyScriptEngine`所有的API,理论上它也可以是一个插件加载器（但不建议在PVip的模块中安装`LiteLoaderBDS`或`LegacyScriptEngine`的插件）
+- 路径: BDS/plugins/Planet/PVip/module/
+- 表单模块格式 
+```js
+{ // PVip调用模块的main默认函数
+  // 默认函数的名字可随意编辑,导出对象必须存在main这个参数,否则PVip提示错误或功能缺失
+  // PVip调用模块时会传递一个玩家对象的参数
+  // 模块开发时可以使用玩家PVip的接口获取PVip玩家相关的数据进行操作
+  // 玩家对象参数可以不用使用
+
+  function main(player) { // 默认函数（这是一个表单函数)
+    let fm = mc.newSimpleForm();
+    fm.setTitle("表单模块");
+    player.sendForm(fm, (player, id) => { });
+  }
+  // 模块导出 {name: 模块名称, version: 模块版本, main:表单}
+  module.exports = { name: "表单模块", version: "0.0.0", main: main }
+}
+```
+- 非表单模块 
+```js
+{ // PVip调用模块的main默认函数
+  // 这个函数是必须存在,否则PVip提示错误或功能确实
+  // PVip调用模块时会传递一个玩家对象的参数,模块开发时可以使用玩家PVip的接口获取PVip玩家相关的数据进行操作
+  // 玩家对象参数可以不用使用
+
+  function main() { // 默认函数（这是一个表单函数)
+    log("PVip的非表单模块")
+  }
+
+  module.exports = { name: "非表单模块", version: "0.0.0", main: main }
+}
+```
+
 ## PAPI变量说明
 > 使用`BEPlaceholderAPI`公共变量需要安装`BEPlaceholderAPI`或`GMLIB-LegacyRemoteCallApi`插件
 
 |变量|注释|
 |---|---|
-|`%player_vip%`|玩家VIP身份<br>根据`config`文件中的`title`显示|
-|`%player_vip_title%`|玩家VIP称号<br>若安装了`PTitle`不建议使用该变量|
+|`%player_vip%`|玩家VIP身份<br>根据`config`文件中的`title`显示|`ChatEX`插件`%player_vip%`<br>`GwChat`插件`%player_vip%`| 
+|`%player_vip_time_left%`|玩家VIP剩余时长|`ChatEX`插件`%player_vip_time_left%`<br>`GwChat`插件`%player_vip_time_left%`| 
+|`%player_vip_title%`|玩家VIP称号<br>若安装了`PTitle`不建议使用该变量|`ChatEX`插件`%player_vip%`<br>`GwChat`插件`%player_vip%`|
 
 ## API
-> PVip提供了11个接口，PCsvip旧接口请查[PCsvip](./PCSVIP.md)文档
+> PVip提供了11个接口，PCsvip旧接口请查[PCsvip](./PCSVIP.md)文档<br>若使用的是PCsvip接口推荐安装[PVip_old](https://sunsserver.lanzn.com/iJdYP1zydl5a)
 
 #### 获取PVip插件版本
 `ll.import("PVip", "version")()` 
@@ -200,6 +240,7 @@ PVip是PCsvip的全新续作,作为前置插件的它拥有PCsvip全部功能,�
     | time | VIP时长 | `Number`或`null` | `1`或`null` |
     | get_time | 获取VIP时间 | `String` | "2024-05-18 15:53:08"或"---" |
     | join_time | 进服日期 | `String` | "2024-3-17" |
+    | black_list | 是否存在于<br>VIP黑名单中 | `Boolean` | `false`|
 
 #### 获取指定玩家VIP身份
 `ll.import("PVip", "get_status")(player)` 
@@ -209,6 +250,16 @@ PVip是PCsvip的全新续作,作为前置插件的它拥有PCsvip全部功能,�
     玩家对象 或 玩家名称
 - 返回值: 玩家VIP身份 或 VIP所有数据 
 - 返回值类型: `Boolean` 
+
+#### 获取VIP玩家剩余时长 
+`ll.import("PVip", "vip_time_left")(player)` 
+
+- 参数
+ - player: `Player`或`String`
+    玩家对象 或 玩家名称
+- 返回值: 剩余时长（单位: 天） 
+- 返回值类型: `Number`
+ - 返回值为`0`时表示无数据、时长为永久、不是会员
 
 #### 添加一个VIP
 `ll.import("PVip", "add_vip")(player, .[time, integral])` 
@@ -234,7 +285,7 @@ PVip是PCsvip的全新续作,作为前置插件的它拥有PCsvip全部功能,�
  - 执行的玩家是VIP会关闭VIP 
  - 执行的玩家不是VIP会删除VIP数据 
 
-#### 给指定玩家添加VIP时长
+#### 添加指定玩家VIP时长
 `ll.import("PVip", "add_time")(player, time)` 
 
 - 参数
@@ -247,7 +298,7 @@ PVip是PCsvip的全新续作,作为前置插件的它拥有PCsvip全部功能,�
  - 被执行时长的玩家必须是获得过VIP的玩家 
  - 执行后玩家当前不是VIP身份会自动开通VIP身份，类似`ll.import("PVip", "add_vip")(player)`API  
 
-#### 给指定玩家减少VIP时长
+#### 减少指定玩家VIP时长
 `ll.import("PVip", "reduce_time")(player, time)` 
 
 - 参数
@@ -260,7 +311,7 @@ PVip是PCsvip的全新续作,作为前置插件的它拥有PCsvip全部功能,�
  - 被执行的玩家必须是获得过VIP的玩家 
  - 执行后玩家当前剩余时长小于被减少的时长会自动关闭VIP，类似执行一次`ll.import("PVip", "del_vip")(player)` 
 
-#### 给指定玩家增加VIP经验 
+#### 增加指定玩家增加VIP经验 
 `ll.import("PVip", "add_exp")(player, exp)` 
 
 - 参数
@@ -272,7 +323,7 @@ PVip是PCsvip的全新续作,作为前置插件的它拥有PCsvip全部功能,�
 - 返回值类型: `Boolean`
  - 被执行的玩家必须是获得过VIP的玩家 
 
-#### 给指定玩家减少VIP经验 
+#### 减少指定玩家VIP经验 
 `ll.import("PVip", "reduce_exp")(player, exp)` 
 
 - 参数
@@ -284,7 +335,7 @@ PVip是PCsvip的全新续作,作为前置插件的它拥有PCsvip全部功能,�
 - 返回值类型: `Boolean`
  - 被执行的玩家必须是获得过VIP的玩家 
 
-#### 给指定玩家增加VIP积分 
+#### 增加指定玩家VIP积分 
 `ll.import("PVip", "add_integral")(player, integral)` 
 
 - 参数
@@ -296,7 +347,7 @@ PVip是PCsvip的全新续作,作为前置插件的它拥有PCsvip全部功能,�
 - 返回值类型: `Boolean`
  - 被执行的玩家必须是获得过VIP的玩家 
 
- #### 给指定玩家减少VIP积分 
+#### 减少指定玩家VIP积分 
 `ll.import("PVip", "reduce_integral")(player, integral)` 
 
 - 参数

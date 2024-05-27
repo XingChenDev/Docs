@@ -17,6 +17,7 @@ PTitle是一个可高度自定义的称号系统插件,他支持玩家定制称�
 ### 可选
 - [PCsvip](https://www.minebbs.com/resources/pcsvip.4385/) 
 - [PLib 建议使用](https://www.minebbs.com/resources/plib-planet.4523/)  
+- [GwChat](https://www.minebbs.com/threads/gwchat-papi.25536/)
 > LL2上使用PAPI的所需组件 
  - [BEPlaceholderAPI](https://www.minebbs.com/resources/beplaceholderapi.4181/) 
 > LL3上使用PAPI的所需组件 

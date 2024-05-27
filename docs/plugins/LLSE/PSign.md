@@ -115,7 +115,7 @@ PSign是一个支持正则表达式通过控制台实现QQ群离线签到的插�
 |`%player_sign_weekly_count%`|玩家月签到次数|`%player_sign_weekly_count%`|
 |`%player_sign_cont%`|玩家连续签到次数|`%player_sign_cont%`|
 |`%player_sign_date%`|玩家最后签到日期|`%player_sign_date%`|
-|`%player_sign_time_diff%`|玩家签到时间差|`%player_sign_time_diff%`||
+|`%player_sign_time_diff%`|玩家签到时间差|`%player_sign_time_diff%`|
 
 ## API 
 > PSign提供了18个接口 包括9个新接口和9个兼容旧接口 

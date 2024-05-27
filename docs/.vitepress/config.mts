@@ -53,6 +53,10 @@ export default defineConfig({
         ]
       },
       {
+        text: 'PAPI变量说明',
+        link: '/plugins/PAPI_variant'
+      },
+      {
         text: '关于',
         link: '/About'
       },
@@ -62,7 +66,7 @@ export default defineConfig({
     ],
     footer: {
       message: 'Planet工作室',
-      copyright: 'Copyright © 2024'
+      copyright: 'Copyright © 2021-2024'
     },
     search: {
       provider: 'local'
