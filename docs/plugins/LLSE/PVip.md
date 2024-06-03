@@ -34,9 +34,7 @@ PVip是PCsvip的全新续作,作为前置插件的它拥有PCsvip全部功能,�
 `/vipshop` - 会员商城	游戏内执行  
 `/vipset` - 会员管理	游戏内执行  
 `/vip add (玩家ID/QQ号) [天数]` - 控制台添加VIP	控制台操作，"[]"内为选填  
-`/vip del (玩家ID/QQ号)`	控制台删除VIP	控制台操作，当玩家是VIP时输入会关掉VIP，当玩家不是VIP时会删除VIP数据  
-`/vip addexp (玩家ID/QQ号) (经验)` 控制台增加玩家会员等级经验，所有参数为必填  
-`/vip reduceexp (玩家ID/QQ号) (经验)` 控制台减少玩家会员等级经验，所有参数为必填  
+`/vip del (玩家ID/QQ号)`	控制台删除VIP	控制台操作，当玩家是VIP时输入会关掉VIP，当玩家不是VIP时会删除VIP数据 
 `/vip addint (玩家ID/QQ号) (经验)` 控制台增加玩家会员积分，所有参数为必填  
 `/vip reduceint (玩家ID/QQ号) (经验)` 控制台减少玩家会员积分，所有参数为必填  
 `/vip addtime (玩家ID/QQ号) (时长)`	控制台增加玩家时长	控制台操作，所有参数为必填  
@@ -47,8 +45,6 @@ PVip是PCsvip的全新续作,作为前置插件的它拥有PCsvip全部功能,�
 |--|--|--|--|
 |`vip add 114514`|将114514绑定的玩家添加为会员,时间为默认|`vip add Steve 6`|将Steve玩家添加为会员,时间为6天|
 |`vip del 114514`|移除114514绑定的玩家的会员|`vip del Steve`|移除Steve玩家的会员|
-|`vip addexp 114514 100`|给114514绑定的玩家增加100exp会员等级经验|`vip addexp Steve 100`|给Steve玩家增加100exp会员等级经验|
-|`vip reduceexp 114514 100`|减少114514绑定的玩家100exp会员等级经验|`vip reduceexp Steve 100`|减少Steve玩家100exp会员等级经验|
 |`vip addint 114514 100`|给114514绑定的玩家增加100会员积分|`vip addint Steve 100`|给Steve玩家增加100会员积分|
 |`vip reduceint 114514 100`|减少114514绑定的玩家100会员积分|`vip reduceint Steve 100`|减少Steve玩家100会员积分|
 |`vip addtime 114514 10`|给114514绑定的玩家增加10天会员时间|`vip addtime Steve 100`|给Steve玩家增加10天会员时间|
@@ -167,33 +163,37 @@ PVip是PCsvip的全新续作,作为前置插件的它拥有PCsvip全部功能,�
 - 路径: BDS/plugins/Planet/PVip/module/
 - 表单模块格式 
 ```js
-{ // PVip调用模块的main默认函数
-  // 默认函数的名字可随意编辑,导出对象必须存在main这个参数,否则PVip提示错误或功能缺失
+{ // PVip调用模块的函数类型
+  // 函数的名字可随意编辑,导出对象中必须存在main这个参数,否则PVip提示错误或功能缺失
   // PVip调用模块时会传递一个玩家对象的参数
   // 模块开发时可以使用玩家PVip的接口获取PVip玩家相关的数据进行操作
-  // 玩家对象参数可以不用使用
+  // 玩家对象参数可以不被使用
 
-  function main(player) { // 默认函数（这是一个表单函数)
+  function main(player) { // 被调用的默认函数
     let fm = mc.newSimpleForm();
     fm.setTitle("表单模块");
     player.sendForm(fm, (player, id) => { });
-  }
-  // 模块导出 {name: 模块名称, version: 模块版本, main:表单}
-  module.exports = { name: "表单模块", version: "0.0.0", main: main }
+  };
+  
+  module.exports = { name: "表单模块", version: "0.0.0",author: "Planet工作室", type: "", path: "" main: main };
+  // 模块导出 {name: 模块名称, version: 模块版本,author: 开发者,type: 模块类型, path: 表单按钮贴图 main: 被调用的函数};
+  /*
+  模块 type 类型（需要运行在PVip 3.0.1及之后的版本中）: 
+  main_form 在VIP插件的主表单中添加一个用于打开这个模块的按钮
+  vip_form 在玩家VIP表单中添加一个用于打开这个模块的按钮
+  store_form  在VIP商城的主表单中添加一个用于打开这个模块的按钮
+  set_form 在VIP设置的主表单中添加一个用于打开这个模块的按钮
+  auxiliary 在PVIP插件运行时直接加载这个模块
+  */
 }
 ```
 - 非表单模块 
 ```js
-{ // PVip调用模块的main默认函数
-  // 这个函数是必须存在,否则PVip提示错误或功能确实
-  // PVip调用模块时会传递一个玩家对象的参数,模块开发时可以使用玩家PVip的接口获取PVip玩家相关的数据进行操作
-  // 玩家对象参数可以不用使用
-
-  function main() { // 默认函数（这是一个表单函数)
-    log("PVip的非表单模块")
-  }
-
-  module.exports = { name: "非表单模块", version: "0.0.0", main: main }
+{ 
+  function main() { // 被调用的默认函数
+    log("PVip的非表单模块");
+  };
+  module.exports = { name: "非表单模块", version: "0.0.0", main: main };
 }
 ```
 
