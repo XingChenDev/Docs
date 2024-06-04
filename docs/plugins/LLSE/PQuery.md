@@ -7,21 +7,21 @@ PQuery停更
 ## 前置组件
 ### 必选
 #### LL2 
-- [LiteLoaderBDS](https://www.minebbs.com/liteloader/) 
+- [`LiteLoaderBDS`](https://www.minebbs.com/liteloader/) 
 #### LL3
-- [LeviLamina](https://www.minebbs.com/resources/levilamina.8049/) 
-- [LegacyScriptEngine](https://www.minebbs.com/resources/legacyscriptengine.8048/) 
- - 此插件需要LL3的LSE-quickjs加载器下运行,使用前请确保您已安装了该加载器 
+- [`LeviLamina`](https://www.minebbs.com/resources/levilamina.8049/) 
+- [`LegacyScriptEngine`](https://www.minebbs.com/resources/legacyscriptengine.8048/) 
+ - 此插件需要LL3的LSE-quickjs加载器下运行,使用前请确保您已安装了该加载器  
 
 ### 可选
-- [死亡榜/挖掘榜](https://www.minebbs.com/resources/2857/)
-- [PSign](https://www.minebbs.com/resources/psign.4137/)
-- [PCsvip](https://www.minebbs.com/resources/pcsvip.4385/)
-- [PTitle](https://www.minebbs.com/resources/ptitle.4048/)
-- [OnlineTimer](https://www.minebbs.com/resources/onlinetimer.2934/)
-- [Ranking](https://www.minebbs.com/resources/ranking.3568/) 
+- [`死亡榜/挖掘榜`](https://www.minebbs.com/resources/2857/)
+- [`PSign`](https://www.minebbs.com/resources/psign.4137/)
+- [`PVip`](https://www.minebbs.com/resources/pvip.4385/) 
+- [`PTitle`](https://www.minebbs.com/resources/ptitle.4048/)
+- [`OnlineTimer`](https://www.minebbs.com/resources/onlinetimer.2934/)
+- [`Ranking`](https://www.minebbs.com/resources/ranking.3568/) 
 > LL2上使用PAPI的所需组件 
- - [BEPlaceholderAPI](https://www.minebbs.com/resources/beplaceholderapi.4181/) 
+- [`BEPlaceholderAPI`](https://www.minebbs.com/resources/beplaceholderapi.4181/) 
 
 ## 安装 
 - 首次安装,将文件`PQuery.llse.js`解压到此路径下:`BDS/plugins/` 

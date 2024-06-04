@@ -4,23 +4,22 @@ PMail已接入E-Mail模块，可以实现对现实邮箱的交互（详细使用
 ::: 
  
 ## 前置组件
-> 请根据您的服务端系统进选择
 ### 必选
 #### LL2 
-- [LiteLoaderBDS](https://www.minebbs.com/liteloader/) 
+- [`LiteLoaderBDS`](https://www.minebbs.com/liteloader/) 
 #### LL3
-- [LeviLamina](https://www.minebbs.com/resources/levilamina.8049/) 
-- [LegacyScriptEngine](https://www.minebbs.com/resources/legacyscriptengine.8048/) 
+- [`LeviLamina`](https://www.minebbs.com/resources/levilamina.8049/) 
+- [`LegacyScriptEngine`](https://www.minebbs.com/resources/legacyscriptengine.8048/) 
  - 此插件需要LL3的LSE-nodejs加载器下运行,使用前请确保您已安装了该加载器 
 
 ### 可选
-- [PCsvip](https://www.minebbs.com/resources/pcsvip.4385/) 
-- [PLib 建议使用](https://www.minebbs.com/resources/plib-planet.4523/)  
+- [`PVip`](https://www.minebbs.com/resources/pvip.4385/) 
+- [`PLib`](https://www.minebbs.com/resources/plib.4523/)  
 > LL2上使用PAPI的所需组件 
- - [BEPlaceholderAPI](https://www.minebbs.com/resources/beplaceholderapi.4181/) 
+- [`BEPlaceholderAPI`](https://www.minebbs.com/resources/beplaceholderapi.4181/) 
 > LL3上使用PAPI的所需组件 
- - [GMLIB](https://www.minebbs.com/resources/gmlib.6636/) 
- - [GMLIB-LegacyRemoteCallApi](https://www.minebbs.com/resources/gmlib-legacyremotecallapi-gmlib-remotecallapi.7159/) 
+- [`GMLIB`](https://www.minebbs.com/resources/gmlib.6636/) 
+- [`GMLIB-LegacyRemoteCallApi`](https://www.minebbs.com/resources/gmlib-legacyremotecallapi-gmlib-remotecallapi.7159/) 
 
 
 ## 安装
@@ -155,16 +154,6 @@ PMail已接入E-Mail模块，可以实现对现实邮箱的交互（详细使用
     "玩家名称":"邮箱地址"
 }
 ```
-
-## PAPI变量说明
--`v1.0.9`正式版开始支持   
->  使用`BEPlaceholderAPI`公共变量需要安装`BEPlaceholderAPI`插件
-
-|变量|注释|示例|
-|---|---|---|
-|`%player_mail_in_count%`|玩家收件箱邮件总数量| `%player_mail_in_count%` |
-|`%player_unread_count%`|玩家收件箱未读邮件数量| `%player_unread_count%` |
-|`%player_sent_mail_count%`|玩家发件箱邮件总数量| `%player_sent_mail_count%` |
 
 ## API
 > PMail提供了11个接口 其中新接口6个，旧版本兼容接口5个

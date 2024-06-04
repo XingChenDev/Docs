@@ -3,23 +3,22 @@ PSign是一个支持正则表达式通过控制台实现QQ群离线签到的插�
 :::
 
 ## 前置组件
-> 请根据您的服务端系统进选择 
 ### 必选
 #### LL2 
-- [LiteLoaderBDS](https://www.minebbs.com/liteloader/) 
+- [`LiteLoaderBDS`](https://www.minebbs.com/liteloader/) 
 #### LL3
-- [LeviLamina](https://www.minebbs.com/resources/levilamina.8049/) 
-- [LegacyScriptEngine](https://www.minebbs.com/resources/legacyscriptengine.8048/) 
- - 此插件需要LL3的LSE-quickjs加载器下运行,使用前请确保您已安装了该加载器 
+- [`LeviLamina`](https://www.minebbs.com/resources/levilamina.8049/) 
+- [`LegacyScriptEngine`](https://www.minebbs.com/resources/legacyscriptengine.8048/) 
+ - 此插件需要LL3的LSE-quickjs加载器下运行,使用前请确保您已安装了该加载器  
 
 ### 可选
-- [PCsvip](https://www.minebbs.com/resources/pcsvip.4385/)
-- [PLib 建议使用](https://www.minebbs.com/resources/plib-planet.4523/)  
+- [`PVip`](https://www.minebbs.com/resources/pvip.4385/) 
+- [`PLib`](https://www.minebbs.com/resources/plib.4523/)  
 > LL2上使用PAPI的所需组件 
- - [BEPlaceholderAPI](https://www.minebbs.com/resources/beplaceholderapi.4181/) 
+- [`BEPlaceholderAPI`](https://www.minebbs.com/resources/beplaceholderapi.4181/) 
 > LL3上使用PAPI的所需组件 
- - [GMLIB](https://www.minebbs.com/resources/gmlib.6636/) 
- - [GMLIB-LegacyRemoteCallApi](https://www.minebbs.com/resources/gmlib-legacyremotecallapi-gmlib-remotecallapi.7159/) 
+- [`GMLIB`](https://www.minebbs.com/resources/gmlib.6636/) 
+- [`GMLIB-LegacyRemoteCallApi`](https://www.minebbs.com/resources/gmlib-legacyremotecallapi-gmlib-remotecallapi.7159/) 
 
 ## 安装
 #### LL2
@@ -103,19 +102,6 @@ PSign是一个支持正则表达式通过控制台实现QQ群离线签到的插�
 ```
 
 
-
-## PAPI变量说明 
--`v1.1.0`正式版开始支持   
-> 使用`BEPlaceholderAPI`公共变量需要安装`BEPlaceholderAPI`插件 
-
-|变量|注释|示例|
-|---|---|---|
-|`%player_sign_count%`|玩家总签到次数|`%player_sign_count%`|
-|`%player_sign_weekly_count%`|玩家周签到次数|`%player_sign_weekly_count%`|
-|`%player_sign_weekly_count%`|玩家月签到次数|`%player_sign_weekly_count%`|
-|`%player_sign_cont%`|玩家连续签到次数|`%player_sign_cont%`|
-|`%player_sign_date%`|玩家最后签到日期|`%player_sign_date%`|
-|`%player_sign_time_diff%`|玩家签到时间差|`%player_sign_time_diff%`|
 
 ## API 
 > PSign提供了18个接口 包括9个新接口和9个兼容旧接口 

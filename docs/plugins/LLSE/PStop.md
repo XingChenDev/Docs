@@ -3,18 +3,17 @@ PStop是一个可在游戏内、控制台输入指令来进行对非管理员(OP
 :::
 
 ## 前置组件
-> 请根据您的服务端系统进选择 
 ### 必选
 #### LL2 
-- [LiteLoaderBDS](https://www.minebbs.com/liteloader/) 
+- [`LiteLoaderBDS`](https://www.minebbs.com/liteloader/) 
 #### LL3
-- [LeviLamina](https://www.minebbs.com/resources/levilamina.8049/) 
-- [LegacyScriptEngine](https://www.minebbs.com/resources/legacyscriptengine.8048/) 
- - 此插件需要LL3的LSE-quickjs加载器下运行,使用前请确保您已安装了该加载器 
+- [`LeviLamina`](https://www.minebbs.com/resources/levilamina.8049/) 
+- [`LegacyScriptEngine`](https://www.minebbs.com/resources/legacyscriptengine.8048/) 
+ - 此插件需要LL3的LSE-quickjs加载器下运行,使用前请确保您已安装了该加载器  
 
 ### 可选
-- [PCsvip](https://www.minebbs.com/resources/pcsvip.4385/)
-- [PLib 建议使用](https://www.minebbs.com/resources/plib-planet.4523/)  
+- [`PVip`](https://www.minebbs.com/resources/pvip.4385/) 
+- [`PLib`](https://www.minebbs.com/resources/plib.4523/)  
 
 ## 安装
 #### LL2

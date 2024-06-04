@@ -5,24 +5,24 @@ PTitle是一个可高度自定义的称号系统插件,他支持玩家定制称�
 > 全新改版的PTitle即将登场,我们将对底层代码进行重写,新PTitle将支持多buff、自定义buff、实物称号（命名牌）,带来不一样的称号体验。对影响服务器TPS的所有逻辑单元进行简化,以达到最优效果
 
 ## 前置组件
-> 请根据您的服务端系统进选择 
 ### 必选
 #### LL2 
-- [LiteLoaderBDS](https://www.minebbs.com/liteloader/) 
+- [`LiteLoaderBDS`](https://www.minebbs.com/liteloader/) 
 #### LL3
-- [LeviLamina](https://www.minebbs.com/resources/levilamina.8049/) 
-- [LegacyScriptEngine](https://www.minebbs.com/resources/legacyscriptengine.8048/) 
- - 此插件需要LL3的LSE-nodejs加载器下运行,使用前请确保您已安装了该加载器 
+- [`LeviLamina`](https://www.minebbs.com/resources/levilamina.8049/) 
+- [`LegacyScriptEngine`](https://www.minebbs.com/resources/legacyscriptengine.8048/) 
+ - 此插件需要LL3的LSE-nodejs加载器下运行,使用前请确保您已安装了该加载器  
 
 ### 可选
-- [PCsvip](https://www.minebbs.com/resources/pcsvip.4385/) 
-- [PLib 建议使用](https://www.minebbs.com/resources/plib-planet.4523/)  
-- [GwChat](https://www.minebbs.com/threads/gwchat-papi.25536/)
+- [`PVip`](https://www.minebbs.com/resources/pvip.4385/) 
+- [`PLib`](https://www.minebbs.com/resources/plib.4523/) 
+- [`PChat`](https://www.minebbs.com/resources/pchat.6818/)  
+- [`GwChat`](https://www.minebbs.com/threads/gwchat-papi.25536/)
 > LL2上使用PAPI的所需组件 
- - [BEPlaceholderAPI](https://www.minebbs.com/resources/beplaceholderapi.4181/) 
+- [`BEPlaceholderAPI`](https://www.minebbs.com/resources/beplaceholderapi.4181/) 
 > LL3上使用PAPI的所需组件 
- - [GMLIB](https://www.minebbs.com/resources/gmlib.6636/) 
- - [GMLIB-LegacyRemoteCallApi](https://www.minebbs.com/resources/gmlib-legacyremotecallapi-gmlib-remotecallapi.7159/) 
+- [`GMLIB`](https://www.minebbs.com/resources/gmlib.6636/) 
+- [`GMLIB-LegacyRemoteCallApi`](https://www.minebbs.com/resources/gmlib-legacyremotecallapi-gmlib-remotecallapi.7159/) 
 
 ## 安装
 #### LL2
@@ -415,15 +415,6 @@ PTitle是一个可高度自定义的称号系统插件,他支持玩家定制称�
 
 
 
-
-## PAPI变量说明
--`v2.0.0 Beta 23.05.0617M`正式版开始支持  
-
-> 使用`BEPlaceholderAPI`公共变量需要安装`BEPlaceholderAPI`或`GMLIB-LegacyRemoteCallApi`插件
-
-|变量|注释|示例|
-|---|---|---|
-|`%PT_Wearch%`|玩家当前佩戴称号|`HeadShow`插件`%PT_Wearch%`<br>`PQuery`插件`%PT_Wearch%`| 
 
 ## API
 > PTitle提供了6个接口

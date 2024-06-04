@@ -5,19 +5,19 @@ PChat插件是一个专注于MC消息处理的插件，他可以配合Emoji材�
 ## 前置组件
 ### 必选
 #### LL2 
-- [LiteLoaderBDS](https://www.minebbs.com/liteloader/) 
+- [`LiteLoaderBDS`](https://www.minebbs.com/liteloader/) 
 #### LL3
-- [LeviLamina](https://www.minebbs.com/resources/levilamina.8049/) 
-- [LegacyScriptEngine](https://www.minebbs.com/resources/legacyscriptengine.8048/) 
+- [`LeviLamina`](https://www.minebbs.com/resources/levilamina.8049/) 
+- [`LegacyScriptEngine`](https://www.minebbs.com/resources/legacyscriptengine.8048/) 
  - 此插件需要LL3的LSE-quickjs加载器下运行,使用前请确保您已安装了该加载器 
 
 ### 可选
-- [PLib 建议使用](https://www.minebbs.com/resources/plib-planet.4523/) 
+- [`PLib`](https://www.minebbs.com/resources/plib.4523/) 
 > LL2上使用PAPI的所需组件 
- - [BEPlaceholderAPI](https://www.minebbs.com/resources/beplaceholderapi.4181/) 
+- [`BEPlaceholderAP`I](https://www.minebbs.com/resources/beplaceholderapi.4181/) 
 > LL3上使用PAPI的所需组件 
- - [GMLIB](https://www.minebbs.com/resources/gmlib.6636/) 
- - [GMLIB-LegacyRemoteCallApi](https://www.minebbs.com/resources/gmlib-legacyremotecallapi-gmlib-remotecallapi.7159/) 
+- [`GMLIB`](https://www.minebbs.com/resources/gmlib.6636/) 
+- [`GMLIB-LegacyRemoteCallApi`](https://www.minebbs.com/resources/gmlib-legacyremotecallapi-gmlib-remotecallapi.7159/) 
 
 ## 安装
 #### LL2
@@ -29,16 +29,6 @@ PChat插件是一个专注于MC消息处理的插件，他可以配合Emoji材�
 
 ## 注册指令说明
 `chat` - 聊天(通过控制台向服务器内发送消息)
-
-## PAPI变量说明 
-
-> 使用`BEPlaceholderAPI`公共变量需要安装`BEPlaceholderAPI`或`GMLIB-LegacyRemoteCallApi`插件
-
-|变量|注释|示例|
-|---|---|---|
-| `%emoji_log%` | 转换及艾特的聊天消息并输出到控制台 |`ChatEX`插件`%emoji_log%`<br>`GwChat`插件`%emoji_log%`| 
-| `%emoji_game%` | 转换Emoji表情为font及艾特的聊天消息并输出到游戏中 |`ChatEX`插件`%emoji_game%`<br>`GwChat`插件`%emoji_game%`| 
-| `%face_msg%` | 转换Emoji表情为QQFace及艾特的聊天消息并输出到控制台 |`ChatEX`插件`%face_msg%`<br>`GwChat`插件`%face_msg%`|
 
 ## 群服聊天交互方法
 > 使用Serein面板并安装PChat-Serein版

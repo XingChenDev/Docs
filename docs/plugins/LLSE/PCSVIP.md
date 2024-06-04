@@ -7,19 +7,19 @@ PCsvip现已停更，所有功能由[PVip](./PVip.md)接管
 ## 前置组件
 ### 必选
 #### LL2 
-- [LiteLoaderBDS](https://www.minebbs.com/liteloader/) 
+- [`LiteLoaderBDS`](https://www.minebbs.com/liteloader/) 
 #### LL3
-- [LeviLamina](https://www.minebbs.com/resources/levilamina.8049/) 
-- [LegacyScriptEngine](https://www.minebbs.com/resources/legacyscriptengine.8048/) 
- - 此插件需要LL3的LSE-quickjs加载器下运行,使用前请确保您已安装了该加载器 
+- [`LeviLamina`](https://www.minebbs.com/resources/levilamina.8049/) 
+- [`LegacyScriptEngine`](https://www.minebbs.com/resources/legacyscriptengine.8048/) 
+ - 此插件需要LL3的LSE-quickjs加载器下运行,使用前请确保您已安装了该加载器  
 
 ### 可选
-- [PLib 建议使用](https://www.minebbs.com/resources/plib-planet.4523/) 
+- [`PLib`](https://www.minebbs.com/resources/plib.4523/) 
 > LL2上使用PAPI的所需组件 
- - [BEPlaceholderAPI](https://www.minebbs.com/resources/beplaceholderapi.4181/) 
+- [`BEPlaceholderAPI`](https://www.minebbs.com/resources/beplaceholderapi.4181/) 
 > LL3上使用PAPI的所需组件 
- - [GMLIB](https://www.minebbs.com/resources/gmlib.6636/) 
- - [GMLIB-LegacyRemoteCallApi](https://www.minebbs.com/resources/gmlib-legacyremotecallapi-gmlib-remotecallapi.7159/) 
+- [`GMLIB`](https://www.minebbs.com/resources/gmlib.6636/) 
+- [`GMLIB-LegacyRemoteCallApi`](https://www.minebbs.com/resources/gmlib-legacyremotecallapi-gmlib-remotecallapi.7159/) 
 
 ## 安装
 #### LL2

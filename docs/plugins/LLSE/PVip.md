@@ -5,20 +5,20 @@ PVip是PCsvip的全新续作,作为前置插件的它拥有PCsvip全部功能,�
 ## 前置组件
 ### 必选
 #### LL2 
-- [LiteLoaderBDS](https://www.minebbs.com/liteloader/) 
+- [`LiteLoaderBDS`](https://www.minebbs.com/liteloader/) 
 #### LL3
-- [LeviLamina](https://www.minebbs.com/resources/levilamina.8049/) 
-- [LegacyScriptEngine](https://www.minebbs.com/resources/legacyscriptengine.8048/) 
+- [`LeviLamina`](https://www.minebbs.com/resources/levilamina.8049/) 
+- [`LegacyScriptEngine`](https://www.minebbs.com/resources/legacyscriptengine.8048/) 
  - 此插件需要LL3的LSE-quickjs加载器下运行,使用前请确保您已安装了该加载器 
 
 ### 可选
-- [PLib 建议使用](https://www.minebbs.com/resources/plib-planet.4523/) 
-- [PVip_old 为使用旧接口的插件而制作](https://sunsserver.lanzn.com/iJdYP1zydl5a)
+- [`PLib`](https://www.minebbs.com/resources/plib-planet.4523/) 
+- [`PVip_old` 推荐安装](https://sunsserver.lanzn.com/iJdYP1zydl5a)
 > LL2上使用PAPI的所需组件 
- - [BEPlaceholderAPI](https://www.minebbs.com/resources/beplaceholderapi.4181/) 
+- [`BEPlaceholderAPI`](https://www.minebbs.com/resources/beplaceholderapi.4181/) 
 > LL3上使用PAPI的所需组件 
- - [GMLIB](https://www.minebbs.com/resources/gmlib.6636/) 
- - [GMLIB-LegacyRemoteCallApi](https://www.minebbs.com/resources/gmlib-legacyremotecallapi-gmlib-remotecallapi.7159/) 
+- [`GMLIB`](https://www.minebbs.com/resources/gmlib.6636/) 
+- [`GMLIB-LegacyRemoteCallApi`](https://www.minebbs.com/resources/gmlib-legacyremotecallapi-gmlib-remotecallapi.7159/) 
 
 ## 安装
 #### LL2
@@ -196,15 +196,6 @@ PVip是PCsvip的全新续作,作为前置插件的它拥有PCsvip全部功能,�
   module.exports = { name: "非表单模块", version: "0.0.0", main: main };
 }
 ```
-
-## PAPI变量说明
-> 使用`BEPlaceholderAPI`公共变量需要安装`BEPlaceholderAPI`或`GMLIB-LegacyRemoteCallApi`插件
-
-|变量|注释|
-|---|---|
-|`%player_vip%`|玩家VIP身份<br>根据`config`文件中的`title`显示|`ChatEX`插件`%player_vip%`<br>`GwChat`插件`%player_vip%`| 
-|`%player_vip_time_left%`|玩家VIP剩余时长|`ChatEX`插件`%player_vip_time_left%`<br>`GwChat`插件`%player_vip_time_left%`| 
-|`%player_vip_title%`|玩家VIP称号<br>若安装了`PTitle`不建议使用该变量|`ChatEX`插件`%player_vip%`<br>`GwChat`插件`%player_vip%`|
 
 ## API
 > PVip提供了11个接口，PCsvip旧接口请查[PCsvip](./PCSVIP.md)文档<br>若使用的是PCsvip接口推荐安装[PVip_old](https://sunsserver.lanzn.com/iJdYP1zydl5a)
