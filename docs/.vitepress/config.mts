@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Planet工作室插件文档",
+  title: "插件文档",
   description: "--星辰开发组",
   markdown: {
     container: {
@@ -16,8 +16,10 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: '主页', link: '/' },
+      { text: '文档主页', link: '/' },
+      { text: '工作室主页', link: 'https://www.mcmap.top' },
       { text: '加入群聊', link: 'http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=1hh-XxHHnZ3Ljp-eEeZVgI-iRyLIMeHB&authKey=GtMz8hu1sMxLp5706YefERQ%2B1VSHJbdE1h%2F%2F7rIngoLpwH76kNokZC0Y58pxcMxO&noverify=0&group_code=639276103' }
+
     ],
     sidebar: [
       {
