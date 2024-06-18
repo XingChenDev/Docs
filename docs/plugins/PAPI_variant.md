@@ -30,6 +30,7 @@
 > `PCsvip`已停止更新及后期维护,`PVip`已接管`PCsvip`继续推送 
 
 |变量|注释|
+|---|---|
 |`%PC_Vip%`|玩家VIP身份<br>根据`config`文件中的`viptitle`显示|
 |`%PC_Surplus%`|玩家VIP剩余时长|
 |`%PC_Title%`|玩家VIP称号<br>若安装了`PTitle`不建议使用该变量|
