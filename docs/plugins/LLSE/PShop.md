@@ -22,6 +22,18 @@ PShop是一个商店插件,服主可以在商店中添加固定的售卖物品�
 #### LL3
 - 将文件夹`PShop`解压到此路径下:`BDS/plugins/`  
  - 更新插件请在保存必要配置文件后将原来的文件夹删除  
+ 
+## 注册指令说明
+`/shop `商店
+`/shop或/shop gui` 打开总GUI
+`/shop buy` 打开购买菜单
+`/shop sell `打开出售菜单
+`/market `市场
+`/market或/market gui `打开总GUI
+`/market buy` 打开购买菜单
+`/market sell` 打开出售菜单
+`/market remove` 打开下架菜单
+`/market op` 打开op菜单​
 
 ## 配置文件说明
 > 更改配置文件请注意 JSON 文件格式,不推荐使用记事本修改配置文件 
@@ -108,15 +120,5 @@ PShop是一个商店插件,服主可以在商店中添加固定的售卖物品�
     ]
 }
 ```
-## 注册指令说明
-`/shop `商店
-`/shop或/shop gui` 打开总GUI
-`/shop buy` 打开购买菜单
-`/shop sell `打开出售菜单
-`/market `市场
-`/market或/market gui `打开总GUI
-`/market buy` 打开购买菜单
-`/market sell` 打开出售菜单
-`/market remove` 打开下架菜单
-`/market op` 打开op菜单​
+
 ## 插件开发中~~·~~敬请期待
