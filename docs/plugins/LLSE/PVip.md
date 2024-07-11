@@ -13,7 +13,7 @@ PVip是PCsvip的全新续作,作为前置插件的它拥有PCsvip全部功能,�
 
 ### 可选
 - [`PLib`](https://www.minebbs.com/resources/plib-planet.4523/) 
-- [`PVip_old` 推荐安装](https://sunsserver.lanzn.com/iJdYP1zydl5a)
+- [`PVip_old 3.0.1` 推荐安装](https://sunsserver.lanzn.com/iTTEs2395ugb)
 > LL2上使用PAPI的所需组件 
 - [`BEPlaceholderAPI`](https://www.minebbs.com/resources/beplaceholderapi.4181/) 
 > LL3上使用PAPI的所需组件 
@@ -33,6 +33,7 @@ PVip是PCsvip的全新续作,作为前置插件的它拥有PCsvip全部功能,�
 `/myvip` - 我的会员 游戏内执行  
 `/vipshop` - 会员商城	游戏内执行  
 `/vipset` - 会员管理	游戏内执行  
+`/vipmod` - VIP模块中心 游戏内执行  
 `/vip add (玩家ID/QQ号) [天数]` - 控制台添加VIP	控制台操作，"[]"内为选填  
 `/vip del (玩家ID/QQ号)`	控制台删除VIP	控制台操作，当玩家是VIP时输入会关掉VIP，当玩家不是VIP时会删除VIP数据 
 `/vip addint (玩家ID/QQ号) (经验)` 控制台增加玩家会员积分，所有参数为必填  
@@ -175,8 +176,8 @@ PVip是PCsvip的全新续作,作为前置插件的它拥有PCsvip全部功能,�
     player.sendForm(fm, (player, id) => { });
   };
   
-  module.exports = { name: "表单模块", version: "0.0.0",author: "Planet工作室", type: "", path: "" main: main };
-  // 模块导出 {name: 模块名称, version: 模块版本,author: 开发者,type: 模块类型, path: 表单按钮贴图 main: 被调用的函数};
+  module.exports = { name: "表单模块", version: "0.0.0",author: "Planet工作室", type: "", text: "按钮名称", path: "" main: main };
+  // 模块导出 {name: 模块名称, version: 模块版本,author: 开发者,type: 模块类型, text: 表单按钮名称, path: 表单按钮贴图 main: 被调用的函数};
   /*
   模块 type 类型（需要运行在PVip 3.0.1及之后的版本中）: 
   main_form 在VIP插件的主表单中添加一个用于打开这个模块的按钮
