@@ -42,6 +42,7 @@ export default defineConfig({
           { text: 'PShop - 商店系统', link: '/plugins/LLSE/PShop' },
           { text: 'PSign - 签到', link: '/plugins/LLSE/PSign' },
           { text: 'PStop - 维护系统', link: '/plugins/LLSE/PStop' },
+          { text: 'PStore- 商城系统', link: '/plugins/LLSE/PStore' },
           { text: 'PTitle - 称号系统', link: '/plugins/LLSE/PTitle' },
           { text: 'PVip - VIP插件[上新]', link: '/plugins/LLSE/PVip' }
         ]
