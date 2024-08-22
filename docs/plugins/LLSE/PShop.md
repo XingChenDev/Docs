@@ -14,6 +14,7 @@ PShop是一个商店插件,服主可以在商店中添加固定的售卖物品�
 ### 可选
 - [`PVip`](https://www.minebbs.com/resources/pvip.4385/) 
 - [`PMail`](https://www.minebbs.com/resources/pvip.4385/) 
+- [`SUpdate`](https://www.minebbs.com/resources/supdate.9003/)
 
 ## 安装
 #### LL2
@@ -34,6 +35,7 @@ PShop是一个商店插件,服主可以在商店中添加固定的售卖物品�
 `/market sell` 打开出售菜单  
 `/market remove` 打开下架菜单  
 `/market op` 打开op菜单​  
+`/market seatch` 打开搜索菜单  
 ## 配置文件说明
 > 更改配置文件请注意 JSON 文件格式,不推荐使用记事本修改配置文件 
 #### `config.json`文件
