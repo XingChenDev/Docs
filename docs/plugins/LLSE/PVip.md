@@ -169,11 +169,23 @@ PVip是PCsvip的全新续作,作为前置插件的它拥有PCsvip全部功能,�
   // PVip调用模块时会传递一个玩家对象的参数
   // 模块开发时可以使用玩家PVip的接口获取PVip玩家相关的数据进行操作
   // 玩家对象参数可以不被使用
-
-  function main(player) { // 被调用的默认函数
+  /**
+	* 被调用的默认函数
+	* @param {Player} player 玩家对象
+	* @param {Objective} additional_data 附加数据（目前传递为玩家的VIP数据）
+	* @param {Function} functions 上级表单（用于返回注册表单）
+	*/
+  function main(player, additional_data, functions) { // 被调用的默认函数
     let fm = mc.newSimpleForm();
     fm.setTitle("表单模块");
-    player.sendForm(fm, (player, id) => { });
+    player.sendForm(fm, (player, id) => { 
+      if(id==null)
+        // 下面的函数是通过PVip传递过来的上级表单
+        // 由于模块中心表单的参数比较复杂
+        // 传递的附加数据中包含模块文件的数据
+        // 返回上级表单必须填写，否则返回模块中心的表单会报错
+        functions(player, additional_data.file, additional_data.data); 
+    });
   };
   
   module.exports = { name: "表单模块", version: "0.0.0",author: "Planet工作室", type: "", text: "按钮名称", path: "" main: main };
