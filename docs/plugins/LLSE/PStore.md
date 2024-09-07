@@ -25,10 +25,17 @@ PShop是一个商店插件,服主可以在商店中添加固定的售卖物品�
  - 更新插件请在保存必要配置文件后将原来的文件夹删除  
 
 ## 注册指令说明
+`/pstore` - 商城系统主表单 
+`/sshop` - 系统商店 
+`/wshop` - 交易所（跨服交易）
+`/pshop` - 玩家商店（小店）
 
 ## 配置文件说明
 > 更改配置文件请注意 JSON 文件格式,不推荐使用记事本修改配置文件 
 #### `config.json`文件
+
+- 插件基础配置文件
+- 路径: BDS/Plugins/Planet/PStore/config.json
 ```js
 {
     "version": "v0.0.1 Beta 24.07.03000", // 插件版本
@@ -74,6 +81,9 @@ PShop是一个商店插件,服主可以在商店中添加固定的售卖物品�
 }
 ```
 #### `system_shop.json`文件
+
+- 系统商店配置文件
+- 路径: BDS/Plugins/Planet/PStore/data/system_shop.json.json
 ```js
 {
 "buy": [ // 购买物品数据
