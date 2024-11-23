@@ -163,52 +163,7 @@ PVip是PCsvip的全新续作,作为前置插件的它拥有PCsvip全部功能,�
 > PVip全新版本开启了VIP模块化,直接将PVip的模块插件放置在指定文件夹中，通过PVip的`vipmod`指令打开VIP模块中心进行调用<br>PVip模块可使用`LiteLoaderBDS`或`LegacyScriptEngine`所有的API,理论上它也可以是一个插件加载器（但不建议在PVip的模块中安装`LiteLoaderBDS`或`LegacyScriptEngine`的插件）
 - 路径: BDS/plugins/Planet/PVip/module/
 - 表单模块格式 
-```js
-{ // PVip调用模块的函数类型
-  // 函数的名字可随意编辑,导出对象中必须存在main这个参数,否则PVip提示错误或功能缺失
-  // PVip调用模块时会传递一个玩家对象的参数
-  // 模块开发时可以使用玩家PVip的接口获取PVip玩家相关的数据进行操作
-  // 玩家对象参数可以不被使用
-  /**
-	* 被调用的默认函数
-	* @param {Player} player 玩家对象
-	* @param {Objective} additional_data 附加数据（目前传递为玩家的VIP数据）
-	* @param {Function} functions 上级表单（用于返回注册表单）
-	*/
-  function main(player, additional_data, functions) { // 被调用的默认函数
-    let fm = mc.newSimpleForm();
-    fm.setTitle("表单模块");
-    player.sendForm(fm, (player, id) => { 
-      if(id==null)
-        // 下面的函数是通过PVip传递过来的上级表单
-        // 由于模块中心表单的参数比较复杂
-        // 传递的附加数据中包含模块文件的数据
-        // 返回上级表单必须填写，否则返回模块中心的表单会报错
-        functions(player, additional_data.file, additional_data.data); 
-    });
-  };
-  
-  module.exports = { name: "表单模块", version: "0.0.0",author: "Planet工作室", type: "", text: "按钮名称", path: "" main: main };
-  // 模块导出 {name: 模块名称, version: 模块版本,author: 开发者,type: 模块类型, text: 表单按钮名称, path: 表单按钮贴图 main: 被调用的函数};
-  /*
-  模块 type 类型（需要运行在PVip 3.0.1及之后的版本中）: 
-  main_form 在VIP插件的主表单中添加一个用于打开这个模块的按钮
-  vip_form 在玩家VIP表单中添加一个用于打开这个模块的按钮
-  store_form  在VIP商城的主表单中添加一个用于打开这个模块的按钮
-  set_form 在VIP设置的主表单中添加一个用于打开这个模块的按钮
-  auxiliary 在PVIP插件运行时直接加载这个模块
-  */
-}
-```
-- 非表单模块 
-```js
-{ 
-  function main() { // 被调用的默认函数
-    log("PVip的非表单模块");
-  };
-  module.exports = { name: "非表单模块", version: "0.0.0", main: main };
-}
-```
+[下载示例模块](<a href="" download="filename.txt">Download File</a>)
 
 ## API
 > PVip提供了11个接口，PCsvip旧接口请查[PCsvip](./PCSVIP.md)文档<br>若使用的是PCsvip接口推荐安装[PVip_old](https://sunsserver.lanzn.com/iJdYP1zydl5a)
