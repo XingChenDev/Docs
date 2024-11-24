@@ -160,17 +160,31 @@ PVip是PCsvip的全新续作,作为前置插件的它拥有PCsvip全部功能,�
 ```
 
 ## 模块化
-> PVip全新版本开启了VIP模块化,直接将PVip的模块插件放置在指定文件夹中，通过PVip的`vipmod`指令打开VIP模块中心进行调用<br>PVip模块可使用`LiteLoaderBDS`或`LegacyScriptEngine`所有的API,理论上它也可以是一个插件加载器（但不建议在PVip的模块中安装`LiteLoaderBDS`或`LegacyScriptEngine`的插件）
+> PVip模块化,是直接将PVip的模块插件放置在指定文件夹中,插件加载时会自动导入并加载模块中`main`函数的所有逻辑并,通过自动运行和被动运行的方式达到模块设计的目的，目前可支持在PVip的多个主要表单中注册用于启用或打开某个模块的按钮,具体请下载示例模块查看   
+
+- 注意:模块是`JavaScript`语言,可使用`LiteLoaderBDS-LLSE`或`LeviLamina`的`LegacyScriptEngine`所有的API,理论上它也可以是一个插件加载器（但不建议在PVip的模块中安装`LiteLoaderBDS-LLSE`或`LegacyScriptEngine`的插件,会导致部分功能无法使用,例如PAPI变量和接口）
 - 路径: BDS/plugins/Planet/PVip/module/
-- 表单模块格式 
-[下载示例模块](<a href="" download="filename.txt">Download File</a>)
+<a href="https://www.mcmap.top/pvip/vipmod/vip_test_form.js" download="vip_test_form.js">下载非表单示例模块</a>   
+<a href="https://www.mcmap.top/pvip/vipmod/vip_test.js" download="vip_test.js">下载表单示例模块</a>    
+
+- 模块类型说明
+
+    | 类型 | 含义 | 备注 | 
+    | ---------- | --------- | --------- |
+    | `auxiliary` | 自动运行（辅助模块） | 可以在插件加载时自动运行的模块,在此类型后面加上特殊类型参数（如:`auxiliary_jl`即可变更进服与离开服务器的文本） |
+    | `main_form` | 注册主表单按钮 | 在插件的指令`vip`的表单中注册一个用于打开模块的按钮,可通过该指令的表单进入模块的表单或调用模块的逻辑 |
+    | `vip_form` | 注册我的VIP表单按钮 | 在插件的指令`myvip`的表单中注册一个用于打开模块的按钮,可通过该指令的表单进入模块的表单或调用模块的逻辑 | 
+    | `store_form` | 注册VIP商城按钮 | 在插件的指令`vipshop`的表单中注册一个用于打开模块的按钮,可通过该指令的表单进入模块的表单或调用模块的逻辑 |
+    | `set_form` | 注册我的VIP表单按钮 | 在插件的指令`vipset`的表单中注册一个用于打开模块的按钮,可通过该指令的表单进入模块的表单或调用模块的逻辑 | 
+
+
 
 ## API
 > PVip提供了11个接口，PCsvip旧接口请查[PCsvip](./PCSVIP.md)文档<br>若使用的是PCsvip接口推荐安装[PVip_old](https://sunsserver.lanzn.com/iJdYP1zydl5a)
 
 #### 获取PVip插件版本
 `ll.import("PVip", "version")()` 
-
+1
 - 返回值: `PVip插件版本` 
 - 返回值类型: `String` 
  - 该接口仅在`PVip`发布后开放，若使用之前的旧版本请使用`ll.hasExported("PVip","version")`检查函数是否被导出，否则会报错

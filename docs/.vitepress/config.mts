@@ -55,6 +55,13 @@ export default defineConfig({
           { text: 'PBind - 账号绑定', link: '/plugins/Serein/PBind' },
           { text: 'PQuery - 多功能查询', link: '/plugins/Serein/PQuery' }
         ]
+      }, {
+        text: 'PVip模块插件',
+        collapsed: true,
+        link: '/plugins/vipmod/',
+        items: [
+          { text: '进服&离开文本修改', link: '/plugins/vipmod/join_left_tip' }
+        ]
       },
       {
         text: 'PAPI变量说明',
